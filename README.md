@@ -12,13 +12,13 @@ The critical success probability is
 \boxed{s_c=d^{-1/m}.}
 ```
 
-At fixed $`m\ge1`$, $`d\ge2`$ and $`0<s<1`$, the minimum initial inventory satisfies:
+At fixed $`m\ge1`$, $`d\ge2`$ and $`0\lt s\lt 1`$, the minimum initial inventory satisfies:
 
 | Success requirement | Optimal photon inventory as $`\varepsilon\downarrow0`$ |
 |---|---|
-| $`s<s_c`$ | Bounded; exact joint return is possible at finite mean energy |
+| $`s\lt s_c`$ | Bounded; exact joint return is possible at finite mean energy |
 | $`s=s_c`$ | $`\Theta(\log(1/\varepsilon))`$ |
-| $`s_c<s<1`$ | $`\Theta(\varepsilon^{-a_m})`$, where $`a_m=\log(d^{1/m}s)/\log(1/s)`$ |
+| $`s_c\lt s\lt 1`$ | $`\Theta(\varepsilon^{-a_m})`$, where $`a_m=\log(d^{1/m}s)/\log(1/s)`$ |
 
 The lower bounds cover all allowed LOCC protocols and mixed retained success outputs. Explicit finite catalysts attain the logarithmic and power orders. The [model](science/model.md) states the complete assumptions, operation closure and limiting convention.
 
@@ -48,6 +48,16 @@ Start with the [physical interpretation](science/interpretation.md) and [model](
 The proof combines established Schmidt-tail conversion theory with a fidelity-to-tail recurrence, oscillator spectral counting and matching self-similar catalysts. The optimized photon–success–accuracy law is the contribution; stochastic infinite-dimensional conversion and the filtering mechanism are attributed foundations.
 
 [The LLM reading guide](llms.txt) maps scientific questions to authoritative pages.
+
+## Learn the project
+
+The single educational anchor is John Watrous, [*The Theory of Quantum Information* (2018)](https://cs.uwaterloo.ca/~watrous/TQI/), using the author's available manuscript. Its treatment of fidelity, majorization and bipartite entanglement supplies the finite-dimensional foundations; the oscillator and heralded-energy arguments are developed in this project.
+
+| Entry | What it provides |
+|---|---|
+| [Worked example](learning/WORKED_EXAMPLE.md) | A complete finite Bell-pair experiment: catalyst probabilities, local filter, success, joint fidelity and photon inventory. |
+| [30-milestone map](learning/MILESTONES.md) | A shared route from quantum-state foundations to the construction, converse, mode threshold and physical meaning. |
+| [Watrous bridge](learning/WATROUS_BRIDGE.md) | Verified source sections, notation translations and the additional steps connecting the textbook to the project. |
 
 ## Reproduce the finite checks
 

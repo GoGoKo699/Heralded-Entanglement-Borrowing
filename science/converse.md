@@ -124,7 +124,7 @@ The Schmidt tails lie in $`[0,1]`$. For countable outcomes the preceding sums th
 For clarity about limiting protocols, let $`\sigma_{\mathrm{succ}}`$ denote the unnormalized successful retained output. Put
 
 ```math
-u=\operatorname{Tr}\sigma_{\mathrm{succ}},
+u=\mathrm{Tr}\sigma_{\mathrm{succ}},
 \qquad
 v=\langle T|\sigma_{\mathrm{succ}}|T\rangle.
 ```
@@ -153,7 +153,7 @@ Taking $`k=dn`$ and using $`Q_{dn}=P_n`$ gives
 \left(\sqrt{P_n}-\sqrt{2\epsilon}\right)_+.
 ```
 
-Let $`x_\ell=\sqrt{P_{d^\ell}}`$. For fixed $`0<s<1`$, iteration yields
+Let $`x_\ell=\sqrt{P_{d^\ell}}`$. For fixed $`0\lt s\lt 1`$, iteration yields
 
 ```math
 x_\ell\geq
@@ -203,9 +203,9 @@ Changing the finitely many initial terms only changes constants. Let $`r=d^{1/m}
 
 | Success regime | Consequence of the sum |
 |---|---|
-| $`r<1`$ | A positive energy lower bound; the [exact finite-energy construction](exact_success.md) applies. |
+| $`r\lt 1`$ | A positive energy lower bound; the [exact finite-energy construction](exact_success.md) applies. |
 | $`r=1`$ | $`E=\Omega_{m,s,d}(\log(1/\epsilon))`$. |
-| $`r>1`$, with $`s<1`$ | $`E=\Omega_{m,s,d}(\epsilon^{-a_m})`$, where $`a_m=\log(r)/\log(1/s)`$. |
+| $`r>1`$, with $`s\lt 1`$ | $`E=\Omega_{m,s,d}(\epsilon^{-a_m})`$, where $`a_m=\log(r)/\log(1/s)`$. |
 
 In the last row, $`r^L`$ is a constant multiple of $`\epsilon^{-a_m}`$ because the uncertainty in $`L`$ is additive and bounded. Thus the proof establishes the power itself, without a missing logarithmic factor. The [finite constructions](construction.md) give the corresponding upper bounds; see the combined [threshold statement](mode_threshold.md).
 
@@ -243,7 +243,7 @@ For one mode, exact success and the [one-mode product identity](spectral_energy.
 =s\left[d\mu_1(p)+\frac{d-1}{2}\right].
 ```
 
-For finite energy and $`0<s<1/d`$ this gives
+For finite energy and $`0\lt s\lt 1/d`$ this gives
 
 ```math
 E\geq\frac{s(d-1)}{1-ds}.
@@ -260,7 +260,7 @@ Let $`\epsilon_j\downarrow0`$ and choose protocols whose energies approach the a
 In particular, $`P_K^{(j)}\leq C/K`$. This uniform tail bound gives an $`\ell^1`$-convergent subsequence of the sorted probability vectors, with a normalized limit $`p`$. Lower semicontinuity gives
 
 ```math
-\mu_1(p)\leq\liminf_j\mu_1(p^{(j)})<\infty.
+\mu_1(p)\leq\liminf_j\mu_1(p^{(j)})\lt \infty.
 ```
 
 At every fixed $`k`$, both $`P_k^{(j)}`$ and the repeated-spectrum tail $`Q_k^{(j)}`$ converge. Passing to the limit in the proved tail inequality gives $`P_k\geq sQ_k`$. Summing these nonnegative inequalities then yields the exact mean-index inequality for $`p`$, and therefore
@@ -276,7 +276,7 @@ The exact construction supplies the reverse inequality. Consequently
 \boxed{
 \lim_{\epsilon\downarrow0}E_1(\epsilon;s,d)
 =\frac{s(d-1)}{1-ds},
-\qquad 0<s<1/d.
+\qquad 0\lt s\lt 1/d.
 }
 ```
 
@@ -303,6 +303,6 @@ Equivalently,
 \log(1+E)=\Omega_{m,d}(\epsilon^{-1/2}).
 ```
 
-This boundary lower bound is not a matching endpoint assertion in the main theorem, which fixes $`s<1`$. Taking $`s\uparrow1`$ inside its power formula is not justified. Deterministic embezzling families are discussed and credited in [related work](../references/related_work.md); the finite construction here is proved for each fixed $`s<1`$.
+This boundary lower bound is not a matching endpoint assertion in the main theorem, which fixes $`s\lt 1`$. Taking $`s\uparrow1`$ inside its power formula is not justified. Deterministic embezzling families are discussed and credited in [related work](../references/related_work.md); the finite construction here is proved for each fixed $`s\lt 1`$.
 
 [Scientific model](model.md) · [Spectral energy](spectral_energy.md) · [Exact success](exact_success.md) · [Finite constructions](construction.md) · [Interpretation](interpretation.md)

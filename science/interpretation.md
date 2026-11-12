@@ -4,13 +4,13 @@ Alice and Bob want a Bell pair while keeping their shared entangled reservoir us
 
 ## Success changes the divergence class
 
-For one oscillator at each party and a Bell-pair target, the critical success probability is $`s_c=1/2`$. At every fixed $`0<s<1/2`$, exact success-conditioned return is possible with initial total photons
+For one oscillator at each party and a Bell-pair target, the critical success probability is $`s_c=1/2`$. At every fixed $`0\lt s\lt 1/2`$, exact success-conditioned return is possible with initial total photons
 
 ```math
 E=\frac{s}{1-2s}.
 ```
 
-This is the exact optimum for zero error when infinite-support pure catalysts are admitted, and the limiting optimum for finite-error approximations. It is an initial inventory, not the energy consumed in one trial. At $`s=1/2`$, the optimal inventory instead grows as $`\log(1/\varepsilon)`$. At $`1/2<s<1`$, it grows as a power of inverse joint infidelity. The [converse](converse.md) optimizes over all allowed LOCC protocols, rather than only the explicit filter.
+This is the exact optimum for zero error when infinite-support pure catalysts are admitted, and the limiting optimum for finite-error approximations. It is an initial inventory, not the energy consumed in one trial. At $`s=1/2`$, the optimal inventory instead grows as $`\log(1/\varepsilon)`$. At $`1/2\lt s\lt 1`$, it grows as a power of inverse joint infidelity. The [converse](converse.md) optimizes over all allowed LOCC protocols, rather than only the explicit filter.
 
 | Fixed success requirement | One-mode Bell-pair consequence |
 |---|---|
@@ -42,7 +42,7 @@ The success flag is part of the task. Averaging successful and failed branches g
 
 ## Finite approximations and implementation resources
 
-Every positive-error upper bound uses a finite Schmidt cutoff $`D=d^L`$ and finite local operations. At fixed $`s<1`$, $`L=O(\log(1/\varepsilon))`$, so the cutoff is polynomial in inverse error, with an exponent depending on success probability. The [construction](construction.md) provides its normalized state, a bounded local filter, exact success probability and joint output fidelity.
+Every positive-error upper bound uses a finite Schmidt cutoff $`D=d^L`$ and finite local operations. At fixed $`s\lt 1`$, $`L=O(\log(1/\varepsilon))`$, so the cutoff is polynomial in inverse error, with an exponent depending on success probability. The [construction](construction.md) provides its normalized state, a bounded local filter, exact success probability and joint output fidelity.
 
 Exact zero-error attainment below threshold uses infinite Schmidt rank even though its mean energy is finite. No finite-rank catalyst can exactly generate a nontrivial maximally entangled target and return itself with nonzero success: the desired Schmidt rank would be multiplied by $`d`$. Finite mean energy and finite Hilbert support are different requirements.
 
