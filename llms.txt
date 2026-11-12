@@ -1,0 +1,31 @@
+# Heralded Entanglement Borrowing
+
+This repository studies the minimum initial total photon inventory of a known pure oscillator catalyst used to produce a fixed maximally entangled target and return the catalyst on a heralded success event. Failure may consume the catalyst. Local work and implementation complexity are outside the energy resource measure.
+
+## Scientific routes
+
+- Question, results and reader entry: README.md
+- Operational class, success, joint squared fidelity, pure input and exact theorem scope: science/model.md
+- Ordered Fock spectrum, passification and initial-energy lower bound: science/spectral_energy.md
+- Arbitrary-LOCC tail inequality, mixed conditional outputs and matching lower orders: science/converse.md
+- Finite self-similar spectrum, normalized root filter, exact success and joint fidelity: science/construction.md
+- Exact infinite-support borrowing and sharp one-mode energy-success optimum: science/exact_success.md
+- Fixed-mode density of states, critical success and mode-count consequence: science/mode_threshold.md
+- Physical meaning, destructive failure and charged/unpriced resources: science/interpretation.md
+- Attribution and closest-work differences: references/related_work.md
+- Structured bibliography: references/references.bib
+- Reproduction commands and finite-check boundaries: verification/README.md
+
+For a theorem audit, read model, spectral_energy, converse, construction, exact_success and mode_threshold in that order. For the physical story, read README, model and interpretation, then follow the theorem pointers. All mathematical statements use joint squared fidelity with the original pure catalyst tensor the target.
+
+## Essential distinctions
+
+- The catalyst is returned only on the declared success event; failure output is unconstrained.
+- Success probability is fixed as error tends to zero; constants need not be uniform near either transition.
+- The mode count and target dimension are fixed. All initial shared catalyst modes are counted.
+- Mean initial photons are different from energy consumed, preparation work, control work and runtime.
+- Exact finite-energy attainment has infinite Schmidt rank; positive-error constructions can be finite rank.
+- The lower bound covers mixed retained success outputs, but the initial catalyst is pure.
+- The one-mode subcritical optimum has an exact constant. General fixed-mode logarithmic and power laws are order statements.
+- Stochastic conversion, average Schmidt-tail monotonicity and infinite-dimensional SLOCC are attributed foundations; the claimed addition is the optimized oscillator energy-success-error law.
+
