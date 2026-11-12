@@ -12,7 +12,7 @@ E(C)=
 \sum_{a=1}^{m}a_a^\dagger a_a+
 \sum_{b=1}^{m}b_b^\dagger b_b
 \right|C\right\rangle.
-\tag{1}
+\qquad\text{(1)}
 ```
 
 The corresponding excitation energy is $`\hbar\omega E(C)`$. Both parties' photons are counted, including any local squeezing or displacement in the initial catalyst. All initially shared entanglement is contained in these catalyst modes.
@@ -22,7 +22,7 @@ The target registers $`A_T,B_T`$ are initially in a product pure state. Their de
 ```math
 |\Phi_d\rangle=
 \frac1{\sqrt d}\sum_{r=0}^{d-1}|r\rangle_{A_T}|r\rangle_{B_T}.
-\tag{2}
+\qquad\text{(2)}
 ```
 
 The target dimension is fixed. For $`d=2`$ this is one Bell pair; $`d=2^k`$ represents $`k`$ Bell pairs.
@@ -42,7 +42,7 @@ F_{\rm joint}
 =
 \langle C,\Phi_d|\rho_{\rm suc}|C,\Phi_d\rangle
 \ge1-\varepsilon.
-\tag{3}
+\qquad\text{(3)}
 ```
 
 This is squared fidelity with the complete pure reference. It requires return of the original catalyst, preparation of the target and their joint decoupling. It is stronger than requiring separate accurate marginals without a joint condition. The associated purified distance is $`\sqrt{1-F_{\rm joint}}`$.
@@ -65,7 +65,7 @@ E(C):
 p_{\rm suc}\ge s,\quad F_{\rm joint}\ge1-\varepsilon
 \end{array}
 \right\}.
-\tag{4}
+\qquad\text{(4)}
 ```
 
 The infimum includes infinite-support states with finite mean energy. Every upper bound at $`\varepsilon>0`$ also has a finite-support implementation.
@@ -79,7 +79,7 @@ g=d^{1/m}s,\qquad
 s_c=d^{-1/m},\qquad
 a_m(s,d)=
 \frac{\log g}{\log(1/s)}.
-\tag{5}
+\qquad\text{(5)}
 ```
 
 The logarithm base is immaterial in this ratio.
@@ -104,7 +104,7 @@ The mechanism has two parts. The target multiplies Schmidt rank by $`d`$ and for
 p_{\rm exact}^{\max}(E;d)
 =
 \frac{E}{dE+d-1}.
-\tag{6}
+\qquad\text{(6)}
 ```
 
 It is attained by an infinite-support finite-energy pure catalyst. Equivalently, for $`0\lt s\lt 1/d`$,
@@ -118,7 +118,7 @@ E_1(0;s,d)
 E_1(\varepsilon;s,d)
 =
 \frac{s(d-1)}{1-ds}.
-\tag{7}
+\qquad\text{(7)}
 ```
 
 [Exact success](exact_success.md) proves these statements. For $`m>1`$, the threshold and divergence orders are established, but no corresponding exact finite-error frontier or simple exact subcritical energy constant is claimed.
@@ -129,7 +129,7 @@ E_1(\varepsilon;s,d)
 
 ```math
 m>\frac{\log d}{\log(1/s)}.
-\tag{8}
+\qquad\text{(8)}
 ```
 
 Thus the smallest admissible integer mode count per party is
@@ -140,7 +140,7 @@ m_{\min}^{\rm exact}(s,d)
 \left\lfloor
 \frac{\log d}{\log(1/s)}
 \right\rfloor+1.
-\tag{9}
+\qquad\text{(9)}
 ```
 
 The strict inequality matters at an integer boundary. These are exact finite-energy statements with infinite Fock support. Finite-support versions approach the same task at every positive error. [The mode-threshold page](mode_threshold.md) gives the proof and examples.

@@ -76,7 +76,7 @@ Both sides of the inequality may be infinite. Equality is attainable by assignin
 To prove the bound, let $`\rho`$ be either local reduced state and let $`\Pi_h`$ project onto the local Fock states with at most $`h`$ photons. Its rank is $`A_m(h)`$. The Ky Fan variational principle gives
 
 ```math
-\operatorname{Tr}(\rho\Pi_h)
+\mathrm{Tr}(\rho\Pi_h)
 \leq\sum_{j=1}^{A_m(h)}p_j.
 ```
 
@@ -84,8 +84,8 @@ The integer-valued spectral decomposition of the number operator and Tonelli's t
 
 ```math
 \begin{aligned}
-\operatorname{Tr}(N_m\rho)
-&=\sum_{h\geq0}\left[1-\operatorname{Tr}(\rho\Pi_h)\right]\\
+\mathrm{Tr}(N_m\rho)
+&=\sum_{h\geq0}\left[1-\mathrm{Tr}(\rho\Pi_h)\right]\\
 &\geq\sum_{h\geq0}\sum_{j>A_m(h)}p_j\\
 &=\sum_{j\geq1}e_jp_j.
 \end{aligned}

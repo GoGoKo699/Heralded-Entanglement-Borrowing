@@ -124,7 +124,7 @@ The Schmidt tails lie in $`[0,1]`$. For countable outcomes the preceding sums th
 For clarity about limiting protocols, let $`\sigma_{\mathrm{succ}}`$ denote the unnormalized successful retained output. Put
 
 ```math
-u=\operatorname{Tr}\sigma_{\mathrm{succ}},
+u=\mathrm{Tr}\sigma_{\mathrm{succ}},
 \qquad
 v=\langle T|\sigma_{\mathrm{succ}}|T\rangle.
 ```
@@ -260,7 +260,7 @@ Let $`\epsilon_j\downarrow0`$ and choose protocols whose energies approach the a
 In particular, $`P_K^{(j)}\leq C/K`$. This uniform tail bound gives an $`\ell^1`$-convergent subsequence of the sorted probability vectors, with a normalized limit $`p`$. Lower semicontinuity gives
 
 ```math
-\mu_1(p)\leq\liminf_j\mu_1(p^{(j)})<\infty.
+\mu_1(p)\leq\liminf_j\mu_1(p^{(j)})\lt \infty.
 ```
 
 At every fixed $`k`$, both $`P_k^{(j)}`$ and the repeated-spectrum tail $`Q_k^{(j)}`$ converge. Passing to the limit in the proved tail inequality gives $`P_k\geq sQ_k`$. Summing these nonnegative inequalities then yields the exact mean-index inequality for $`p`$, and therefore
@@ -276,7 +276,7 @@ The exact construction supplies the reverse inequality. Consequently
 \boxed{
 \lim_{\epsilon\downarrow0}E_1(\epsilon;s,d)
 =\frac{s(d-1)}{1-ds},
-\qquad 0<s<1/d.
+\qquad 0\lt s\lt 1/d.
 }
 ```
 
