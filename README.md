@@ -49,6 +49,16 @@ The proof combines established Schmidt-tail conversion theory with a fidelity-to
 
 [The LLM reading guide](llms.txt) maps scientific questions to authoritative pages.
 
+## Learn the project
+
+The single educational anchor is John Watrous, [*The Theory of Quantum Information* (2018)](https://cs.uwaterloo.ca/~watrous/TQI/), using the author's available manuscript. Its treatment of fidelity, majorization and bipartite entanglement supplies the finite-dimensional foundations; the oscillator and heralded-energy arguments are developed in this project.
+
+| Entry | What it provides |
+|---|---|
+| [Worked example](learning/WORKED_EXAMPLE.md) | A complete finite Bell-pair experiment: catalyst probabilities, local filter, success, joint fidelity and photon inventory. |
+| [30-milestone map](learning/MILESTONES.md) | A shared route from quantum-state foundations to the construction, converse, mode threshold and physical meaning. |
+| [Watrous bridge](learning/WATROUS_BRIDGE.md) | Verified source sections, notation translations and the additional steps connecting the textbook to the project. |
+
 ## Reproduce the finite checks
 
 With Python 3.11 or later, run from the repository root:

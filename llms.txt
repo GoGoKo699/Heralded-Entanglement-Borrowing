@@ -18,6 +18,15 @@ This repository studies the minimum initial total photon inventory of a known pu
 
 For a theorem audit, read model, spectral_energy, converse, construction, exact_success and mode_threshold in that order. For the physical story, read README, model and interpretation, then follow the theorem pointers. All mathematical statements use joint squared fidelity with the original pure catalyst tensor the target.
 
+## Learning routes
+
+- The single educational anchor is John Watrous, The Theory of Quantum Information (2018), using the author's available manuscript.
+- learning/WORKED_EXAMPLE.md gives an explicit finite Bell-pair construction with exact probabilities, fidelity and initial photons.
+- learning/MILESTONES.md gives the common M01–M30 understanding map, with earlier dependencies and source pointers.
+- learning/WATROUS_BRIDGE.md translates the textbook's Schmidt and fidelity conventions and supplies the missing oscillator and heralding connections.
+
+For self-directed study, start with the worked example, then follow the milestone map alongside the bridge. The scientific pages own the exact theorem statements and proofs. The primary research references provide attribution beyond the educational anchor.
+
 ## Essential distinctions
 
 - The catalyst is returned only on the declared success event; failure output is unconstrained.
