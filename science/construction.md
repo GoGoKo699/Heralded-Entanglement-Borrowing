@@ -2,7 +2,7 @@
 
 The construction uses a geometrically weighted spectrum on logarithmic Schmidt-rank blocks. A two-outcome filter announces success with probability exactly $`s`$. After local reindexing, the successful state approximates the original catalyst and $`|\Phi_d\rangle`$ jointly.
 
-Throughout, $`m\ge1`$, $`d\ge2`$ and $`0<s<1`$ are fixed. The [model](model.md) defines the charged inventory and allowed operations.
+Throughout, $`m\ge1`$, $`d\ge2`$ and $`0\lt s\lt 1`$ are fixed. The [model](model.md) defines the charged inventory and allowed operations.
 
 ## 1. A normalized self-similar spectrum
 
@@ -54,7 +54,7 @@ p_{\lceil j/d\rceil}^{(\infty)}.
 \tag{5}
 ```
 
-Normalization holds for every $`s<1`$, even when the associated mean photon number is infinite. Finite truncations below always have finite energy.
+Normalization holds for every $`s\lt 1`$, even when the associated mean photon number is infinite. Finite truncations below always have finite energy.
 
 ## 2. A finite cutoff and a physical catalyst
 
@@ -277,7 +277,7 @@ E_{m,L}
 \tag{23}
 ```
 
-A requested error $`0<\varepsilon<1`$ is met by taking
+A requested error $`0\lt \varepsilon\lt 1`$ is met by taking
 
 ```math
 L=
@@ -317,7 +317,7 @@ E_{1,L}
 \tag{26}
 ```
 
-This follows by summing the consecutive photon numbers $`j-1`$ in each block. When $`ds<1`$, it tends to $`s(d-1)/(1-ds)`$, the sharp [exact-success budget](exact_success.md).
+This follows by summing the consecutive photon numbers $`j-1`$ in each block. When $`ds\lt 1`$, it tends to $`s(d-1)/(1-ds)`$, the sharp [exact-success budget](exact_success.md).
 
 ## 6. The cutoff remains a resource
 

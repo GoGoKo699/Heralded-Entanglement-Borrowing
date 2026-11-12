@@ -7,7 +7,7 @@ The success threshold is determined by how many orthogonal catalyst states fit b
 For $`m`$ modes at one party, the number of Fock basis vectors with total photon number at most $`h\ge0`$ is
 
 ```math
-N_m(h)
+A_m(h)
 =
 \#\{(n_1,\ldots,n_m)\in\mathbb N_0^m:
 n_1+\cdots+n_m\le h\}
@@ -19,7 +19,7 @@ n_1+\cdots+n_m\le h\}
 Enumerate the corresponding photon numbers with multiplicity as $`e_1\le e_2\le\cdots`$, with $`e_1=0`$. At fixed $`m`$,
 
 ```math
-N_m(h)
+A_m(h)
 =
 \frac{h^m}{m!}\bigl(1+O_m(h^{-1})\bigr),
 \qquad
@@ -90,7 +90,7 @@ For any nonnegative increasing energy sequence with $`e_1=0`$, summation by part
 
 The equality holds by monotone summation, including the possibility that both sides are infinite.
 
-To use (7), group the indices in (8) into disjoint blocks $`d^\ell\le k<d^{\ell+1}`$. Since the tails decrease,
+To use (7), group the indices in (8) into disjoint blocks $`d^\ell\le k\lt d^{\ell+1}`$. Since the tails decrease,
 
 ```math
 \begin{aligned}
@@ -122,7 +122,7 @@ for all sufficiently large $`\ell`$. Substituting (7) into (9) shows that finite
 
 Consequently exact return at finite energy is impossible when $`sd^{1/m}\ge1`$.
 
-Conversely, the [self-similar exact construction](exact_success.md) assigns block mass proportional to $`s^\ell`$ at photon cost of order $`d^{\ell/m}`$. Its mean energy is finite when $`sd^{1/m}<1`$. This establishes the necessary and sufficient condition
+Conversely, the [self-similar exact construction](exact_success.md) assigns block mass proportional to $`s^\ell`$ at photon cost of order $`d^{\ell/m}`$. Its mean energy is finite when $`sd^{1/m}\lt 1`$. This establishes the necessary and sufficient condition
 
 ```math
 \boxed{
@@ -147,7 +147,7 @@ At nonzero error, the tail recurrence becomes
 \tag{13}
 ```
 
-For fixed $`0<s<1`$, [the converse](converse.md) proves that nonzero tails of order $`s^\ell`$ must persist through
+For fixed $`0\lt s\lt 1`$, [the converse](converse.md) proves that nonzero tails of order $`s^\ell`$ must persist through
 
 ```math
 L_\varepsilon
@@ -172,7 +172,7 @@ where $`\ell_0`$ is a fixed finite index.
 
 The [finite construction](construction.md) attains the same sum with $`L=\log(1/\varepsilon)/\log(1/s)+O_{s,d}(1)`$. Thus the three different divergence classes in the [main theorem](model.md) follow from an ordinary geometric series:
 
-- If $`sd^{1/m}<1`$, the energy stays bounded. It is also bounded away from zero at small error by (13) at $`k=1`$ and $`e_2=1`$.
+- If $`sd^{1/m}\lt 1`$, the energy stays bounded. It is also bounded away from zero at small error by (13) at $`k=1`$ and $`e_2=1`$.
 - If $`sd^{1/m}=1`$, each forced rank scale has constant-order energy cost, producing $`\Theta(\log(1/\varepsilon))`$.
 - If $`sd^{1/m}>1`$, the last forced rank scales dominate. Their cost is $`\Theta(\varepsilon^{-a_m})`$, where
 
@@ -215,7 +215,7 @@ The inequality is strict because the equality case has a divergent mean energy. 
 
 For example, one mode per party at success $`1/2`$ is precisely critical and needs logarithmically increasing mean energy as the error vanishes. Two modes per party put the same success promise below the threshold, permitting exact finite-energy return with infinite support.
 
-For every fixed $`s<1`$ and finite $`d`$, some finite mode count satisfies (12). This statement does not give a uniform energy bound as $`s\to1`$ or as $`m`$ changes. The constants in the fixed-mode energy laws are allowed to depend on $`m`$.
+For every fixed $`s\lt 1`$ and finite $`d`$, some finite mode count satisfies (12). This statement does not give a uniform energy bound as $`s\to1`$ or as $`m`$ changes. The constants in the fixed-mode energy laws are allowed to depend on $`m`$.
 
 ## 5. Why the inventory must include modes and cutoff
 

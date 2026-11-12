@@ -2,7 +2,7 @@
 
 The result concerns a pure catalyst in a fixed number $`m`$ of equal-frequency oscillator modes per party. An LOCC protocol succeeds with probability at least a fixed $`s`$, and its conditional output has joint squared fidelity at least $`1-\varepsilon`$ with the original catalyst tensored with $`\Phi_d`$. Failure can consume the catalyst. The optimized resource is its initial total mean photon number.
 
-The central conclusion is the success threshold $`s_c=d^{-1/m}`$: finite-energy exact return is possible below it; at the threshold the approximate cost grows logarithmically; above it, for fixed $`s<1`$, the cost has the matched power
+The central conclusion is the success threshold $`s_c=d^{-1/m}`$: finite-energy exact return is possible below it; at the threshold the approximate cost grows logarithmically; above it, for fixed $`s\lt 1`$, the cost has the matched power
 
 ```math
 E_m(\varepsilon;s,d)

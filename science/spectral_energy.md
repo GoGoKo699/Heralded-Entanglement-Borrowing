@@ -147,7 +147,7 @@ This is why finite degeneracies do not create a loophole in the [converse](conve
 \sum_{\ell\leq L}(d^{1/m}s)^\ell.
 ```
 
-Conversely, placing a spectrum with mass $`O_{s,d}(s^\ell)`$ in the block $`d^{\ell-1}<j\leq d^\ell`$ costs at most a constant times the same sum. The [construction](construction.md) has exactly this form. The change from a convergent sum to a logarithmic or growing geometric sum yields the [mode-dependent threshold](mode_threshold.md).
+Conversely, placing a spectrum with mass $`O_{s,d}(s^\ell)`$ in the block $`d^{\ell-1}\lt j\leq d^\ell`$ costs at most a constant times the same sum. The [construction](construction.md) has exactly this form. The change from a convergent sum to a logarithmic or growing geometric sum yields the [mode-dependent threshold](mode_threshold.md).
 
 ## One-mode product identity
 

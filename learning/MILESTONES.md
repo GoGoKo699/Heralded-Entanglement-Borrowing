@@ -138,7 +138,7 @@ Watrous's fidelity function is the unsquared root fidelity. The project's $`F_{\
 
 **Central question:** How many orthogonal $`m`$-mode oscillator states fit below a given total photon number?
 
-**Understanding target:** Interpret the count $`N_m(h)=\binom{h+m}{m}`$ and its fixed-$`m`$ consequence $`e_j=\Theta_m(j^{1/m})`$ for ordered energy levels. Explain why low-energy degeneracy increases with the mode count.
+**Understanding target:** Interpret the count $`A_m(h)=\binom{h+m}{m}`$ and its fixed-$`m`$ consequence $`e_j=\Theta_m(j^{1/m})`$ for ordered energy levels. Explain why low-energy degeneracy increases with the mode count.
 
 **Dependencies and story role:** M01, M02. This supplies the physical rank-to-energy relation.
 
@@ -166,7 +166,7 @@ Watrous's fidelity function is the unsquared root fidelity. The project's $`F_{\
 
 **Central question:** Which task does $`E_m(\varepsilon;s,d)`$ optimize?
 
-**Understanding target:** Assemble a known pure catalyst, fixed $`m,d,0<s<1`$, a success-conditioned joint fidelity promise, unrestricted failure and the initial photon objective. Explain the order “fix the parameters, then send $`\varepsilon`$ to zero,” and separate finite mean energy from finite support.
+**Understanding target:** Assemble a known pure catalyst, fixed $`m,d,0\lt s\lt 1`$, a success-conditioned joint fidelity promise, unrestricted failure and the initial photon objective. Explain the order “fix the parameters, then send $`\varepsilon`$ to zero,” and separate finite mean energy from finite support.
 
 **Dependencies and story role:** M01–M11. This integrates the background into the precise research question.
 
@@ -194,7 +194,7 @@ Watrous's fidelity function is the unsquared root fidelity. The project's $`F_{\
 
 **Central question:** Which source probabilities can reproduce themselves after target replication and a successful filter?
 
-**Understanding target:** Explain the decreasing block spectrum $`p_j=A(s/d)^{\lceil\log_d j\rceil}`$, its block multiplicities and its normalization for every $`s<1`$. Distinguish normalization from finite mean energy.
+**Understanding target:** Explain the decreasing block spectrum $`p_j=A(s/d)^{\lceil\log_d j\rceil}`$, its block multiplicities and its normalization for every $`s\lt 1`$. Distinguish normalization from finite mean energy.
 
 **Dependencies and story role:** M02, M10, M13. This constructs the first attaining object.
 
@@ -348,7 +348,7 @@ Watrous's fidelity function is the unsquared root fidelity. The project's $`F_{\
 
 **Central question:** When does finite mean energy permit exact joint return, and how many modes are needed?
 
-**Understanding target:** Combine the infinite-support construction with the zero-error converse to establish $`s<d^{-1/m}`$. Explain the strict integer condition $`m>\log d/\log(1/s)`$ and why equality belongs to the divergent-energy boundary.
+**Understanding target:** Combine the infinite-support construction with the zero-error converse to establish $`s\lt d^{-1/m}`$. Explain the strict integer condition $`m>\log d/\log(1/s)`$ and why equality belongs to the divergent-energy boundary.
 
 **Dependencies and story role:** M12, M16, M21, M23, M24. This turns the phase law into an exact feasibility and mode-count statement.
 
@@ -362,13 +362,13 @@ Watrous's fidelity function is the unsquared root fidelity. The project's $`F_{\
 
 **Central question:** Why can the one-mode exact budget be determined beyond its asymptotic order?
 
-**Understanding target:** Use the affine identity $`\mu(q)=d\mu(p)+(d-1)/2`$ and average tail monotonicity to derive the energy–success constraint. Explain how the self-similar construction saturates it, giving $`E_1(0;s,d)=s(d-1)/(1-ds)`$ for $`s<1/d`$.
+**Understanding target:** Use the affine identity $`\mu(q)=d\mu(p)+(d-1)/2`$ and average tail monotonicity to derive the energy–success constraint. Explain how the self-similar construction saturates it, giving $`E_1(0;s,d)=s(d-1)/(1-ds)`$ for $`s\lt 1/d`$.
 
 **Dependencies and story role:** M08, M11, M13, M15, M25. This identifies the special exact statement supported by the one-mode spectrum.
 
 **Conceptual connection:** A precise relation between rank and photon number strengthens a matching-order result into an exact optimal budget.
 
-**Source pointers:** Watrous §6.2.1 for stochastic conversion foundations; [one-mode product identity](../science/spectral_energy.md#one-mode-product-identity); [sharp exact bound](../science/exact_success.md#3-a-sharp-one-mode-bound-for-every-energy-budget).
+**Source pointers:** Watrous §6.2.1 for finite-dimensional pure-state conversion foundations; [one-mode product identity](../science/spectral_energy.md#one-mode-product-identity); [sharp exact bound](../science/exact_success.md#3-a-sharp-one-mode-bound-for-every-energy-budget).
 
 ## M27 — Compactness controls catalysts that change with accuracy
 
@@ -418,7 +418,7 @@ Watrous's fidelity function is the unsquared root fidelity. The project's $`F_{\
 
 **Central question:** How do the physical task, two proof routes and final limitations form one scientific account?
 
-**Understanding target:** State the pure-catalyst, fixed-$`m,d,s<1`$ task with conditional joint squared fidelity and destructive failure allowed. Explain how the explicit spectrum/filter and arbitrary-LOCC converse match through the oscillator density of states, identify the exact one-mode result, and retain the boundaries on mixed catalysts, changing parameters and implementation cost.
+**Understanding target:** State the pure-catalyst, fixed-$`m,d,s\lt 1`$ task with conditional joint squared fidelity and destructive failure allowed. Explain how the explicit spectrum/filter and arbitrary-LOCC converse match through the oscillator density of states, identify the exact one-mode result, and retain the boundaries on mixed catalysts, changing parameters and implementation cost.
 
 **Dependencies and story role:** M12–M29. This is the global synthesis of the project, with no additional unannounced prerequisite or claim.
 

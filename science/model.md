@@ -35,7 +35,7 @@ The allowed protocols use local operations and classical communication (LOCC), w
 
 The converse applies to finite-round LOCC and to trace-norm limits of their subnormalized announced-success outputs, with the success probability and retained output converging. This includes the corresponding physically defined limits of sequential LOCC protocols. The construction uses a single local two-outcome filter, one announcement and local isometries; no limiting sequence of communication rounds is needed.
 
-Fix a promised success probability $`0<s<1`$. An announced success has actual probability $`p_{\rm suc}\ge s`$. Its normalized retained state $`\rho_{\rm suc}`$ must obey
+Fix a promised success probability $`0\lt s\lt 1`$. An announced success has actual probability $`p_{\rm suc}\ge s`$. Its normalized retained state $`\rho_{\rm suc}`$ must obey
 
 ```math
 F_{\rm joint}
@@ -90,9 +90,9 @@ The logarithm base is immaterial in this ratio.
 
 | Success promise | Optimal initial photon inventory as $`\varepsilon\downarrow0`$ |
 |---|---|
-| $`0<s<s_c`$ | $`E_m(\varepsilon;s,d)=\Theta_{m,s,d}(1)`$; exact joint return is possible at finite mean energy |
+| $`0\lt s\lt s_c`$ | $`E_m(\varepsilon;s,d)=\Theta_{m,s,d}(1)`$; exact joint return is possible at finite mean energy |
 | $`s=s_c`$ | $`E_m(\varepsilon;s,d)=\Theta_{m,d}(\log(1/\varepsilon))`$ |
-| $`s_c<s<1`$ | $`E_m(\varepsilon;s,d)=\Theta_{m,s,d}(\varepsilon^{-a_m(s,d)})`$ |
+| $`s_c\lt s\lt 1`$ | $`E_m(\varepsilon;s,d)=\Theta_{m,s,d}(\varepsilon^{-a_m(s,d)})`$ |
 
 At or above $`s_c`$, exact joint return at finite mean energy is impossible. The critical logarithm and the supercritical power are matching lower and upper orders over all allowed pure catalysts and LOCC protocols, including mixed retained success outputs.
 
@@ -107,7 +107,7 @@ p_{\rm exact}^{\max}(E;d)
 \tag{6}
 ```
 
-It is attained by an infinite-support finite-energy pure catalyst. Equivalently, for $`0<s<1/d`$,
+It is attained by an infinite-support finite-energy pure catalyst. Equivalently, for $`0\lt s\lt 1/d`$,
 
 ```math
 E_1(0;s,d)
@@ -125,7 +125,7 @@ E_1(\varepsilon;s,d)
 
 ## What the mode count changes
 
-**Corollary 3 (exact finite-energy mode threshold).** At fixed $`d\ge2`$ and $`0<s<1`$, exact joint return with finite mean energy is possible precisely when
+**Corollary 3 (exact finite-energy mode threshold).** At fixed $`d\ge2`$ and $`0\lt s\lt 1`$, exact joint return with finite mean energy is possible precisely when
 
 ```math
 m>\frac{\log d}{\log(1/s)}.

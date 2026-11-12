@@ -12,13 +12,13 @@ The critical success probability is
 \boxed{s_c=d^{-1/m}.}
 ```
 
-At fixed $`m\ge1`$, $`d\ge2`$ and $`0<s<1`$, the minimum initial inventory satisfies:
+At fixed $`m\ge1`$, $`d\ge2`$ and $`0\lt s\lt 1`$, the minimum initial inventory satisfies:
 
 | Success requirement | Optimal photon inventory as $`\varepsilon\downarrow0`$ |
 |---|---|
-| $`s<s_c`$ | Bounded; exact joint return is possible at finite mean energy |
+| $`s\lt s_c`$ | Bounded; exact joint return is possible at finite mean energy |
 | $`s=s_c`$ | $`\Theta(\log(1/\varepsilon))`$ |
-| $`s_c<s<1`$ | $`\Theta(\varepsilon^{-a_m})`$, where $`a_m=\log(d^{1/m}s)/\log(1/s)`$ |
+| $`s_c\lt s\lt 1`$ | $`\Theta(\varepsilon^{-a_m})`$, where $`a_m=\log(d^{1/m}s)/\log(1/s)`$ |
 
 The lower bounds cover all allowed LOCC protocols and mixed retained success outputs. Explicit finite catalysts attain the logarithmic and power orders. The [model](science/model.md) states the complete assumptions, operation closure and limiting convention.
 

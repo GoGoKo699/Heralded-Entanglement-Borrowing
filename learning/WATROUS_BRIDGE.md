@@ -57,7 +57,7 @@ F_{\rm joint}
 
 Consequently the promised error $`F_{\rm joint}\ge1-\varepsilon`$ means $`F_W\ge\sqrt{1-\varepsilon}`$. The associated purified distance is at most $`\sqrt\varepsilon`$. This square matters when translating a small overlap error into the exponent of an energy bound.
 
-The reference contains both the returned catalyst and the target. A good target marginal alone does not test whether the catalyst was returned and decoupled. The state $`\rho_{\rm suc}`$ is normalized conditional on the announced success; its probability is a separate resource parameter $`s`$.
+The reference contains both the returned catalyst and the target. A good target marginal alone does not test whether the catalyst was returned and decoupled. The state $`\rho_{\rm suc}`$ is normalized conditional on the announced success; its actual probability is at least the separately promised parameter $`s`$.
 
 ### Majorization and tail direction
 
@@ -132,9 +132,9 @@ The required tails then cost a geometric sum with ratio $`g=sd^{1/m}`$. The [mat
 
 | Ratio $`g`$ | Initial inventory as joint error vanishes |
 |---|---|
-| $`g<1`$ | Bounded; an infinite-support state permits exact return at finite energy. |
+| $`g\lt 1`$ | Bounded; an infinite-support state permits exact return at finite energy. |
 | $`g=1`$ | $`\Theta(\log(1/\varepsilon))`$. |
-| $`g>1`$, with $`s<1`$ | $`\Theta(\varepsilon^{-a_m})`$, where $`a_m=\log(g)/\log(1/s)`$. |
+| $`g>1`$, with $`s\lt 1`$ | $`\Theta(\varepsilon^{-a_m})`$, where $`a_m=\log(g)/\log(1/s)`$. |
 
 These are fixed-$`m,d,s`$ limits. The [one-mode exact optimum](../science/exact_success.md) further evaluates the subcritical budget as $`s(d-1)/(1-ds)`$. Its failure output is vacuum, so successive exact successes have probability $`s^k`$ after $`k`$ repetitions. Conditional return does not provide an indefinitely reusable entanglement source.
 

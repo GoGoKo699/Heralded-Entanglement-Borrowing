@@ -6,7 +6,7 @@ This page proves the exact construction and the sharp initial-energy budget for 
 
 ## 1. Exact conversion with finite mean energy
 
-Fix $`d\ge2`$ and $`0<s<1`$. Use the decreasing probability sequence
+Fix $`d\ge2`$ and $`0\lt s\lt 1`$. Use the decreasing probability sequence
 
 ```math
 p_1=\frac{1-s}{1-s/d},
@@ -166,7 +166,7 @@ s\left[d\mu(p)+\frac{d-1}{2}\right].
 \tag{14}
 ```
 
-For finite mean energy this requires $`s<1/d`$ and yields
+For finite mean energy this requires $`s\lt 1/d`$ and yields
 
 ```math
 E(C)\ge
@@ -174,7 +174,7 @@ E(C)\ge
 \tag{15}
 ```
 
-The construction (1) attains equality. Indeed, when $`ds<1`$ its moment is finite, and (4) makes (14) an equality. Therefore
+The construction (1) attains equality. Indeed, when $`ds\lt 1`$ its moment is finite, and (4) makes (14) an equality. Therefore
 
 ```math
 \boxed{
@@ -199,7 +199,7 @@ The right side is strictly below $`1/d`$ and approaches that threshold only as $
 
 ## 4. The sharp positive-error limit
 
-For fixed $`0<s<1/d`$,
+For fixed $`0\lt s\lt 1/d`$,
 
 ```math
 \boxed{
@@ -235,7 +235,7 @@ This order of operations matters. Summing an error-dependent additive bound over
 
 ## 5. Exactness, finite rank and repeated use
 
-A finite-rank pure catalyst cannot return exactly while producing $`|\Phi_d\rangle`$ on a nonzero-probability LOCC branch. If its Schmidt rank is $`D<\infty`$, the desired product has rank $`dD>D`$, whereas a local Kraus branch cannot increase Schmidt rank. The exact finite-energy states above evade this finite-rank obstruction through infinite support, not through an uncharged extra shared system.
+A finite-rank pure catalyst cannot return exactly while producing $`|\Phi_d\rangle`$ on a nonzero-probability LOCC branch. If its Schmidt rank is $`D\lt \infty`$, the desired product has rank $`dD>D`$, whereas a local Kraus branch cannot increase Schmidt rank. The exact finite-energy states above evade this finite-rank obstruction through infinite support, not through an uncharged extra shared system.
 
 Exact return is promised only on success. Repeating the exact protocol $`k`$ times gives $`k`$ consecutive successes with probability $`s^k`$. A failure consumes the catalyst. Neither the construction nor the bound describes an indefinitely reusable entanglement source.
 
