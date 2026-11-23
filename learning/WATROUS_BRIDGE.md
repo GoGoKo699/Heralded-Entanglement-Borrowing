@@ -146,8 +146,8 @@ Put $`\beta_i=s\lambda_i`$. There is a unique $`q_s\in(0,1)`$ satisfying
 A tree vertex of weight $`w`$ has children of weights $`w\beta_i`$. Raising weights to $`q_s`$ makes their sum conserved at every split. Stop branches when they first cross a small threshold $`x`$. The stopped weights lie between fixed multiples of $`x`$, so their number is of order $`x^{-q_s}`$. The corresponding sorted spectrum and tail obey
 
 ```math
-p_j^\star=\Theta(j^{-1/q_s}),
-\qquad R_k:=\sum_{j>k}p_j^\star=\Theta(k^{-b_s}),
+r_j=\Theta(j^{-1/q_s}),
+\qquad R_k:=\sum_{j>k}r_j=\Theta(k^{-b_s}),
 \qquad b_s=\frac1{q_s}-1.
 ```
 
@@ -156,7 +156,7 @@ This weighted counting replaces the uniform target's equal-size blocks. Constant
 For $`m`$ modes per party, the number of Fock states with at most $`h`$ photons is $`\binom{h+m}{m}`$. Their ordered energies satisfy $`e_j=\Theta_m(j^{1/m})`$. Passive assignment gives
 
 ```math
-E_{\rm exact}=2\sum_j e_jp_j^\star
+E_{\rm exact}=2\sum_j e_jr_j
 =2\sum_{k\ge1}(e_{k+1}-e_k)R_k,
 ```
 

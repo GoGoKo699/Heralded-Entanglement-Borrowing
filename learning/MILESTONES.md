@@ -40,7 +40,7 @@ Watrous's fidelity function is the unsquared root fidelity. The project's $`F_{\
 
 **Central question:** What specifies the additional shared state required on success?
 
-**Understanding target:** Read a known target $`|T_\lambda\rangle=\sum_{i=1}^{d}\sqrt{\lambda_i}|i,i\rangle`$ with fixed decreasing positive probabilities and $`d\ge2`$. Explain the complete reference $`|C\rangle\otimes|T_\lambda\rangle`$, its product probabilities $`p_j\lambda_i`$ and its finite-rank multiplication by $`r`$. Recognize a uniform $`d`$-level target as a special case.
+**Understanding target:** Read a known target $`|T_\lambda\rangle=\sum_{i=1}^{d}\sqrt{\lambda_i}|i,i\rangle`$ with fixed decreasing positive probabilities and $`d\ge2`$. Explain the complete reference $`|C\rangle\otimes|T_\lambda\rangle`$, its product probabilities $`p_j\lambda_i`$ and its finite-rank multiplication by $`d`$. Recognize a uniform $`d`$-level target as a special case.
 
 **Dependencies and story role:** M02. This specifies the output before comparing targets of the same rank.
 
@@ -236,7 +236,7 @@ Watrous's fidelity function is the unsquared root fidelity. The project's $`F_{\
 
 **Central question:** How many coefficients of the optimal spectrum exceed a small weight?
 
-**Understanding target:** Define $`\beta_i=s\lambda_i`$ and the unique $`q_s`$ in $`(0,1)`$ satisfying $`\sum_i\beta_i^{q_s}=1`$. Explain conserved powered mass at a tree split, stopping leaves near a weight threshold, and the resulting $`p_j^\star=\Theta(j^{-1/q_s})`$ and $`R_k=\Theta(k^{-b_s})`$, $`b_s=1/q_s-1`$.
+**Understanding target:** Define $`\beta_i=s\lambda_i`$ and the unique $`q_s`$ in $`(0,1)`$ satisfying $`\sum_i\beta_i^{q_s}=1`$. Explain conserved powered mass at a tree split, stopping leaves near a weight threshold, and the resulting $`r_j=\Theta(j^{-1/q_s})`$ and $`R_k=\Theta(k^{-b_s})`$, $`b_s=1/q_s-1`$.
 
 **Dependencies and story role:** M10, M15. This extracts the quantitative large-index behavior needed to test physical energy.
 

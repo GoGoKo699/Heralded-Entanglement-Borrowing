@@ -2,11 +2,11 @@
 
 **How does the entanglement spectrum of a desired target determine the energy needed to borrow it?** This project gives the optimal exact catalyst and sharp energy–accuracy laws for a known pure oscillator source returned on a successful trial.
 
-Alice and Bob share a pure catalyst with a fixed number $`m`$ of equal-frequency oscillator modes each. Local operations and classical communication produce a prescribed finite pure target with Schmidt probabilities $`\lambda=(\lambda_1,\ldots,\lambda_r)`$. On an announced success of probability at least $`s`$, the full returned catalyst and target must have joint squared fidelity at least $`1-\varepsilon`$ with their desired product state. **Failure may consume the catalyst.** The resource $`E`$ is the catalyst's initial total mean photon number across both parties.
+Alice and Bob share a pure catalyst with a fixed number $`m`$ of equal-frequency oscillator modes each. Local operations and classical communication produce a prescribed finite pure target with Schmidt probabilities $`\lambda=(\lambda_1,\ldots,\lambda_d)`$. On an announced success of probability at least $`s`$, the full returned catalyst and target must have joint squared fidelity at least $`1-\varepsilon`$ with their desired product state. **Failure may consume the catalyst.** The resource $`E`$ is the catalyst's initial total mean photon number across both parties.
 
 ## The target spectrum controls the threshold
 
-For fixed $`m\ge1`$, positive target Schmidt probabilities of fixed rank $`r\ge2`$, and fixed $`0\lt s\lt 1`$, the critical success is
+For fixed $`m\ge1`$, positive target Schmidt probabilities of fixed rank $`d\ge2`$, and fixed $`0\lt s\lt 1`$, the critical success is
 
 ```math
 \boxed{
@@ -26,7 +26,7 @@ Here $`H_\alpha(\lambda)=\log(\sum_i\lambda_i^\alpha)/(1-\alpha)`$ is Rényi ent
 Define the unique $`q_s\in(0,1)`$ and exponent by
 
 ```math
-\sum_{i=1}^r(s\lambda_i)^{q_s}=1,
+\sum_{i=1}^d(s\lambda_i)^{q_s}=1,
 \qquad
 a=\frac{1}{m(1/q_s-1)}-1.
 ```
