@@ -47,9 +47,9 @@ Decreasing rearrangement is nonexpansive in $`\ell^1`$. For finite lists this fo
 
 ```math
 \begin{aligned}
-\|F_s(p)-F_s(u)\|_1
-&\le s\|p\otimes\lambda-u\otimes\lambda\|_1\\
-&=s\|p-u\|_1.
+\left\|F_s(p)-F_s(u)\right\|_1
+&\le s\left\|p\otimes\lambda-u\otimes\lambda\right\|_1\\
+&=s\left\|p-u\right\|_1.
 \end{aligned}
 ```
 

@@ -180,7 +180,7 @@ Watrous's fidelity function is the unsquared root fidelity. The project's $`F_{\
 
 **Central question:** How does adding an unequal target change the source spectrum?
 
-**Understanding target:** Construct $`q(p)=\operatorname{sort}(p\otimes\lambda)`$ by merging the $`d`$ weighted source streams. Explain why products from different source indices interleave, and recover $`q_j=p_{\lceil j/d\rceil}/d`$ and $`Q_{dk}=P_k`$ for a uniform target.
+**Understanding target:** Construct $`q(p)=\mathrm{sort}(p\otimes\lambda)`$ by merging the $`d`$ weighted source streams. Explain why products from different source indices interleave, and recover $`q_j=p_{\lceil j/d\rceil}/d`$ and $`Q_{dk}=P_k`$ for a uniform target.
 
 **Dependencies and story role:** M03, M08, M12. This identifies the spectral operation used by both the optimizer and the approximate converse.
 

@@ -108,7 +108,7 @@ Write the fixed known target in its Schmidt bases as
 We consider entangled targets with $`d\ge2`$. A maximally entangled $`d`$-level target has $`\lambda_i=1/d`$; a product target needs no borrowed entanglement. For source spectrum $`p`$, the joint reference spectrum is
 
 ```math
-q(p)=\operatorname{sort}\{p_j\lambda_i:j\ge1,\ 1\le i\le d\}.
+q(p)=\mathrm{sort}\{p_j\lambda_i:j\ge1,\ 1\le i\le d\}.
 ```
 
 For uniform targets this repeats every $`p_j/d`$ exactly $`d`$ times and gives $`Q_{dk}=P_k`$. With unequal targets, different product streams interleave. Their known sorted labels replace the special quotient-and-remainder indexing.

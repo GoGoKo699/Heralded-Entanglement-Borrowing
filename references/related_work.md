@@ -13,11 +13,11 @@ The [accuracy theorem](../science/target_accuracy.md) gives the matching bounded
 
 ## What the target-spectrum optimization adds
 
-The stochastic Schmidt-tail criterion and the vector formed by adding a failure mass to the largest target coefficient are inherited from Vidal and Owari et al. They are not new conversion criteria. Here the desired output itself contains the unknown-to-the-optimization catalyst spectrum $`p`$: it is $`\operatorname{sort}(p\otimes\lambda)`$. This self-consistency makes the map
+The stochastic Schmidt-tail criterion and the vector formed by adding a failure mass to the largest target coefficient are inherited from Vidal and Owari et al. They are not new conversion criteria. Here the desired output itself contains the unknown-to-the-optimization catalyst spectrum $`p`$: it is $`\mathrm{sort}(p\otimes\lambda)`$. This self-consistency makes the map
 
 ```math
 F_s(p)=(1-s)\delta_1
-+s\operatorname{sort}(p\otimes\lambda)
++s\mathrm{sort}(p\otimes\lambda)
 ```
 
 relevant. Majorization monotonicity and its $`\ell^1`$ contraction identify a unique fixed point that majorizes every exact feasible catalyst. Its explicit weighted-word spectrum therefore minimizes every increasing passive energy functional. Weighted-tree counting then connects the target spectrum to the oscillator density of states. A separate contraction on square-root Schmidt tails makes the exact spectrum control approximate mixed successful outputs and yields matching finite-cutoff energy orders.
