@@ -3,42 +3,118 @@
   "expressions": [
     {
       "path": "README.md",
-      "index": 6,
-      "source_sha256": "169f276a098a76b3e7aecd2b40a8eda3abfc1b8d3a64dfb89c7abe1ba8a0b4fb",
+      "index": 9,
+      "source_sha256": "0d5905feeefa6356ecf37737b528f733afd9608b265e39e74f50061bb394e20d",
       "required_text": [
         "s",
         "c",
-        "d",
+        "H",
         "m"
       ]
     },
     {
-      "path": "README.md",
-      "index": 18,
-      "source_sha256": "ff866483a4fd3a0fda20612678919430a415c3f2cafcd79c6a63bab7054ca8bf",
+      "path": "science/model.md",
+      "index": 28,
+      "source_sha256": "db33fce51a5e096d00a9770b01bc4b810fe0ccf2e2f6110a3439506653311695",
       "required_text": [
-        "p",
-        "exact",
-        "max",
-        "E",
-        "d"
+        "s",
+        "c",
+        "m"
       ]
     },
     {
-      "path": "science/model.md",
-      "index": 44,
-      "source_sha256": "ee5614f926c0abd06e9d3c6bcdfd9411985ef96e69e38dccb2ec150996319dd9",
+      "path": "science/target_spectrum.md",
+      "index": 12,
+      "source_sha256": "4cf251936014caee9c117244b1cb99ca8450ead5d6fffa13ccc7e03e8c772703",
       "required_text": [
+        "F",
+        "s",
+        "p",
+        "q"
+      ]
+    },
+    {
+      "path": "science/target_spectrum.md",
+      "index": 50,
+      "source_sha256": "a3762b62a1a55713060b1f03e84c56484ce9e71487a37279bdc6b25da6ea2b85",
+      "required_text": [
+        "K",
+        "s",
+        "1"
+      ]
+    },
+    {
+      "path": "science/target_spectrum.md",
+      "index": 62,
+      "source_sha256": "180f10b4ed232bfecc1a6eeddc3ca5f7f216dd768f523aa1afecc17ad9383d1f",
+      "required_text": [
+        "E",
         "m",
-        ">",
-        "log",
-        "d",
-        "s"
+        "2",
+        "e",
+        "r"
+      ]
+    },
+    {
+      "path": "science/target_spectrum.md",
+      "index": 91,
+      "source_sha256": "29f9793c74d538dd71c16aacc14fa9329a45fcda3ffbc407a08fa8090f8e368c",
+      "required_text": [
+        "r",
+        "R",
+        "q",
+        "b"
+      ]
+    },
+    {
+      "path": "science/target_accuracy.md",
+      "index": 42,
+      "source_sha256": "a88d2404ee98444f197e6d8d9a6fd2127869a4cccad170bef03286af322a0933",
+      "required_text": [
+        "P",
+        "R",
+        "s",
+        "1",
+        "2"
+      ]
+    },
+    {
+      "path": "science/target_accuracy.md",
+      "index": 66,
+      "source_sha256": "a9fc748ade056af6c5b7a8ce28349d8c53054923e0091bc7239903a52f20b920",
+      "required_text": [
+        "k",
+        "s",
+        "1",
+        "t"
+      ]
+    },
+    {
+      "path": "science/target_accuracy.md",
+      "index": 70,
+      "source_sha256": "3a8d65fdd338e2312117b2dcf9084334df312d0c0f588eaddc40aef348ce3b97",
+      "required_text": [
+        "v",
+        "q",
+        "b",
+        "s",
+        "t"
+      ]
+    },
+    {
+      "path": "science/target_accuracy.md",
+      "index": 71,
+      "source_sha256": "13cdec1d70ed5372f29581eed6ec6bc66649bdf5158471dfb5d6a42885152f22",
+      "required_text": [
+        "F",
+        "q",
+        "b",
+        "2"
       ]
     },
     {
       "path": "learning/WATROUS_BRIDGE.md",
-      "index": 10,
+      "index": 13,
       "source_sha256": "e9812829afceff84f901a05156edaa8a9704ff2633bdcb03358046a55e973f1e",
       "required_text": [
         "F",

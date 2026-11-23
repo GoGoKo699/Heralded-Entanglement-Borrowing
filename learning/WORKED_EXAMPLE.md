@@ -1,4 +1,8 @@
-# A finite example with four occupied number states
+# Worked borrowing filters: Bell and unequal targets
+
+Both examples use one oscillator per party and four occupied number states. They charge the total initial mean photons, keep the success probability exact, and compare the whole successful output with the original catalyst tensor the requested target. The second example shows why two targets of the same Schmidt rank can have different exact finite-energy thresholds.
+
+## Bell target: a four-state filter
 
 Alice and Bob share one oscillator each. They want to extract the Bell state
 
@@ -208,3 +212,150 @@ E_0
 Every finite cutoff still has nonzero return error: a source of Schmidt rank $`D`$ cannot produce the exact desired rank $`2D`$ on a nonzero-success LOCC branch. Zero-error attainment below the threshold uses the infinite-support, finite-mean-energy state. The finite examples demonstrate how its mean energy can stay bounded while its cutoff increases.
 
 The [verification script](../verification/run_checks.py) checks the same filter, vector overlap, conditional guarantee and energy accounting for several finite instances. Those calculations support the construction; the universal lower bound is the analytical [converse](../science/converse.md).
+
+
+## Unequal target: the spectrum changes the feasibility boundary
+
+Now request
+
+```math
+|T_\lambda\rangle
+=\sqrt{\frac9{10}}|00\rangle
++\sqrt{\frac1{10}}|11\rangle
+```
+
+with success probability $`s=3/5`$. For one mode per party, the [general threshold](../science/target_spectrum.md) is
+
+```math
+s_c(\lambda,1)
+=\frac1{(\sqrt{9/10}+\sqrt{1/10})^2}
+=\frac58.
+```
+
+Thus $`s=3/5\lt 5/8`$ permits exact joint return at finite mean photons in the infinite-support limit. A Bell target also has rank two, but its threshold is $`1/2`$; at the same success probability its optimal inventory instead diverges as accuracy improves. The comparison concerns two different requested states, not an extra free conversion between them.
+
+### Construct and truncate the optimal spectrum
+
+Here the root weight and edge factors are
+
+```math
+A=\frac{1-s}{1-s\lambda_1}=\frac{20}{23},
+\quad \beta_1=\frac{27}{50},
+\quad \beta_2=\frac3{50}.
+```
+
+The optimal [word spectrum](../science/target_spectrum.md) consists of the root and all words starting with label $`2`$. Its four largest entries are the root and the words $`2,21,211`$:
+
+```math
+r_1=\frac{20}{23},\quad
+r_2=\frac6{115},\quad
+r_3=\frac{81}{2875},\quad
+r_4=\frac{2187}{143750}.
+```
+
+Their sum is $`Z=138737/143750`$ and the omitted source tail is $`t=5013/143750`$. Renormalization gives the finite catalyst probabilities
+
+```math
+p=\frac1{138737}(125000,7500,4050,2187).
+```
+
+Assign these probabilities to $`|0,0\rangle,\ldots,|3,3\rangle`$, using their positive square roots as amplitudes. The initial total mean photons are
+
+```math
+E=2\sum_{j=1}^{4}(j-1)p_j
+=\frac{44322}{138737}
+\approx0.31946777.
+```
+
+Each local cutoff is three photons. This inventory is not the local work needed to implement the filter.
+
+### Apply the adjusted root filter
+
+The squared vacuum filter amplitude is
+
+```math
+\kappa
+=1-\frac{1-s}{p_1}
+=\frac{173763}{312500}.
+```
+
+Alice applies $`K=\sqrt\kappa\,|0\rangle\langle0|+\sum_{n=1}^{3}|n\rangle\langle n|`$ on the occupied support and announces its outcome. The success probability remains exactly
+
+```math
+p_1\kappa+\sum_{j=2}^{4}p_j
+=1-(1-s)=\frac35.
+```
+
+The normalized successful spectrum is
+
+```math
+u=\frac1{138737}(115842,12500,6750,3645).
+```
+
+Failure comes only from the attenuated root. It has probability $`2/5`$ and leaves the product vacuum. Retaining that failure output would change the operational fidelity being reported.
+
+### Sort the desired product labels
+
+The desired product spectrum contains the eight numbers $`p_j\lambda_i`$. Its four largest entries are shown with the actual successful coefficients:
+
+| Ordered entry | Catalyst index in the desired output | Target Schmidt label | Desired probability | Actual successful probability |
+|---:|---:|---:|---:|---:|
+| $`1`$ | $`1`$ | $`1`$ | $`112500/138737`$ | $`115842/138737`$ |
+| $`2`$ | $`1`$ | $`2`$ | $`12500/138737`$ | $`12500/138737`$ |
+| $`3`$ | $`2`$ | $`1`$ | $`6750/138737`$ | $`6750/138737`$ |
+| $`4`$ | $`3`$ | $`1`$ | $`3645/138737`$ | $`3645/138737`$ |
+
+For example, the fourth term uses catalyst index $`3`$ and target label $`1`$. It is not the fourth entry of a repeated-pair list. Each party therefore maps its four occupied source states to local oscillator/target labels
+
+```math
+|0\rangle\mapsto|0\rangle|0\rangle_T,\quad
+|1\rangle\mapsto|0\rangle|1\rangle_T,
+```
+
+```math
+|2\rangle\mapsto|1\rangle|0\rangle_T,\quad
+|3\rangle\mapsto|2\rangle|0\rangle_T.
+```
+
+These outputs are orthogonal, so this finite-support map extends to a local unitary with the target initialized in $`|0\rangle_T`$. No number measurement is made.
+
+The four omitted desired coefficients are
+
+```math
+\frac1{1387370}(19683,7500,4050,2187).
+```
+
+Their total mass is
+
+```math
+b=\frac{3342}{138737}
+=\frac{(1-s)t}{s(1-t)}.
+```
+
+The output agrees with desired entries two through four and moves this omitted mass to entry one: $`u_1=q_1+b`$. The source tail $`t`$ and omitted product mass $`b`$ are different quantities, just as in the Bell example.
+
+### Compute the complete joint overlap
+
+In the aligned Schmidt basis,
+
+```math
+\langle C,T_\lambda|\psi_{\rm suc}\rangle
+=\frac{22895+\sqrt{112500\cdot115842}}{138737}.
+```
+
+Therefore
+
+```math
+F_{\rm joint}\approx0.97588216,
+\qquad 1-F_{\rm joint}\approx0.02411784.
+```
+
+The convenient general bound also holds:
+
+```math
+1-F_{\rm joint}\le2b\approx0.04817749.
+```
+
+The fidelity is conditional on the successful $`3/5`$ of attempts and includes the returned oscillator state as well as the unequal target. Enlarging the sorted cutoff gives error tending to zero at the same success probability. Because $`s\lt 5/8`$, its initial photon inventory converges to the finite exact optimum. No simple rational formula for that general unequal-target optimum is asserted here.
+
+The [accuracy proof](../science/target_accuracy.md) establishes the all-size statement and its matching arbitrary-LOCC lower bound. The finite example illustrates the explicit construction and its resource accounting; it does not replace the proof.

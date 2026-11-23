@@ -15,6 +15,8 @@ from decimal import Decimal, getcontext
 from fractions import Fraction
 from pathlib import Path
 
+from check_target_spectrum import run_target_spectrum_checks
+
 
 getcontext().prec = 100
 D = Decimal
@@ -366,11 +368,13 @@ def main() -> None:
     parser.add_argument("--write-expected", action="store_true",
                         help="replace the expected numerical summary after reviewing a scientific change")
     args = parser.parse_args()
-    results = {"schema_version": 1,
+    results = {"schema_version": 2,
                "explicit_instruments": check_explicit_instruments(),
                "single_mode_regimes": check_asymptotic_regimes(),
                "fock_counting_and_passivity": check_fock_counting_and_passivity(),
-               "fixed_mode_regimes": check_fixed_mode_regimes()}
+               "fixed_mode_regimes": check_fixed_mode_regimes(),
+               "target_spectrum": run_target_spectrum_checks(
+                   require, shown, stable_infidelity, fock_energy)}
     expected_path = Path(__file__).with_name("expected_results.json")
     if args.write_expected:
         expected_path.write_text(json.dumps(results, indent=2) + "\n", encoding="utf-8")

@@ -23,7 +23,7 @@ These collector/checker files are retained unchanged as one compatible version s
 
 | File | Git blob identity |
 |---|---|
-| `capture_hosted_math.cjs` | `6f36ee03223a82d0075da2fe903f21bc5a45a75b` |
+| `capture_hosted_math.cjs` | `a22129bf3e84145f16122045368ac9aee58acf3c` |
 | `check_rendered_math.py` | `1d3bf9810d0dfadb844a48b354af80f9b66924bc` |
 | `probe_hosted_math.cjs` | `f83ea9da799bee0b53bd5c57315ae2b4b2d9de43` |
 

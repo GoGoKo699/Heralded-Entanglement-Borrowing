@@ -1,6 +1,6 @@
 # A converse for every allowed LOCC protocol
 
-This page proves the energy lower bounds in the [model](model.md). It allows adaptive local operations and classical communication, discarded local environments, mixed conditional outputs, countably many outcomes and the specified trace-norm closure of LOCC. The initial shared catalyst is pure; an arbitrary mixed shared catalyst is a different optimization.
+This page first proves the general fidelity-to-tail inequality, then derives the uniform-target $`\Phi_d`$ energy laws by rank dilation. [Target accuracy](target_accuracy.md) combines the same tail inequality with the nonuniform target spectrum to prove the general [model](model.md). It allows adaptive local operations and classical communication, discarded local environments, mixed conditional outputs, countably many outcomes and the specified trace-norm closure of LOCC. The initial shared catalyst is pure; an arbitrary mixed shared catalyst is a different optimization.
 
 Write its sorted squared Schmidt coefficients as $`p=(p_j)_{j\geq1}`$ and define
 
@@ -8,12 +8,11 @@ Write its sorted squared Schmidt coefficients as $`p=(p_j)_{j\geq1}`$ and define
 P_k=\sum_{j>k}p_j.
 ```
 
-The desired joint pure state is $`T=\psi\otimes\Phi_d`$. Its sorted Schmidt probabilities and tails are
+For a fixed finite pure target $`\phi_\lambda`$, the desired joint pure state is $`T=\psi\otimes\phi_\lambda`$. Its sorted Schmidt probabilities and tails are
 
 ```math
-q_j=\frac1d\,p_{\lceil j/d\rceil},
-\qquad Q_k=\sum_{j>k}q_j,
-\qquad Q_{dk}=P_k.
+q=(p\otimes\lambda)^\downarrow,
+\qquad Q_k=\sum_{j>k}q_j.
 ```
 
 The announced success probability is at least a fixed $`s>0`$. Squared fidelity with a pure target means its Born probability: if $`\rho_{\mathrm{succ}}`$ is the normalized successful output, the error requirement is
@@ -138,7 +137,9 @@ P_k\geq
 
 Both $`u`$ and $`v`$ are continuous under trace-norm convergence of the flagged output. Consequently the bound extends to the trace-norm closure of finite protocols specified in the [model](model.md), including a limit with actual success $`u\geq s`$ and $`v\geq u(1-\epsilon)`$. Merely having a sequence of success probabilities that tends to zero would not satisfy that promise. This argument concerns ordinary tensor-product systems and normal local instruments; it asserts no commuting-operator embezzlement result.
 
-## A geometric tail recurrence
+## A geometric tail recurrence for the uniform target
+
+The remainder of this page specializes to $`\lambda_i=1/d`$, so $`q_j=p_{\lceil j/d\rceil}/d`$ and $`Q_{dk}=P_k`$. The general replacement for this rank-dilation argument is the square-root tail contraction in [target accuracy](target_accuracy.md).
 
 Since $`q_1=p_1/d\leq1/d`$, the tail inequality has a uniform seed:
 

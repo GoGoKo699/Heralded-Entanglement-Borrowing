@@ -1,10 +1,10 @@
 # From Watrous to heralded entanglement borrowing
 
-Alice and Bob share an entangled oscillator state. They want an additional Bell pair and the original shared state back whenever a local measurement announces success. A failed attempt may consume the shared state. The scientific question is how the promised success probability changes the initial photon inventory needed for an accurate joint return.
+Alice and Bob share an entangled oscillator state. They want an additional known pure entangled target and the original shared state back whenever a local measurement announces success. A failed attempt may consume the shared state. The scientific question is how the target's full Schmidt spectrum and promised success probability change the initial photon inventory needed for accurate joint return.
 
 The educational anchor is John Watrous, [*The Theory of Quantum Information*](https://cs.uwaterloo.ca/~watrous/TQI/), Cambridge University Press, **2018**. The author's page identifies the edition and supplies its chapter manuscripts and errata. The section numbers below refer to that 2018 manuscript. The book develops finite-dimensional foundations; the oscillator limits and the energy law are supplied by this project.
 
-Use this bridge alongside the [30-milestone map](MILESTONES.md) and the [worked example](WORKED_EXAMPLE.md). The example follows one complete filter, including its success probability, failure output and joint fidelity. Specialists can start directly with the [model and theorems](../science/model.md).
+Use this bridge alongside the [30-milestone map](MILESTONES.md) and the [worked examples](WORKED_EXAMPLE.md). The examples follow complete filters for a Bell target and an unequal target, including success probability, failure output, initial photons and joint fidelity. Specialists can start directly with the [model and theorems](../science/model.md).
 
 ## Relevant parts of the anchor
 
@@ -38,6 +38,8 @@ The amplitudes are $`\sqrt{p_j}`$. The reduced density operators have eigenvalue
 
 The basis index $`j`$ orders probabilities. It is not automatically the physical photon number. Connecting the two requires the separate [spectral-energy argument](../science/spectral_energy.md).
 
+The known target $`|T_\lambda\rangle`$ has fixed positive decreasing Schmidt probabilities $`\lambda=(\lambda_1,\ldots,\lambda_d)`$, with $`d\ge2`$. Its definition and product spectrum are developed in step 3 below.
+
 ### Root fidelity and squared joint fidelity
 
 To keep the conventions distinct, denote the book's fidelity by $`F_W`$:
@@ -47,7 +49,7 @@ F_W(\rho,\sigma)
 =\left\|\sqrt\rho\sqrt\sigma\right\|_1.
 ```
 
-This project tests a pure reference $`|T\rangle=|C\rangle\otimes|\Phi_d\rangle`$ and uses
+This project tests a pure reference $`|T\rangle=|C\rangle\otimes|T_\lambda\rangle`$ and uses
 
 ```math
 F_{\rm joint}
@@ -74,9 +76,9 @@ the inequalities become $`P_k\ge Q_k`$. This is the direction used for determini
 
 ### 1. From finite rank to finite mean energy
 
-A finite-rank catalyst of rank $`D`$ would need to become a product of rank $`dD`$ to return exactly while adding $`\Phi_d`$. A local Kraus branch cannot increase Schmidt rank. Exact success at finite $`D`$ is therefore impossible.
+A finite-rank catalyst of rank $`D`$ would need to become a product of rank $`dD`$ to return exactly while adding $`T_\lambda`$. A local Kraus branch cannot increase Schmidt rank. Exact success at finite $`D`$ is therefore impossible.
 
-An oscillator with finite mean photons can still have infinitely many nonzero Schmidt probabilities. The exact subcritical construction uses this distinction. At every positive requested error, [finite truncation](../science/construction.md) instead gives a finite-rank state and finite local operations. The passage to countable spectra is proved using bounded finite-index tails and nonnegative summation; it is not obtained by simply replacing a finite dimension symbol with infinity.
+An oscillator with finite mean photons can still have infinitely many nonzero Schmidt probabilities. The exact subcritical construction uses this distinction. At every positive requested error, [finite truncation](../science/target_accuracy.md) instead gives a finite-rank state and finite local operations. The passage to countable spectra is proved using bounded finite-index tails and nonnegative summation; it is not obtained by simply replacing a finite dimension symbol with infinity.
 
 ### 2. From LOCC to a success-weighted tail bound
 
@@ -92,54 +94,146 @@ s\left(\sqrt{Q_k}-\sqrt{2\varepsilon}\right)_+^2,
 
 This reduction is needed because a retained success output can be mixed and its discarded environment can contain entanglement. The proof also specifies how the bound passes to the allowed trace-norm limits of announced-success outputs.
 
-### 3. From an added target to repeated rank scales
+### 3. The complete target spectrum replaces rank alone
 
-The target $`\Phi_d`$ has $`d`$ equal Schmidt probabilities. Tensoring with it repeats each catalyst probability $`d`$ times and divides it by $`d`$:
-
-```math
-q_j=\frac1d p_{\lceil j/d\rceil},
-\qquad Q_{dk}=P_k.
-```
-
-The tail bound therefore compares the catalyst to itself at two index scales:
+Write the fixed known target in its Schmidt bases as
 
 ```math
-\sqrt{P_{dk}}
-\ge\sqrt{s}
-\left(\sqrt{P_k}-\sqrt{2\varepsilon}\right)_+.
+|T_\lambda\rangle
+=\sum_{i=1}^{d}\sqrt{\lambda_i}|i\rangle|i\rangle,
+\quad \lambda_1\ge\cdots\ge\lambda_d>0,
+\quad \sum_i\lambda_i=1.
 ```
 
-At zero error, every step from $`k`$ to $`dk`$ must retain a fraction $`s`$ of the tail. At small error, [iteration](../science/converse.md#a-geometric-tail-recurrence) forces tails of order $`s^\ell`$ through approximately
+We consider entangled targets with $`d\ge2`$. A maximally entangled $`d`$-level target has $`\lambda_i=1/d`$; a product target needs no borrowed entanglement. For source spectrum $`p`$, the joint reference spectrum is
 
 ```math
-L=\frac{\log(1/\varepsilon)}{\log(1/s)}+O_{s,d}(1)
+q(p)=\mathrm{sort}\{p_j\lambda_i:j\ge1,\ 1\le i\le d\}.
 ```
 
-scales. This is the link between a conditional output guarantee and a requirement on the initial spectrum.
+For uniform targets this repeats every $`p_j/d`$ exactly $`d`$ times and gives $`Q_{dk}=P_k`$. With unequal targets, different product streams interleave. Their known sorted labels replace the special quotient-and-remainder indexing.
 
-### 4. From rank scales to physical photons
+### 4. A fixed point identifies the least costly exact catalyst
 
-For $`m`$ oscillator modes per party, the number of local Fock states with at most $`h`$ photons is $`\binom{h+m}{m}`$. Thus their ordered energies grow as $`e_j\asymp j^{1/m}`$ at fixed $`m`$. Assigning larger Schmidt probabilities to lower energies minimizes the initial inventory and gives
+Set $`\delta_1=(1,0,\ldots)`$ and define
 
 ```math
-E(C)\ge2\sum_je_jp_j
-=2\sum_{k\ge1}(e_{k+1}-e_k)P_k.
+\mathcal F_s(p)=(1-s)\delta_1+s\,q(p).
 ```
 
-The factor two counts both parties. [Spectral energy](../science/spectral_energy.md) proves this inequality for arbitrary physical Schmidt bases, including the degeneracies of multimode Fock energies. It is an initial-state rearrangement bound, not a claim that LOCC conserves photon energy.
+The extra mass is added to the first coordinate after sorting $`q(p)`$. Exact feasibility implies $`p\prec\mathcal F_s(p)`$. The map preserves majorization and contracts $`\ell^1`$ distance by at most $`s\lt 1`$. Its unique fixed point $`r`$ therefore majorizes every feasible source: iterate the comparison and pass each finite ordered sum to the limit.
 
-The required tails then cost a geometric sum with ratio $`g=sd^{1/m}`$. The [matching construction](../science/construction.md#5-photon-inventory-and-the-three-regimes) places mass of order $`s^\ell`$ in the corresponding rank blocks, so it attains the same order. The [mode-threshold account](../science/mode_threshold.md) combines the two directions:
+More concentrated spectra cost less under increasing passive energies. Consequently $`r`$ minimizes the exact initial photon inventory over all allowed pure catalysts and LOCC protocols. Finding this optimizer is stronger than exhibiting one successful filter.
 
-| Ratio $`g`$ | Initial inventory as joint error vanishes |
+Its explicit coefficients form a rooted word forest. The root has weight
+
+```math
+A=\frac{1-s}{1-s\lambda_1}.
+```
+
+Every nonempty word $`(i_1,\ldots,i_k)`$ with $`i_1\ne1`$ contributes $`A s^k\lambda_{i_1}\cdots\lambda_{i_k}`$. Sort the root and all these coefficients decreasingly. Restricting the first letter avoids counting the branch already absorbed in the root. [Target spectra](../science/target_spectrum.md) proves normalization, the fixed-point identity and optimality, including ties.
+
+Alice attenuates only the root amplitude by $`\sqrt{s\lambda_1}`$. The successful state has spectrum $`q(r)`$ and probability exactly $`s`$. Its known sorted product labels give local isometries producing $`|C^\star\rangle\otimes|T_\lambda\rangle`$. Failure has probability $`1-s`$ and leaves the product vacuum. These are unrestricted local controls; they are not asserted to conserve photons.
+
+### 5. Weighted word counting determines the exact energy boundary
+
+Put $`\beta_i=s\lambda_i`$. There is a unique $`q_s\in(0,1)`$ satisfying
+
+```math
+\sum_i\beta_i^{q_s}=1.
+```
+
+A tree vertex of weight $`w`$ has children of weights $`w\beta_i`$. Raising weights to $`q_s`$ makes their sum conserved at every split. Stop branches when they first cross a small threshold $`x`$. The stopped weights lie between fixed multiples of $`x`$, so their number is of order $`x^{-q_s}`$. The corresponding sorted spectrum and tail obey
+
+```math
+r_j=\Theta(j^{-1/q_s}),
+\qquad R_k:=\sum_{j>k}r_j=\Theta(k^{-b_s}),
+\qquad b_s=\frac1{q_s}-1.
+```
+
+This weighted counting replaces the uniform target's equal-size blocks. Constants depend on the fixed target and $`s`$.
+
+For $`m`$ modes per party, the number of Fock states with at most $`h`$ photons is $`\binom{h+m}{m}`$. Their ordered energies satisfy $`e_j=\Theta_m(j^{1/m})`$. Passive assignment gives
+
+```math
+E_{\rm exact}=2\sum_j e_jr_j
+=2\sum_{k\ge1}(e_{k+1}-e_k)R_k,
+```
+
+whenever the sum converges. The factor two counts both parties. [Spectral energy](../science/spectral_energy.md) justifies this rearrangement for arbitrary physical Schmidt bases and degenerate Fock levels.
+
+Set $`q_*=m/(m+1)`$. The Rényi entropy of the ordinary target probability vector is, with natural logarithms,
+
+```math
+H_q(\lambda)=\frac{\log\sum_i\lambda_i^q}{1-q}.
+```
+
+The exact threshold is
+
+```math
+s_c(\lambda,m)
+=\left(\sum_i\lambda_i^{q_*}\right)^{-1/q_*}
+=\exp[-H_{q_*}(\lambda)/m].
+```
+
+Finite exact energy is possible precisely when $`s\lt s_c`$, equivalently $`b_s>1/m`$. Equality has logarithmically divergent energy and is excluded from exact finite-energy feasibility. For $`m=1`$, the unequal rank-two target $`\lambda=(0.9,0.1)`$ has $`s_c=0.625`$; a Bell target of the same rank has $`s_c=0.5`$. Thus rank alone cannot decide exact borrowing at $`s=0.6`$.
+
+### 6. Approximate return inherits the optimal tails to an accuracy cutoff
+
+The success-weighted fidelity-to-tail inequality from step 2 already uses an arbitrary desired pure spectrum $`q`$. It therefore applies without a uniform-target assumption.
+
+The top $`k`$ product coefficients are selected from the $`d`$ sorted streams $`\lambda_i p`$. Allocating $`k_i`$ entries to stream $`i`$ gives
+
+```math
+Q_k=\min_{\substack{k_1+\cdots+k_d=k\\k_i\ge0}}
+\sum_i\lambda_iP_{k_i},
+\qquad P_0=1.
+```
+
+The associated square-root tail operator contracts one-sided uniform errors by $`\sqrt s`$. Comparing the arbitrary source with $`r`$ yields
+
+```math
+P_k\ge
+\left(\sqrt{R_k}
+-\frac{\sqrt{2s\varepsilon}}{1-\sqrt s}\right)_+^2.
+```
+
+Hence $`P_k`$ is at least a fixed fraction of $`R_k`$ while the latter exceeds a fixed multiple of $`\varepsilon`$, through $`k=\Theta(\varepsilon^{-1/b_s})`$. This [stability argument](../science/target_accuracy.md) supplies the unequal-target converse. The bound permits mixed retained success outputs, discarded local environments and the model's admitted LOCC closure.
+
+For attainment, keep the $`D`$ largest fixed-point coefficients and normalize by $`1-t`$, where $`t=R_D`$. Adjust the root filter so success remains exactly $`s`$. After sorted reindexing, the successful spectrum equals the desired spectrum at indices $`2,\ldots,D`$ and moves the omitted target mass
+
+```math
+b=\frac{(1-s)t}{s(1-t)}
+```
+
+to its first entry. Its exact overlap gives $`1-F_{\rm joint}\le2b=O(t)`$. Thus $`D=\Theta(\varepsilon^{-1/b_s})`$ suffices with finite support and finite local operations at every positive error.
+
+The [complete matched law](../science/target_accuracy.md) is:
+
+| Fixed success promise | Optimal initial inventory as $`\varepsilon\downarrow0`$ |
 |---|---|
-| $`g\lt 1`$ | Bounded; an infinite-support state permits exact return at finite energy. |
-| $`g=1`$ | $`\Theta(\log(1/\varepsilon))`$. |
-| $`g>1`$, with $`s\lt 1`$ | $`\Theta(\varepsilon^{-a_m})`$, where $`a_m=\log(g)/\log(1/s)`$. |
+| $`s\lt s_c(\lambda,m)`$ | Converges to $`E_{\rm exact}\lt \infty`$; the infinite-support optimum attains exact return. |
+| $`s=s_c(\lambda,m)`$ | $`\Theta(\log(1/\varepsilon))`$. |
+| $`s>s_c(\lambda,m)`$ | $`\Theta(\varepsilon^{-a})`$ with $`a=1/(m b_s)-1>0`$. |
 
-These are fixed-$`m,d,s`$ limits. The [one-mode exact optimum](../science/exact_success.md) further evaluates the subcritical budget as $`s(d-1)/(1-ds)`$. Its failure output is vacuum, so successive exact successes have probability $`s^k`$ after $`k`$ repetitions. Conditional return does not provide an indefinitely reusable entanglement source.
+Below threshold, bounded-energy compactness controls catalysts that change with accuracy. One must first pass fixed-index tail inequalities to a limit and then use lower semicontinuity of energy. This identifies the limiting optimum rather than merely giving one bounded construction.
+
+## Recover the uniform target
+
+For $`\lambda_i=1/d`$ the exponent equation becomes $`d(s/d)^{q_s}=1`$. Consequently
+
+```math
+b_s=\frac{\log(1/s)}{\log d},
+\quad s_c=d^{-1/m},
+\quad a=\frac{\log(sd^{1/m})}{\log(1/s)}.
+```
+
+The weighted words reduce to the original geometric blocks. For one mode per party the exact energy further simplifies to $`s(d-1)/(1-ds)`$ below $`s=1/d`$. The [Bell example](WORKED_EXAMPLE.md) preserves this specialization and its explicit quotient-and-remainder map; the unequal example shows why sorted product labels are needed more generally.
 
 ## Reading route and boundaries
 
-Follow the [worked example](WORKED_EXAMPLE.md), then [model](../science/model.md), [construction](../science/construction.md), [converse](../science/converse.md), [exact success](../science/exact_success.md) and [mode threshold](../science/mode_threshold.md). The [milestones](MILESTONES.md) organize these connections from basic objects to the complete result. [Interpretation](../science/interpretation.md) separates mean photons, mode count, growing Fock cutoff and local control costs.
+Follow the [worked examples](WORKED_EXAMPLE.md), then [model](../science/model.md), [target spectra](../science/target_spectrum.md), [target accuracy](../science/target_accuracy.md) and [spectral energy](../science/spectral_energy.md). The original [construction](../science/construction.md), [converse](../science/converse.md), [exact success](../science/exact_success.md) and [mode threshold](../science/mode_threshold.md) retain the uniform specialization and its dependencies.
 
-Watrous supplies the finite-dimensional mathematical foundation. The countable-spectrum tail extension, oscillator counting, success-dependent energy optimization and matching asymptotic construction are additional steps explained in the scientific pages. Their primary-paper attribution is collected in [related work](../references/related_work.md); those citations identify research dependencies rather than additional educational anchors. Preparation efficiency, control work, loss robustness, arbitrary mixed catalysts and the deterministic endpoint $`s=1`$ are outside the stated law.
+All asymptotic statements fix $`m`$, the full target spectrum $`\lambda`$ and $`0\lt s\lt 1`$ before sending the joint squared-infidelity to zero. The initial catalyst is pure. For the explicit filter, $`k`$ successive exact successes have probability $`s^k`$; failure consumes the catalyst. Mean photons, the number of modes, the largest occupied Fock level, preparation complexity and local control work are separate resources.
+
+Watrous supplies the finite-dimensional foundation. The fixed-point optimizer, weighted word counting, Rényi threshold, approximate stability and sharp oscillator inventory law belong to the project's scientific account and its [research-level comparisons](../references/related_work.md). Mixed initial catalysts, energy-preserving controls, loss robustness, the deterministic endpoint $`s=1`$ and uniform varying-parameter limits remain separate questions.

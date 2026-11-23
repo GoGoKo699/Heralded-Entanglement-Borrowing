@@ -1,155 +1,165 @@
 # Model and main results
 
-A shared entangled state can supply a maximally entangled target while being returned on an announced success. The catalyst may be consumed on failure. This account determines how the required initial oscillator energy depends on the promised success probability and the accuracy of that joint return.
+Alice and Bob extract a fixed pure entangled target while returning their known pure oscillator catalyst on an announced success. Failure may consume the catalyst. The target's Schmidt spectrum and the catalyst's physical mode count determine the optimal initial photon inventory.
 
-## States and physical inventory
+## States and charged inventory
 
-Fix integers $`m\ge1`$ and $`d\ge2`$. Alice and Bob each hold exactly $`m`$ catalyst oscillator modes, all at the same frequency $`\omega>0`$. They share a known pure state $`|C\rangle`$. With zero-point energy subtracted, its initial total mean photon number is
+Fix $`m\ge1`$ equal-frequency oscillator modes at each party, with common frequency $`\omega>0`$. Their only initially shared entanglement is a known pure catalyst $`|C\rangle`$. With vacuum energy subtracted, its total initial mean photon number is
 
 ```math
-E(C)=
-\left\langle C\left|
-\sum_{a=1}^{m}a_a^\dagger a_a+
-\sum_{b=1}^{m}b_b^\dagger b_b
+E(C)=\left\langle C\left|
+\sum_{a=1}^m a_a^\dagger a_a+
+\sum_{b=1}^m b_b^\dagger b_b
 \right|C\right\rangle.
-\qquad\text{(1)}
 ```
 
-The corresponding excitation energy is $`\hbar\omega E(C)`$. Both parties' photons are counted, including any local squeezing or displacement in the initial catalyst. All initially shared entanglement is contained in these catalyst modes.
+The excitation energy is $`\hbar\omega E(C)`$. Both parties' photons count, including initial local squeezing and displacement. Finite mean energy does not require finite Fock support.
 
-The target registers $`A_T,B_T`$ are initially in a product pure state. Their desired state is
+Target registers begin in a product pure state. The desired finite pure target is known, including its local Schmidt bases, and can be written
 
 ```math
-|\Phi_d\rangle=
-\frac1{\sqrt d}\sum_{r=0}^{d-1}|r\rangle_{A_T}|r\rangle_{B_T}.
-\qquad\text{(2)}
+|\phi_\lambda\rangle
+=\sum_{i=1}^d\sqrt{\lambda_i}\,|i\rangle_A|i\rangle_B,
 ```
 
-The target dimension is fixed. For $`d=2`$ this is one Bell pair; $`d=2^k`$ represents $`k`$ Bell pairs.
-
-A finite number of oscillator modes still has an infinite-dimensional Hilbert space. Finite mean energy does not require a finite Fock cutoff. We distinguish exact infinite-support constructions from finite-support constructions at every positive error.
+where $`d\ge2`$, $`\lambda_1\ge\cdots\ge\lambda_d>0`$ and $`\sum_i\lambda_i=1`$. Zero Schmidt coefficients are omitted. Known local changes of basis implement any finite pure target with this spectrum. The uniform spectrum $`\lambda_i=1/d`$ gives $`|\Phi_d\rangle`$; $`d=2`$ is one Bell pair.
 
 ## Operations, heralding and return
 
-The allowed protocols use local operations and classical communication (LOCC), with arbitrary product local ancillas and classical randomization. These ancillas supply no initial shared entanglement. Local work, local control complexity and preparation time are unrestricted. No fresh entangled specimens or quantum communication are supplied.
+Allowed protocols use local operations and classical communication (LOCC), arbitrary product local ancillas and classical randomization. No fresh shared entanglement or quantum communication is supplied. Local preparation time, control work, gate complexity and the local energy of target/work registers are unrestricted and are not part of the initial catalyst inventory.
 
-The converse applies to finite-round LOCC and to trace-norm limits of their subnormalized announced-success outputs, with the success probability and retained output converging. This includes the corresponding physically defined limits of sequential LOCC protocols. The construction uses a single local two-outcome filter, one announcement and local isometries; no limiting sequence of communication rounds is needed.
+The converse covers finite-round LOCC and trace-norm limits of their subnormalized announced-success outputs, with success probability and retained output converging. It includes adaptive protocols, discarded local environments, mixed retained outputs and the corresponding physically defined sequential limits. The attaining protocols use a single local two-outcome filter, one announcement and local isometries.
 
-Fix a promised success probability $`0\lt s\lt 1`$. An announced success has actual probability $`p_{\rm suc}\ge s`$. Its normalized retained state $`\rho_{\rm suc}`$ must obey
+Fix $`0\lt s\lt1`$. An announced success has actual probability $`p_{\rm suc}\ge s`$ and normalized retained state $`\rho_{\rm suc}`$ satisfying
 
 ```math
 F_{\rm joint}
-=
-\langle C,\Phi_d|\rho_{\rm suc}|C,\Phi_d\rangle
+=\langle C,\phi_\lambda|\rho_{\rm suc}|C,\phi_\lambda\rangle
 \ge1-\varepsilon.
-\qquad\text{(3)}
 ```
 
-This is squared fidelity with the complete pure reference. It requires return of the original catalyst, preparation of the target and their joint decoupling. It is stronger than requiring separate accurate marginals without a joint condition. The associated purified distance is $`\sqrt{1-F_{\rm joint}}`$.
+This is squared fidelity with the complete pure reference. It tests catalyst return, target preparation and their joint decoupling. The corresponding purified distance is $`\sqrt{1-F_{\rm joint}}`$. Returning only a marginal or permitting residual target–catalyst correlations under another error criterion defines a different task.
 
-The failure branch is unrestricted. In the exact attaining construction it destroys the catalyst. A protocol with $`p_{\rm suc}>s`$ may independently discard a fraction of its success flags, so using success probability exactly $`s`$ is sufficient for optimization.
-
-Only the initial catalyst inventory (1) is minimized. In particular, $`E(C)`$ is not the work spent preparing or operating the apparatus. Target registers and local control ancillas introduce no additional shared entanglement, but their local energy is not included in this inventory.
-
-## Optimization and limiting convention
+Failure is unrestricted. In the attaining constructions it destroys the catalyst to a product state. A protocol exceeding success $`s`$ can independently discard some success flags, so success exactly $`s`$ suffices for upper bounds.
 
 Define
 
 ```math
-E_m(\varepsilon;s,d)
-=
-\inf\left\{
-E(C):
-\begin{array}{l}
-|C\rangle\text{ is a pure }m\text{-mode-per-party catalyst},\\
-p_{\rm suc}\ge s,\quad F_{\rm joint}\ge1-\varepsilon
-\end{array}
-\right\}.
-\qquad\text{(4)}
+E_m(\varepsilon;s,\lambda)
+=\inf\{E(C):p_{\rm suc}\ge s,\ F_{\rm joint}\ge1-\varepsilon\},
 ```
 
-The infimum includes infinite-support states with finite mean energy. Every upper bound at $`\varepsilon>0`$ also has a finite-support implementation.
+over the stated pure catalysts and protocols. Infinite support with finite mean energy is allowed. Every positive-error upper bound also has finite Schmidt support and finite-dimensional local operations.
 
-Unless stated otherwise, $`\varepsilon\downarrow0`$ while $`m,d,s`$ remain fixed. Constants in asymptotic bounds may depend on all three. No uniform joint limit with growing mode count or target dimension, or with $`s`$ approaching a boundary, is asserted.
+The limit $`\varepsilon\downarrow0`$ holds at fixed $`m,s,\lambda`$. Constants may depend on all these parameters. There is no uniform claim with growing target rank/mode count, changing Schmidt probabilities or success approaching a boundary.
 
-Set
+## The spectral success–energy law
+
+Let $`q_s\in(0,1)`$ be the unique solution and define $`b_s>0`$ by
 
 ```math
-g=d^{1/m}s,\qquad
-s_c=d^{-1/m},\qquad
-a_m(s,d)=
-\frac{\log g}{\log(1/s)}.
-\qquad\text{(5)}
+\sum_{i=1}^d(s\lambda_i)^{q_s}=1,
+\qquad b_s=\frac1{q_s}-1.
 ```
 
-The logarithm base is immaterial in this ratio.
+For $`q\in(0,1)`$, use the natural-log Rényi entropy
 
-## The success–energy law
+```math
+H_q(\lambda)=\frac{\log\sum_i\lambda_i^q}{1-q}.
+```
 
-**Theorem 1 (fixed mode count and fixed success).** In the model above,
+The critical success is
 
-| Success promise | Optimal initial photon inventory as $`\varepsilon\downarrow0`$ |
+```math
+\boxed{
+s_c(\lambda,m)
+=\left(\sum_i\lambda_i^{m/(m+1)}\right)^{-(m+1)/m}
+=e^{-H_{m/(m+1)}(\lambda)/m}.
+}
+```
+
+**Theorem 1 (sharp fixed-parameter inventory law).** In the model above:
+
+| Success promise | Optimal initial photons as $`\varepsilon\downarrow0`$ |
 |---|---|
-| $`0\lt s\lt s_c`$ | $`E_m(\varepsilon;s,d)=\Theta_{m,s,d}(1)`$; exact joint return is possible at finite mean energy |
-| $`s=s_c`$ | $`E_m(\varepsilon;s,d)=\Theta_{m,d}(\log(1/\varepsilon))`$ |
-| $`s_c\lt s\lt 1`$ | $`E_m(\varepsilon;s,d)=\Theta_{m,s,d}(\varepsilon^{-a_m(s,d)})`$ |
+| $`s\lt s_c(\lambda,m)`$ | Convergence to an attained finite exact-return optimum $`E_m(0;s,\lambda)>0`$ |
+| $`s=s_c(\lambda,m)`$ | $`\Theta_{m,s,\lambda}(\log(1/\varepsilon))`$ |
+| $`s_c(\lambda,m)\lt s\lt1`$ | $`\Theta_{m,s,\lambda}(\varepsilon^{-a_m(s,\lambda)})`$ |
 
-At or above $`s_c`$, exact joint return at finite mean energy is impossible. The critical logarithm and the supercritical power are matching lower and upper orders over all allowed pure catalysts and LOCC protocols, including mixed retained success outputs.
-
-The mechanism has two parts. The target multiplies Schmidt rank by $`d`$ and forces a tail recurrence under successful approximate return. The number of low-energy Fock states determines the cost of the tails that must survive that recurrence. [The converse](converse.md) proves the recurrence and lower bounds. [The construction](construction.md) gives matching finite catalysts. [The spectral-energy account](spectral_energy.md) converts Schmidt rank into a physical photon inventory.
-
-**Theorem 2 (sharp one-mode exact budget).** For one oscillator per party and any finite $`E>0`$, the maximum success probability for exact joint return with initial inventory at most $`E`$ is
+The positive exponent in the last row is
 
 ```math
-p_{\rm exact}^{\max}(E;d)
-=
-\frac{E}{dE+d-1}.
-\qquad\text{(6)}
+a_m(s,\lambda)=\frac1{m b_s}-1.
 ```
 
-It is attained by an infinite-support finite-energy pure catalyst. Equivalently, for $`0\lt s\lt 1/d`$,
+The three rows equivalently have $`b_s>1/m`$, $`b_s=1/m`$ and $`b_s\lt 1/m`$. Exact finite-energy return is possible precisely in the strict first regime. The critical and supercritical orders match over all allowed LOCC protocols, including mixed success outputs. The [accuracy proof](target_accuracy.md) gives both the universal converse and a finite cutoff with success exactly $`s`$.
+
+## The exact optimal catalyst
+
+**Theorem 2 (universal exact passive-energy minimizer).** Set
+
+```math
+A=\frac{1-s}{1-s\lambda_1}.
+```
+
+Form a multiset containing one coefficient $`A`$ and, for every finite word $`(i_1,\ldots,i_\ell)`$ whose first symbol is not 1, a coefficient
+
+```math
+A\prod_{a=1}^{\ell}(s\lambda_{i_a}).
+```
+
+Its decreasing rearrangement $`r=(r_j)`$ is normalized. Every exactly feasible source spectrum is majorized by $`r`$. If $`e_j`$ is the $`j`$th local $`m`$-mode photon number in increasing order with multiplicity, then
+
+```math
+\boxed{E_m(0;s,\lambda)=2\sum_{j\ge1}e_jr_j.}
+```
+
+The equality includes the value infinity. When finite, the minimum is attained in matched passive Fock bases by a bounded root filter followed by local Schmidt reindexing. On success it returns exactly $`|C\rangle\otimes|\phi_\lambda\rangle`$; on failure it leaves a product vacuum.
+
+The spectrum has $`r_j=\Theta_{s,\lambda}(j^{-1/q_s})`$. The [exact-spectrum proof](target_spectrum.md) establishes its optimality using a majorization-preserving contraction and derives its exponent by weighted-tree counting. [Passive energy](spectral_energy.md) supplies the physical basis-independent bound. The optimum is an exact spectrum sum, rather than a simple elementary formula for every target or the exact frontier at each positive error.
+
+## Uniform-target formulas retained as a special case
+
+For $`\lambda_i=1/d`$, write $`E_m(\varepsilon;s,d)`$ as shorthand. Then
+
+```math
+\begin{aligned}
+s_c&=d^{-1/m},\\
+b_s&=\frac{\log(1/s)}{\log d},\\
+a_m(s,d)&=\frac{\log(sd^{1/m})}{\log(1/s)}.
+\end{aligned}
+```
+
+The weighted-word spectrum becomes the logarithmic-block construction in [construction](construction.md), and [converse](converse.md) gives its direct rank-dilation proof.
+
+For one oscillator per party, the exact and limiting subcritical energy simplify to
 
 ```math
 E_1(0;s,d)
-=
-\frac{s(d-1)}{1-ds},
-\qquad
-\lim_{\varepsilon\downarrow0}
-E_1(\varepsilon;s,d)
-=
-\frac{s(d-1)}{1-ds}.
-\qquad\text{(7)}
+=\lim_{\varepsilon\downarrow0}E_1(\varepsilon;s,d)
+=\frac{s(d-1)}{1-ds},
+\quad 0\lt s\lt1/d.
 ```
 
-[Exact success](exact_success.md) proves these statements. For $`m>1`$, the threshold and divergence orders are established, but no corresponding exact finite-error frontier or simple exact subcritical energy constant is claimed.
+Equivalently, at a finite photon budget $`E>0`$, the maximum exact success is $`E/(dE+d-1)`$. [Exact success](exact_success.md) retains the direct derivation and the infinite-dimensional local dilation.
 
-## What the mode count changes
+## Mode count and a physical example
 
-**Corollary 3 (exact finite-energy mode threshold).** At fixed $`d\ge2`$ and $`0\lt s\lt 1`$, exact joint return with finite mean energy is possible precisely when
+The minimum number of modes per party for exact finite-energy return is
 
 ```math
-m>\frac{\log d}{\log(1/s)}.
-\qquad\text{(8)}
+m_{\min}^{\rm exact}(s,\lambda)
+=\left\lfloor\frac1{b_s}\right\rfloor+1.
 ```
 
-Thus the smallest admissible integer mode count per party is
+The strict boundary is essential. For uniform targets this reduces to $`\lfloor\log d/\log(1/s)\rfloor+1`$.
 
-```math
-m_{\min}^{\rm exact}(s,d)
-=
-\left\lfloor
-\frac{\log d}{\log(1/s)}
-\right\rfloor+1.
-\qquad\text{(9)}
-```
-
-The strict inequality matters at an integer boundary. These are exact finite-energy statements with infinite Fock support. Finite-support versions approach the same task at every positive error. [The mode-threshold page](mode_threshold.md) gives the proof and examples.
+With one mode per party, $`\lambda=(0.9,0.1)`$ has critical success $`0.625`$, whereas a Bell pair of the same Schmidt rank has critical success $`0.5`$. At success $`0.6`$, the former admits exact return at finite mean energy and the latter does not. The [interpretation](interpretation.md) and [mode-threshold page](mode_threshold.md) explain this spectrum dependence.
 
 ## Scope and attribution
 
-The initial catalyst is pure. The result does not cover arbitrary mixed catalysts, arbitrary entangled targets, energy-conserving control restrictions, or unrestricted growing-parameter limits. It is an initial energy and mode inventory law, without a preparation, gate-count, runtime or work advantage claim. The deterministic endpoint $`s=1`$ is outside Theorem 1.
+The catalyst is known and pure; the target has fixed finite Schmidt rank and known local bases. Arbitrary mixed initial catalysts, infinite-rank targets, the deterministic endpoint $`s=1`$, energy-conserving control restrictions and uniform varying-parameter limits are outside the matching theorem. The cost is initial catalyst photon inventory, without a preparation-work, gate-count, runtime or fault-tolerance guarantee.
 
-The proof uses established Schmidt-spectrum conversion tools: Vidal tail monotones, infinite-dimensional SLOCC conversion theory and fidelity bounds from sorted Schmidt coefficients. The added result is their optimization into the success-dependent oscillator energy law, including its critical order and supercritical exponent. [Related work](../references/related_work.md) states the comparison at the level of the actual models.
+Stochastic Schmidt-tail conversion, infinite-dimensional SLOCC theory, sorted-spectrum fidelity and passive energy are inherited foundations. The added account optimizes the exact self-borrowing spectrum and the success-dependent photon/accuracy law, identifying the Rényi order selected by oscillator mode count. [Related work](../references/related_work.md) gives the model-level comparison.
 
-For the complete account, continue through [construction](construction.md), [converse](converse.md), [exact success](exact_success.md), [mode threshold](mode_threshold.md) and [interpretation](interpretation.md). Finite numerical checks and their limits are described in [verification](../verification/README.md).
-
+[Scientific route](README.md) · [Exact spectrum](target_spectrum.md) · [Accuracy law](target_accuracy.md) · [Verification](../verification/README.md)

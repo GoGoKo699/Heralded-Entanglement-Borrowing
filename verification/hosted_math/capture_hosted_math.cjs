@@ -286,7 +286,7 @@ function sessionBinding(inventory, tree, expectedBytes, contractBytes, runtime, 
 }
 function newSession(binding, at) {
   return {schema_version:1,kind:'hosted_math_session',binding,started_at:at,updated_at:at,
-    completed:[],failures:[]};
+    completed:[],failures:[],navigation_retries:[]};
 }
 function saveSession(output, session) {
   const temporary=path.join(output,'capture-state.json.tmp');
@@ -355,7 +355,8 @@ function loadResume(directory, binding, inventory, now=Date.now()) {
         receipt_sha256:descriptor.receipt.sha256,observed_at:receipt.observed_at}});
   }
   return {reusable,previous_attempt:{directory:path.resolve(directory),session_sha256:sha256(bytes),
-    started_at:session.started_at,updated_at:session.updated_at,failures:session.failures}};
+    started_at:session.started_at,updated_at:session.updated_at,failures:session.failures,
+    navigation_retries:session.navigation_retries ?? []}};
 }
 function runTextCheck(args, helper, output, inventoryFile, captureFile, resultFile, contractFile=null) {
   const command=[helper,'check','--inventory',path.join(output,inventoryFile),'--capture',path.join(output,captureFile),
@@ -391,13 +392,26 @@ function savePageReceipt(args, helper, output, session, inventory, source, viewp
   session.completed.push(descriptor);session.updated_at=new Date().toISOString();saveSession(output,session);
   return {passed:true,result,artifacts:[...files,descriptor.receipt],receipt};
 }
-async function captureHostedPage(context, source, expected, prefix, output, readinessOptions={}) {
+async function captureHostedPage(context, source, expected, prefix, output, options={}) {
   const page=await context.newPage();
   const item={path:source.path,url:source.url,revision:source.revision,source_sha256:source.source_sha256,errors:[],math:[]};
   try {
-    const response=await page.goto(source.url,{waitUntil:'domcontentloaded',timeout:60000});
+    const navigate=async()=>{
+      const response=await page.goto(source.url,{waitUntil:'domcontentloaded',timeout:60000});
+      if(page.url()!==source.url) throw new Error('Browser redirected away from exact pinned source URL');
+      return response;
+    };
+    let response=await navigate();
+    const status=response?.status();
+    // Retry only a response from the exact pinned navigation, with no redirect.
+    if([502,503,504].includes(status)) {
+      if(response.url()!==source.url || response.request().redirectedFrom()!==null)
+        throw new Error('Browser redirected away from exact pinned source URL');
+      options.onNavigationRetry?.({http_status:status,observed_at:new Date().toISOString()});
+      await page.waitForTimeout(1000);
+      response=await navigate();
+    }
     if(response?.status()!==200) throw new Error('HTTP '+response?.status());
-    if(page.url()!==source.url) throw new Error('Browser redirected away from exact pinned source URL');
     const article=page.locator('article.markdown-body').first();
     await article.waitFor({state:'visible',timeout:30000});
     await page.evaluate(async()=>{
@@ -406,7 +420,7 @@ async function captureHostedPage(context, source, expected, prefix, output, read
       }
       window.scrollTo(0,0);
     });
-    await waitForHostedMath(article,expected.length,readinessOptions);
+    await waitForHostedMath(article,expected.length,options);
     Object.assign(item,await article.evaluate(inspectArticle,expected));
     const html=prefix+'.html',png=prefix+'.png';
     fs.writeFileSync(path.join(output,html),await page.content());
@@ -486,7 +500,13 @@ async function run(args, adapters={}) {
             pageProvenance.push({path:source.path,viewport,observed_at:item.observed_at,reused:true,...prior.provenance});
           } else {
             try {
-              item=await captureHostedPage(context,{...source,revision:args.revision},expected[source.path],prefix,output);
+              item=await captureHostedPage(context,{...source,revision:args.revision},expected[source.path],prefix,output,{
+                onNavigationRetry:retry=>{
+                  session.navigation_retries.push({path:source.path,url:source.url,viewport,...retry});
+                  session.updated_at=retry.observed_at;
+                  saveSession(output,session);
+                }
+              });
               const receipt=savePageReceipt(args,helper,output,session,inventory,source,viewport,item,prefix,contract);
               artifacts.push(...receipt.artifacts);
               pageProvenance.push({path:source.path,viewport,observed_at:item.observed_at,reused:false});
@@ -531,7 +551,8 @@ async function run(args, adapters={}) {
   if(session) artifacts.push(artifact(output,'capture-state.json','capture_session'));
   const observations=pageProvenance.map(p=>p.observed_at).sort((a,b)=>Date.parse(a)-Date.parse(b));
   const report={...boundReport(inventory,pinned.tree,viewports,artifacts,failures,observations[0] || at),runtime,
-    report_assembled_at:new Date().toISOString(),page_provenance:pageProvenance,diagnostic_only:args.diagnosticOnly===true};
+    report_assembled_at:new Date().toISOString(),page_provenance:pageProvenance,
+    navigation_retries:session?.navigation_retries ?? [],diagnostic_only:args.diagnosticOnly===true};
   if(session?.previous_attempt) report.previous_attempt=session.previous_attempt;
   writeJSON(path.join(output,'hosted-report.json'),report);
   console.log(JSON.stringify({status:report.status,report:path.join(output,'hosted-report.json'),sha256:sha256(fs.readFileSync(path.join(output,'hosted-report.json'))),pages:report.required_pages.length,failures:report.failures.length,reused_pages:pageProvenance.filter(p=>p.reused).length}));

@@ -1,5 +1,7 @@
 # Matching finite catalysts
 
+This page gives the explicit logarithmic-block construction for the uniform target $`\Phi_d`$. The general finite pure-target construction and its exact-success cutoff are in [target accuracy](target_accuracy.md#3-a-finite-cutoff-with-success-exactly-s); [target spectrum](target_spectrum.md) identifies their common optimal infinite spectrum.
+
 The construction uses a geometrically weighted spectrum on logarithmic Schmidt-rank blocks. A two-outcome filter announces success with probability exactly $`s`$. After local reindexing, the successful state approximates the original catalyst and $`|\Phi_d\rangle`$ jointly.
 
 Throughout, $`m\ge1`$, $`d\ge2`$ and $`0\lt s\lt 1`$ are fixed. The [model](model.md) defines the charged inventory and allowed operations.
