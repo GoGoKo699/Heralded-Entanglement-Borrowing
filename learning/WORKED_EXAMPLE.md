@@ -232,7 +232,7 @@ s_c(\lambda,1)
 =\frac58.
 ```
 
-Thus $`s=3/5<5/8`$ permits exact joint return at finite mean photons in the infinite-support limit. A Bell target also has rank two, but its threshold is $`1/2`$; at the same success probability its optimal inventory instead diverges as accuracy improves. The comparison concerns two different requested states, not an extra free conversion between them.
+Thus $`s=3/5\lt 5/8`$ permits exact joint return at finite mean photons in the infinite-support limit. A Bell target also has rank two, but its threshold is $`1/2`$; at the same success probability its optimal inventory instead diverges as accuracy improves. The comparison concerns two different requested states, not an extra free conversion between them.
 
 ### Construct and truncate the optimal spectrum
 
@@ -356,6 +356,6 @@ The convenient general bound also holds:
 1-F_{\rm joint}\le2b\approx0.04817749.
 ```
 
-The fidelity is conditional on the successful $`3/5`$ of attempts and includes the returned oscillator state as well as the unequal target. Enlarging the sorted cutoff gives error tending to zero at the same success probability. Because $`s<5/8`$, its initial photon inventory converges to the finite exact optimum. No simple rational formula for that general unequal-target optimum is asserted here.
+The fidelity is conditional on the successful $`3/5`$ of attempts and includes the returned oscillator state as well as the unequal target. Enlarging the sorted cutoff gives error tending to zero at the same success probability. Because $`s\lt 5/8`$, its initial photon inventory converges to the finite exact optimum. No simple rational formula for that general unequal-target optimum is asserted here.
 
 The [accuracy proof](../science/target_accuracy.md) establishes the all-size statement and its matching arbitrary-LOCC lower bound. The finite example illustrates the explicit construction and its resource accounting; it does not replace the proof.

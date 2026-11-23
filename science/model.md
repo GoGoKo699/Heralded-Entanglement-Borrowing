@@ -92,7 +92,7 @@ The positive exponent in the last row is
 a_m(s,\lambda)=\frac1{m b_s}-1.
 ```
 
-The three rows equivalently have $`b_s>1/m`$, $`b_s=1/m`$ and $`b_s<1/m`$. Exact finite-energy return is possible precisely in the strict first regime. The critical and supercritical orders match over all allowed LOCC protocols, including mixed success outputs. The [accuracy proof](target_accuracy.md) gives both the universal converse and a finite cutoff with success exactly $`s`$.
+The three rows equivalently have $`b_s>1/m`$, $`b_s=1/m`$ and $`b_s\lt 1/m`$. Exact finite-energy return is possible precisely in the strict first regime. The critical and supercritical orders match over all allowed LOCC protocols, including mixed success outputs. The [accuracy proof](target_accuracy.md) gives both the universal converse and a finite cutoff with success exactly $`s`$.
 
 ## The exact optimal catalyst
 

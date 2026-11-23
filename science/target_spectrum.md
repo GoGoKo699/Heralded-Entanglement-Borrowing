@@ -191,15 +191,15 @@ For $`m`$ equal-frequency modes, ordered Fock counting gives $`e_j=\Theta_m(j^{1
 ```math
 \frac1{q_s}>1+\frac1m,
 \qquad\text{equivalently}\qquad
-q_s<\frac{m}{m+1}.
+q_s\lt \frac{m}{m+1}.
 ```
 
 At equality, $`e_jr_j=\Theta(1/j)`$ and the series diverges logarithmically. Set $`q_*=m/(m+1)`$. Since the defining power sum is decreasing,
 
 ```math
-q_s<q_*
+q_s\lt q_*
 \quad\Longleftrightarrow\quad
-s<\left(\sum_i\lambda_i^{q_*}\right)^{-1/q_*}.
+s\lt \left(\sum_i\lambda_i^{q_*}\right)^{-1/q_*}.
 ```
 
 Using natural logarithms, $`H_q(\lambda)=\log(\sum_i\lambda_i^q)/(1-q)`$, this is the strict success boundary

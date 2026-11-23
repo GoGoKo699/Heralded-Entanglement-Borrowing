@@ -6,7 +6,7 @@ Alice and Bob share a pure catalyst with a fixed number $`m`$ of equal-frequency
 
 ## The target spectrum controls the threshold
 
-For fixed $`m\ge1`$, positive target Schmidt probabilities of fixed rank $`r\ge2`$, and fixed $`0<s<1`$, the critical success is
+For fixed $`m\ge1`$, positive target Schmidt probabilities of fixed rank $`r\ge2`$, and fixed $`0\lt s\lt 1`$, the critical success is
 
 ```math
 \boxed{
@@ -19,9 +19,9 @@ Here $`H_\alpha(\lambda)=\log(\sum_i\lambda_i^\alpha)/(1-\alpha)`$ is Rényi ent
 
 | Success requirement | Optimal initial photon inventory as $`\varepsilon\downarrow0`$ |
 |---|---|
-| $`s<s_c(\lambda,m)`$ | Converges to the finite exact optimum; exact joint return is possible |
+| $`s\lt s_c(\lambda,m)`$ | Converges to the finite exact optimum; exact joint return is possible |
 | $`s=s_c(\lambda,m)`$ | $`\Theta(\log(1/\varepsilon))`$ |
-| $`s_c(\lambda,m)<s<1`$ | $`\Theta(\varepsilon^{-a})`$, with the spectrum-dependent exponent below |
+| $`s_c(\lambda,m)\lt s\lt 1`$ | $`\Theta(\varepsilon^{-a})`$, with the spectrum-dependent exponent below |
 
 Define the unique $`q_s\in(0,1)`$ and exponent by
 
@@ -60,7 +60,7 @@ For one oscillator per party, the exact optimum also has the closed form
 p_{\rm exact}^{\max}(E;d)=\frac{E}{dE+d-1},
 \qquad
 E_1^{\rm exact}(s,d)=\frac{s(d-1)}{1-ds}
-\quad(0<s<1/d).
+\quad(0\lt s\lt 1/d).
 ```
 
 The [uniform-target construction](science/construction.md), [tail recurrence](science/converse.md), and [one-mode exact calculation](science/exact_success.md) retain these useful explicit formulas. They are specializations of the target-spectrum law.

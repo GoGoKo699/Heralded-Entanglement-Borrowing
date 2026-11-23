@@ -53,7 +53,7 @@ Writing $`q_*=m/(m+1)`$, this yields
 
 ```math
 \boxed{
-s<s_c(\lambda,m),
+s\lt s_c(\lambda,m),
 \qquad
 s_c(\lambda,m)
 =\left(\sum_i\lambda_i^{q_*}\right)^{-1/q_*}.
@@ -114,7 +114,7 @@ The direct uniform-target proof uses $`Q_{dk}=P_k`$: exact success forces $`P_{d
 
 ## 5. Approximate return at the boundary
 
-The [robust tail comparison](target_accuracy.md#1-a-robust-comparison-with-the-exact-optimal-tail) forces the exact optimal tail up to indices of order $`\varepsilon^{-1/b_s}`$. Finite cutoffs attain that order with success exactly $`s`$. Consequently the energy is logarithmic when $`b_s=1/m`$ and a power with exponent $`1/(m b_s)-1`$ when $`b_s<1/m`$.
+The [robust tail comparison](target_accuracy.md#1-a-robust-comparison-with-the-exact-optimal-tail) forces the exact optimal tail up to indices of order $`\varepsilon^{-1/b_s}`$. Finite cutoffs attain that order with success exactly $`s`$. Consequently the energy is logarithmic when $`b_s=1/m`$ and a power with exponent $`1/(m b_s)-1`$ when $`b_s\lt 1/m`$.
 
 Below the boundary, finite cutoffs converge to the exact optimal spectrum sum. At or above it, no bounded-energy family can make the joint error vanish. These conclusions optimize mean initial photon inventory; they do not optimize local preparation or control work.
 

@@ -121,7 +121,7 @@ Set $`\delta_1=(1,0,\ldots)`$ and define
 \mathcal F_s(p)=(1-s)\delta_1+s\,q(p).
 ```
 
-The extra mass is added to the first coordinate after sorting $`q(p)`$. Exact feasibility implies $`p\prec\mathcal F_s(p)`$. The map preserves majorization and contracts $`\ell^1`$ distance by at most $`s<1`$. Its unique fixed point $`r`$ therefore majorizes every feasible source: iterate the comparison and pass each finite ordered sum to the limit.
+The extra mass is added to the first coordinate after sorting $`q(p)`$. Exact feasibility implies $`p\prec\mathcal F_s(p)`$. The map preserves majorization and contracts $`\ell^1`$ distance by at most $`s\lt 1`$. Its unique fixed point $`r`$ therefore majorizes every feasible source: iterate the comparison and pass each finite ordered sum to the limit.
 
 More concentrated spectra cost less under increasing passive energies. Consequently $`r`$ minimizes the exact initial photon inventory over all allowed pure catalysts and LOCC protocols. Finding this optimizer is stronger than exhibiting one successful filter.
 
@@ -176,7 +176,7 @@ s_c(\lambda,m)
 =\exp[-H_{q_*}(\lambda)/m].
 ```
 
-Finite exact energy is possible precisely when $`s<s_c`$, equivalently $`b_s>1/m`$. Equality has logarithmically divergent energy and is excluded from exact finite-energy feasibility. For $`m=1`$, the unequal rank-two target $`\lambda=(0.9,0.1)`$ has $`s_c=0.625`$; a Bell target of the same rank has $`s_c=0.5`$. Thus rank alone cannot decide exact borrowing at $`s=0.6`$.
+Finite exact energy is possible precisely when $`s\lt s_c`$, equivalently $`b_s>1/m`$. Equality has logarithmically divergent energy and is excluded from exact finite-energy feasibility. For $`m=1`$, the unequal rank-two target $`\lambda=(0.9,0.1)`$ has $`s_c=0.625`$; a Bell target of the same rank has $`s_c=0.5`$. Thus rank alone cannot decide exact borrowing at $`s=0.6`$.
 
 ### 6. Approximate return inherits the optimal tails to an accuracy cutoff
 
@@ -212,7 +212,7 @@ The [complete matched law](../science/target_accuracy.md) is:
 
 | Fixed success promise | Optimal initial inventory as $`\varepsilon\downarrow0`$ |
 |---|---|
-| $`s<s_c(\lambda,m)`$ | Converges to $`E_{\rm exact}<\infty`$; the infinite-support optimum attains exact return. |
+| $`s\lt s_c(\lambda,m)`$ | Converges to $`E_{\rm exact}\lt \infty`$; the infinite-support optimum attains exact return. |
 | $`s=s_c(\lambda,m)`$ | $`\Theta(\log(1/\varepsilon))`$. |
 | $`s>s_c(\lambda,m)`$ | $`\Theta(\varepsilon^{-a})`$ with $`a=1/(m b_s)-1>0`$. |
 
@@ -234,6 +234,6 @@ The weighted words reduce to the original geometric blocks. For one mode per par
 
 Follow the [worked examples](WORKED_EXAMPLE.md), then [model](../science/model.md), [target spectra](../science/target_spectrum.md), [target accuracy](../science/target_accuracy.md) and [spectral energy](../science/spectral_energy.md). The original [construction](../science/construction.md), [converse](../science/converse.md), [exact success](../science/exact_success.md) and [mode threshold](../science/mode_threshold.md) retain the uniform specialization and its dependencies.
 
-All asymptotic statements fix $`m`$, the full target spectrum $`\lambda`$ and $`0<s<1`$ before sending the joint squared-infidelity to zero. The initial catalyst is pure. For the explicit filter, $`k`$ successive exact successes have probability $`s^k`$; failure consumes the catalyst. Mean photons, the number of modes, the largest occupied Fock level, preparation complexity and local control work are separate resources.
+All asymptotic statements fix $`m`$, the full target spectrum $`\lambda`$ and $`0\lt s\lt 1`$ before sending the joint squared-infidelity to zero. The initial catalyst is pure. For the explicit filter, $`k`$ successive exact successes have probability $`s^k`$; failure consumes the catalyst. Mean photons, the number of modes, the largest occupied Fock level, preparation complexity and local control work are separate resources.
 
 Watrous supplies the finite-dimensional foundation. The fixed-point optimizer, weighted word counting, Rényi threshold, approximate stability and sharp oscillator inventory law belong to the project's scientific account and its [research-level comparisons](../references/related_work.md). Mixed initial catalysts, energy-preserving controls, loss robustness, the deterministic endpoint $`s=1`$ and uniform varying-parameter limits remain separate questions.

@@ -52,7 +52,7 @@ Meanwhile, $`m`$ oscillator modes have $`\binom{h+m}{m}`$ Fock states below phot
 |---|---|
 | $`b_s>1/m`$ | Finite exact-return energy; finite cutoffs approach it. |
 | $`b_s=1/m`$ | $`\Theta(\log(1/\varepsilon))`$ as error vanishes. |
-| $`b_s<1/m`$ | $`\Theta(\varepsilon^{-[1/(m b_s)-1]})`$. |
+| $`b_s\lt 1/m`$ | $`\Theta(\varepsilon^{-[1/(m b_s)-1]})`$. |
 
 The [exact-spectrum proof](target_spectrum.md) shows that this is an optimum over all catalysts, rather than only a property of one chosen tree. The [accuracy proof](target_accuracy.md) shows that arbitrary mixed-output LOCC cannot evade the necessary tails at nonzero error.
 

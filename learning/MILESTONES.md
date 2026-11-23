@@ -166,7 +166,7 @@ Watrous's fidelity function is the unsquared root fidelity. The project's $`F_{\
 
 **Central question:** Which physical task is optimized, and which parameters remain fixed?
 
-**Understanding target:** Assemble a known pure catalyst, fixed mode count $`m`$, complete entangled target spectrum $`\lambda`$ and $`0<s<1`$, success-conditioned joint squared fidelity, unrestricted failure and initial total photons. Explain the limit $`\varepsilon\downarrow0`$ with those parameters fixed, and distinguish finite mean energy from finite support.
+**Understanding target:** Assemble a known pure catalyst, fixed mode count $`m`$, complete entangled target spectrum $`\lambda`$ and $`0\lt s\lt 1`$, success-conditioned joint squared fidelity, unrestricted failure and initial total photons. Explain the limit $`\varepsilon\downarrow0`$ with those parameters fixed, and distinguish finite mean energy from finite support.
 
 **Dependencies and story role:** M01–M11. This integrates the background into the precise research question.
 
@@ -250,7 +250,7 @@ Watrous's fidelity function is the unsquared root fidelity. The project's $`F_{\
 
 **Central question:** When does the optimal exact spectrum have finite photon inventory?
 
-**Understanding target:** Combine the fixed-point tail with $`m`$-mode ordered energies. Define $`q_*=m/(m+1)`$ and $`H_q(\lambda)=\log(\sum_i\lambda_i^q)/(1-q)`$, then explain $`s_c=\exp[-H_{q_*}(\lambda)/m]`$. Establish the strict condition $`s<s_c`$, including logarithmic divergence at equality and the different rank-two thresholds $`1/2`$ and $`5/8`$ for Bell and $`(0.9,0.1)`$ targets.
+**Understanding target:** Combine the fixed-point tail with $`m`$-mode ordered energies. Define $`q_*=m/(m+1)`$ and $`H_q(\lambda)=\log(\sum_i\lambda_i^q)/(1-q)`$, then explain $`s_c=\exp[-H_{q_*}(\lambda)/m]`$. Establish the strict condition $`s\lt s_c`$, including logarithmic divergence at equality and the different rank-two thresholds $`1/2`$ and $`5/8`$ for Bell and $`(0.9,0.1)`$ targets.
 
 **Dependencies and story role:** M10, M11, M14, M17. This combines the exact optimization and oscillator density of states into a physical feasibility boundary.
 
@@ -320,7 +320,7 @@ Watrous's fidelity function is the unsquared root fidelity. The project's $`F_{\
 
 **Central question:** Over how many ordered coefficients does fidelity force a significant tail?
 
-**Understanding target:** Use $`R_k=\Theta(k^{-b_s})`$ and the stability estimate to locate $`k=\Theta(\varepsilon^{-1/b_s})`$. Sum the forced tails against passive energy increments to derive a logarithm at $`b_s=1/m`$ and the power $`\varepsilon^{-(1/(mb_s)-1)}`$ when $`b_s<1/m`$. Retain degeneracies and fixed-parameter constants.
+**Understanding target:** Use $`R_k=\Theta(k^{-b_s})`$ and the stability estimate to locate $`k=\Theta(\varepsilon^{-1/b_s})`$. Sum the forced tails against passive energy increments to derive a logarithm at $`b_s=1/m`$ and the power $`\varepsilon^{-(1/(mb_s)-1)}`$ when $`b_s\lt 1/m`$. Retain degeneracies and fixed-parameter constants.
 
 **Dependencies and story role:** M10, M11, M17, M22. This turns the general converse into quantitative initial-photon lower bounds.
 
@@ -362,7 +362,7 @@ Watrous's fidelity function is the unsquared root fidelity. The project's $`F_{\
 
 **Central question:** How can the general theorem be checked against the maximally entangled case?
 
-**Understanding target:** Substitute $`\lambda_i=1/d`$ into the exponent equation to obtain $`b_s=\log(1/s)/\log d`$, $`s_c=d^{-1/m}`$ and $`a=\log(sd^{1/m})/\log(1/s)`$. Explain reduction of the word forest to geometric blocks and the one-mode exact formula $`E=s(d-1)/(1-ds)`$, including its restricted domain $`s<1/d`$.
+**Understanding target:** Substitute $`\lambda_i=1/d`$ into the exponent equation to obtain $`b_s=\log(1/s)/\log d`$, $`s_c=d^{-1/m}`$ and $`a=\log(sd^{1/m})/\log(1/s)`$. Explain reduction of the word forest to geometric blocks and the one-mode exact formula $`E=s(d-1)/(1-ds)`$, including its restricted domain $`s\lt 1/d`$.
 
 **Dependencies and story role:** M13, M15, M17, M18, M25. This verifies that the extension contains the established result without replacing it.
 
@@ -418,7 +418,7 @@ Watrous's fidelity function is the unsquared root fidelity. The project's $`F_{\
 
 **Central question:** How do the task, optimizer, construction, converse and boundaries form one account?
 
-**Understanding target:** State the pure-catalyst task at fixed $`m`$, $`\lambda`$ and $`s<1`$ with conditional joint squared fidelity and destructive failure allowed. Connect the optimal fixed point, its explicit filter, weighted tail, Rényi threshold and matched approximation law to oscillator counting. Recover the uniform special case and retain limits on mixed inputs, deterministic success, changing parameters and implementation costs.
+**Understanding target:** State the pure-catalyst task at fixed $`m`$, $`\lambda`$ and $`s\lt 1`$ with conditional joint squared fidelity and destructive failure allowed. Connect the optimal fixed point, its explicit filter, weighted tail, Rényi threshold and matched approximation law to oscillator counting. Recover the uniform special case and retain limits on mixed inputs, deterministic success, changing parameters and implementation costs.
 
 **Dependencies and story role:** M12–M29. This is the global synthesis of the project.
 

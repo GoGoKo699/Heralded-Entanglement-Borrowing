@@ -1,6 +1,6 @@
 # Related work and attribution
 
-The task uses a known pure catalyst in a fixed number $`m`$ of equal-frequency oscillator modes per party. An LOCC protocol produces a fixed finite pure target with Schmidt probabilities $`\lambda`$ and returns the original catalyst, jointly, on success of probability at least a fixed $`0<s<1`$. Failure can consume the catalyst. The optimized resource is the initial total mean photon number; the error is joint squared infidelity.
+The task uses a known pure catalyst in a fixed number $`m`$ of equal-frequency oscillator modes per party. An LOCC protocol produces a fixed finite pure target with Schmidt probabilities $`\lambda`$ and returns the original catalyst, jointly, on success of probability at least a fixed $`0\lt s\lt 1`$. Failure can consume the catalyst. The optimized resource is the initial total mean photon number; the error is joint squared infidelity.
 
 The [target-spectrum theorem](../science/target_spectrum.md) identifies an explicit optimal exact catalyst spectrum and the critical success
 

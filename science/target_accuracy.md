@@ -6,9 +6,9 @@ Let $`q_s`$ solve $`\sum_i(s\lambda_i)^{q_s}=1`$ and put $`b_s=1/q_s-1`$. Then $
 
 | Regime | Optimal initial photons |
 |---|---|
-| $`b_s>1/m`$ | $`E_m(\varepsilon;s,\lambda)\to E_m(0;s,\lambda)<\infty`$ |
+| $`b_s>1/m`$ | $`E_m(\varepsilon;s,\lambda)\to E_m(0;s,\lambda)\lt \infty`$ |
 | $`b_s=1/m`$ | $`\Theta(\log(1/\varepsilon))`$ |
-| $`b_s<1/m`$ | $`\Theta(\varepsilon^{-[1/(m b_s)-1]})`$ |
+| $`b_s\lt 1/m`$ | $`\Theta(\varepsilon^{-[1/(m b_s)-1]})`$ |
 
 The lower bound permits every protocol in the [model](model.md), including mixed retained success outputs. The upper bound uses finite Schmidt support and a local filter whose success probability is exactly $`s`$.
 
@@ -104,7 +104,7 @@ R_{2^{\ell+1}}
 \end{aligned}
 ```
 
-The contribution from a whole block is thus bounded below by a fixed positive multiple of $`2^{\ell(1/m-b_s)}`$. When $`b_s=1/m`$, there are $`\Theta(\log(1/\varepsilon))`$ constant-order blocks. When $`b_s<1/m`$, the last blocks give
+The contribution from a whole block is thus bounded below by a fixed positive multiple of $`2^{\ell(1/m-b_s)}`$. When $`b_s=1/m`$, there are $`\Theta(\log(1/\varepsilon))`$ constant-order blocks. When $`b_s\lt 1/m`$, the last blocks give
 
 ```math
 E(C)=\Omega_{m,s,\lambda}
@@ -198,7 +198,7 @@ E_D=
 \begin{cases}
 O_{m,s,\lambda}(1),&b_s>1/m,\\
 \Theta_{m,s,\lambda}(\log D),&b_s=1/m,\\
-\Theta_{m,s,\lambda}(D^{1/m-b_s}),&b_s<1/m.
+\Theta_{m,s,\lambda}(D^{1/m-b_s}),&b_s\lt 1/m.
 \end{cases}
 ```
 
@@ -226,7 +226,7 @@ Combining with the cutoff upper limit proves
 \boxed{
 \lim_{\varepsilon\downarrow0}E_m(\varepsilon;s,\lambda)
 =E_m(0;s,\lambda)
-=2\sum_j e_jr_j<\infty.
+=2\sum_j e_jr_j\lt \infty.
 }
 ```
 
