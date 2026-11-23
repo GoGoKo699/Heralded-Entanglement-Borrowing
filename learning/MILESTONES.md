@@ -2,7 +2,7 @@
 
 This is a common understanding map for the project. Its single educational anchor is John Watrous, *The Theory of Quantum Information* (2018). The [Watrous bridge](WATROUS_BRIDGE.md) identifies the verified sections, translates notation and supplies the steps from the book's finite-dimensional framework to this oscillator problem.
 
-The map has **12 background/preliminary milestones** and **18 narrative/innovation milestones**. The background builds from the physical carriers and individual quantum operations to the complete task and resource model. The narrative builds explicit state and filter components, develops the converse from a branch to an arbitrary protocol, and combines both routes into the energy and mode laws. This allocation reflects the project's connection between stochastic entanglement conversion and oscillator density of states.
+The map has **12 background/preliminary milestones** and **18 narrative/innovation milestones**. The background builds from the physical carriers and individual quantum operations to the complete task and resource model. The narrative builds the optimal target-dependent spectrum and filter, develops the approximate converse from a branch to an arbitrary protocol, and combines both routes into the full spectrum-dependent energy law. The uniform maximally entangled target is retained as a checked special case. This allocation reflects the project's connection between stochastic entanglement conversion and oscillator density of states.
 
 Watrous's fidelity function is the unsquared root fidelity. The project's $`F_{\rm joint}`$ is its square. Oscillator counting, infinite-dimensional extensions and the optimized success–energy law are supplied by the project and its research-level references; the textbook is not credited with those results.
 
@@ -18,7 +18,7 @@ Watrous's fidelity function is the unsquared root fidelity. The project's $`F_{\
 
 **Conceptual connection:** A bipartite quantum state becomes a physical resource once its carriers and energy convention are specified.
 
-**Source pointers:** Watrous §1.1.3, “Operator decompositions and norms,” for the finite-dimensional spectral language; [model: states and inventory](../science/model.md#states-and-physical-inventory); [spectral energy: Fock counting](../science/spectral_energy.md#fock-counting).
+**Source pointers:** Watrous §1.1.3, “Operator decompositions and norms,” for the finite-dimensional spectral language; [model: states and inventory](../science/model.md#states-and-charged-inventory); [spectral energy: Fock counting](../science/spectral_energy.md#fock-counting).
 
 ## M02 — Schmidt probabilities describe shared pure entanglement
 
@@ -34,19 +34,19 @@ Watrous's fidelity function is the unsquared root fidelity. The project's $`F_{\
 
 **Source pointers:** Watrous §1.1.3, Schmidt decompositions; [spectral energy: passive Schmidt assignment](../science/spectral_energy.md#passive-schmidt-assignment); [exact-success spectrum](../science/exact_success.md#1-exact-conversion-with-finite-mean-energy).
 
-## M03 — A maximally entangled target and a product reference
+## M03 — A pure target and its full Schmidt spectrum
 
 **Phase:** Background/preliminaries.
 
-**Central question:** How is adding a $`d`$-level maximally entangled target represented in a Schmidt spectrum?
+**Central question:** What specifies the additional shared state required on success?
 
-**Understanding target:** Explain the uniform target probabilities $`1/d`$, the tensor-product reference $`|C\rangle\otimes|\Phi_d\rangle`$, and the multiplication of finite Schmidt rank by $`d`$. Keep target preparation and catalyst return in the same reference state.
+**Understanding target:** Read a known target $`|T_\lambda\rangle=\sum_{i=1}^{d}\sqrt{\lambda_i}|i,i\rangle`$ with fixed decreasing positive probabilities and $`d\ge2`$. Explain the complete reference $`|C\rangle\otimes|T_\lambda\rangle`$, its product probabilities $`p_j\lambda_i`$ and its finite-rank multiplication by $`r`$. Recognize a uniform $`d`$-level target as a special case.
 
-**Dependencies and story role:** M02. This specifies the entanglement that must appear on success.
+**Dependencies and story role:** M02. This specifies the output before comparing targets of the same rank.
 
-**Conceptual connection:** Tensor products translate a physical output promise into a change of ordered probability data.
+**Conceptual connection:** Tensor products convert a physical joint-return promise into ordered probability data; target rank alone does not specify those data.
 
-**Source pointers:** Watrous §1.1.3 and §6.2.1, “Entanglement transformation”; [model: target state](../science/model.md#states-and-physical-inventory); [spectral energy: product identity](../science/spectral_energy.md#one-mode-product-identity).
+**Source pointers:** Watrous §1.1.3 and §6.2.1; [model](../science/model.md); [general target spectrum](../science/target_spectrum.md); [notation bridge](WATROUS_BRIDGE.md).
 
 ## M04 — A local filter has an outcome and a probability
 
@@ -74,7 +74,7 @@ Watrous's fidelity function is the unsquared root fidelity. The project's $`F_{\
 
 **Conceptual connection:** The same state transformation has a different resource meaning when its permitted communication and auxiliary inputs change.
 
-**Source pointers:** Watrous §6.1.2, “Separable maps and the LOCC paradigm”; [model: operations and heralding](../science/model.md#operations-heralding-and-return); [interpretation: failure](../science/interpretation.md#what-happens-on-failure).
+**Source pointers:** Watrous §6.1.2, “Separable maps and the LOCC paradigm”; [model: operations and heralding](../science/model.md#operations-heralding-and-return); [interpretation: failure](../science/interpretation.md#what-success-and-failure-mean).
 
 ## M06 — Conditional joint fidelity is the return criterion
 
@@ -144,7 +144,7 @@ Watrous's fidelity function is the unsquared root fidelity. The project's $`F_{\
 
 **Conceptual connection:** Counting Fock configurations gives physical meaning to a location in an ordered Schmidt spectrum.
 
-**Source pointers:** Watrous §1.1.3 for ordered spectral notation; the oscillator counting derivation is local: [spectral energy: Fock counting](../science/spectral_energy.md#fock-counting); [mode threshold: counting states](../science/mode_threshold.md#1-counting-low-energy-oscillator-states).
+**Source pointers:** Watrous §1.1.3 for ordered spectral notation; the oscillator counting derivation is local: [spectral energy: Fock counting](../science/spectral_energy.md#fock-counting); [mode threshold: counting states](../science/mode_threshold.md#1-physical-state-counting).
 
 ## M11 — Passive assignment and the tail-energy identity
 
@@ -164,265 +164,265 @@ Watrous's fidelity function is the unsquared root fidelity. The project's $`F_{\
 
 **Phase:** Background/preliminaries.
 
-**Central question:** Which task does $`E_m(\varepsilon;s,d)`$ optimize?
+**Central question:** Which physical task is optimized, and which parameters remain fixed?
 
-**Understanding target:** Assemble a known pure catalyst, fixed $`m,d,0\lt s\lt 1`$, a success-conditioned joint fidelity promise, unrestricted failure and the initial photon objective. Explain the order “fix the parameters, then send $`\varepsilon`$ to zero,” and separate finite mean energy from finite support.
+**Understanding target:** Assemble a known pure catalyst, fixed mode count $`m`$, complete entangled target spectrum $`\lambda`$ and $`0<s<1`$, success-conditioned joint squared fidelity, unrestricted failure and initial total photons. Explain the limit $`\varepsilon\downarrow0`$ with those parameters fixed, and distinguish finite mean energy from finite support.
 
 **Dependencies and story role:** M01–M11. This integrates the background into the precise research question.
 
-**Conceptual connection:** State conversion, physical density of states and conditional error become one resource optimization with explicit quantifiers.
+**Conceptual connection:** State conversion, oscillator density of states and conditional error become one optimization with explicit quantifiers and a full target specification.
 
-**Source pointers:** Watrous §2.3.2, §3.2 and §6.1.2 for the underlying language; [model: optimization](../science/model.md#optimization-and-limiting-convention); [model: scope](../science/model.md#scope-and-attribution).
+**Source pointers:** Watrous §2.3.2, §3.2 and §6.1.2; [model and scope](../science/model.md); [general accuracy law](../science/target_accuracy.md).
 
-## M13 — Adding the target replicates every Schmidt probability
-
-**Phase:** Narrative/innovation.
-
-**Central question:** Why does a maximally entangled target relate tails at indices $`k`$ and $`dk`$?
-
-**Understanding target:** Derive $`q_j=p_{\lceil j/d\rceil}/d`$ and $`Q_{dk}=P_k`$. Explain the factor $`d`$ as the target's uniform Schmidt multiplicity.
-
-**Dependencies and story role:** M03, M08, M12. This identifies the local spectral mechanism used by both proof routes.
-
-**Conceptual connection:** The tensor-product output promise becomes an exact relation across rank scales.
-
-**Source pointers:** Watrous §1.1.3 and §6.2.1; [converse: target spectrum](../science/converse.md); [spectral energy: product identity](../science/spectral_energy.md#one-mode-product-identity).
-
-## M14 — A self-similar spectrum balances the replicated target
+## M13 — Sorted product streams contain the target information
 
 **Phase:** Narrative/innovation.
 
-**Central question:** Which source probabilities can reproduce themselves after target replication and a successful filter?
+**Central question:** How does adding an unequal target change the source spectrum?
 
-**Understanding target:** Explain the decreasing block spectrum $`p_j=A(s/d)^{\lceil\log_d j\rceil}`$, its block multiplicities and its normalization for every $`s\lt 1`$. Distinguish normalization from finite mean energy.
+**Understanding target:** Construct $`q(p)=\operatorname{sort}(p\otimes\lambda)`$ by merging the $`d`$ weighted source streams. Explain why products from different source indices interleave, and recover $`q_j=p_{\lceil j/d\rceil}/d`$ and $`Q_{dk}=P_k`$ for a uniform target.
 
-**Dependencies and story role:** M02, M10, M13. This constructs the first attaining object.
+**Dependencies and story role:** M03, M08, M12. This identifies the spectral operation used by both the optimizer and the approximate converse.
 
-**Conceptual connection:** The probability reduction $`s`$ compensates the target's multiplicity $`d`$ through a geometric distribution over rank scales.
+**Conceptual connection:** The complete target spectrum enters through sorted products, while uniform targets admit a simpler dilation in the rank index.
 
-**Source pointers:** Watrous §1.1.3 for Schmidt notation; [construction: normalized spectrum](../science/construction.md#1-a-normalized-self-similar-spectrum); [exact-success source](../science/exact_success.md#1-exact-conversion-with-finite-mean-energy).
+**Source pointers:** Watrous §1.1.3 and §4.3.1; [target spectrum](../science/target_spectrum.md); [target-tail allocation](../science/target_accuracy.md).
 
-## M15 — One root filter announces exact success probability
-
-**Phase:** Narrative/innovation.
-
-**Central question:** How does the self-similar spectrum turn a local filter into the required stochastic transformation?
-
-**Understanding target:** Explain why attenuating only the vacuum/root amplitude produces the replicated spectrum with probability exactly $`s`$. Account for the complementary branch, which leaves a separable vacuum.
-
-**Dependencies and story role:** M04, M05, M14. This turns the spectral design into an allowed local instrument.
-
-**Conceptual connection:** The spectrum identity $`p=(1-s)\delta_1+s q`$ encodes the complete success-and-failure balance without making the initial catalyst mixed.
-
-**Source pointers:** Watrous §2.2.2 and §2.3.2; [exact filter and outcomes](../science/exact_success.md#1-exact-conversion-with-finite-mean-energy); [construction: filter](../science/construction.md#3-a-root-only-filter-with-exact-success-probability).
-
-## M16 — Local reindexing produces a returned catalyst and target
+## M14 — The most concentrated feasible spectrum is a fixed point
 
 **Phase:** Narrative/innovation.
 
-**Central question:** How does a replicated Schmidt spectrum become the desired physical product state?
+**Central question:** Why does a particular successful catalyst minimize energy over all allowed pure catalysts?
 
-**Understanding target:** Follow the quotient-and-remainder map from one Fock index to a catalyst index and target label. Explain joint decoupling and why the exact infinite-dimensional isometry needs a legitimate local dilation.
+**Understanding target:** Use exact tails $`P_k\ge sQ_k`$ to read $`p\prec\mathcal F_s(p)`$, where $`\mathcal F_s(p)=(1-s)\delta_1+s q(p)`$. Explain majorization preservation, the $`s`$-contraction in $`\ell^1`$, and iteration to the unique fixed point $`r`$. Conclude that $`r`$ majorizes every feasible spectrum and minimizes increasing passive energy.
 
-**Dependencies and story role:** M03, M05, M13, M15. This completes the exact successful transformation.
+**Dependencies and story role:** M08, M11, M13. This turns feasibility into a global optimization rather than one successful example.
 
-**Conceptual connection:** A sorted-spectrum construction acquires a concrete output register structure through local isometries.
+**Conceptual connection:** An order-preserving contraction connects stochastic entanglement conversion with universal spectral-energy optimality.
 
-**Source pointers:** Watrous §2.2.2 for isometric dilations; [exact conversion and local dilation](../science/exact_success.md#local-dilation); [finite reindexing](../science/construction.md#4-local-reindexing-and-exact-fidelity).
+**Source pointers:** Watrous §4.3.1 and §6.2.1 for the finite-dimensional foundations; [fixed-point optimization](../science/target_spectrum.md).
 
-## M17 — Finite truncation preserves the success promise
-
-**Phase:** Narrative/innovation.
-
-**Central question:** How can the construction use finite Fock support without silently changing its promised success probability?
-
-**Understanding target:** Explain the cutoff $`D=d^L`$, the omitted source mass $`t_L`$ and renormalization. Identify why the root filter is adjusted so that success remains exactly $`s`$ after truncation.
-
-**Dependencies and story role:** M06, M14, M15, M16. This makes every positive-error upper bound finite.
-
-**Conceptual connection:** Finite approximation must preserve the operational success requirement as well as approximate the desired state.
-
-**Source pointers:** Watrous §2.3.2 and §3.2; [construction: finite cutoff](../science/construction.md#2-a-finite-cutoff-and-a-physical-catalyst); [adjusted root filter](../science/construction.md#3-a-root-only-filter-with-exact-success-probability); [worked example](WORKED_EXAMPLE.md).
-
-## M18 — The omitted target tail determines the joint fidelity
+## M15 — A word forest gives the optimal spectrum explicitly
 
 **Phase:** Narrative/innovation.
 
-**Central question:** Where does the finite construction's return error reside?
+**Central question:** Which coefficients realize the fixed point for an arbitrary target?
 
-**Understanding target:** Explain that the successful spectrum agrees with the desired spectrum at indices $`2,\ldots,D`$, while omitted target mass $`b_L`$ moves to the root. Relate the resulting exact overlap to $`1-F_L=O_{s,d}(s^L)`$.
+**Understanding target:** Explain the root $`A=(1-s)/(1-s\lambda_1)`$ and the coefficients $`A s^k\lambda_{i_1}\cdots\lambda_{i_k}`$ for words whose first letter is not 1. Account for normalization and why pruning the first branch avoids duplicate counting. Distinguish normalization from finite photon energy.
 
-**Dependencies and story role:** M06, M07, M13, M17. This supplies the accuracy estimate for the upper bound.
+**Dependencies and story role:** M02, M13, M14. This constructs the exact optimizer from the target probabilities.
 
-**Conceptual connection:** A controlled spectral discrepancy gives an explicit joint return guarantee for the entire retained output.
+**Conceptual connection:** Self-reproduction after target multiplication becomes an explicit weighted tree of Schmidt coefficients.
 
-**Source pointers:** Watrous §3.2; [construction: exact fidelity](../science/construction.md#4-local-reindexing-and-exact-fidelity); [worked example](WORKED_EXAMPLE.md).
+**Source pointers:** Watrous §1.1.3 for Schmidt notation; [root and word spectrum](../science/target_spectrum.md); [unequal worked example](WORKED_EXAMPLE.md).
 
-## M19 — A successful branch cannot hide its required Schmidt tail
-
-**Phase:** Narrative/innovation.
-
-**Central question:** How does an accurate successful branch force a minimum amount of entanglement in its complete state?
-
-**Understanding target:** Combine Schmidt affinity, tail coarse graining and a purification of discarded environments. Explain why a potentially entangled environment cannot reduce the required tail below that of the desired retained target.
-
-**Dependencies and story role:** M07, M08, M09, M13. This develops the local geometric step of the converse.
-
-**Conceptual connection:** Fidelity to the retained pure reference constrains the entanglement spectrum even when the retained success state is mixed.
-
-**Source pointers:** Watrous §3.2.2 and §4.3.1; [converse: affinity and environments](../science/converse.md#schmidt-affinity-and-discarded-environments).
-
-## M20 — Averaging gives a bound for every allowed protocol
+## M16 — One filter and sorted local labels complete the protocol
 
 **Phase:** Narrative/innovation.
 
-**Central question:** How do branch constraints survive adaptive LOCC and conditioning on success?
+**Central question:** How is the spectral fixed point realized by LOCC with an actual success flag?
 
-**Understanding target:** Combine average Schmidt-tail monotonicity with the average fidelity budget to obtain $`P_k\ge s(\sqrt{Q_k}-\sqrt{2\varepsilon})_+^2`$. Explain why this covers several successful outcomes, mixed retained states and the specified closure of LOCC.
+**Understanding target:** Follow the root-only amplitude attenuation $`\sqrt{s\lambda_1}`$, success probability exactly $`s`$, product-vacuum failure and local reindexing into catalyst and target labels. Explain why unequal targets use known sorted product labels and why the countable-support operation needs an admitted local dilation.
 
-**Dependencies and story role:** M05, M06, M08, M09, M19. This lifts a branch argument to the complete protocol class.
+**Dependencies and story role:** M04, M05, M13, M15. This converts the optimal spectrum into an operational exact protocol.
 
-**Conceptual connection:** The success probability pays for the entanglement carried by accepted branches; conditioning does not remove that cost.
+**Conceptual connection:** The identity $`r=(1-s)\delta_1+s q(r)`$ balances both outcomes of a local instrument without making the initial state mixed.
 
-**Source pointers:** Watrous §6.1.2 and §6.2.1 for finite-dimensional LOCC foundations; [converse: averaging](../science/converse.md#averaging-the-successful-branches); [infinite outcomes and closure](../science/converse.md#infinite-outcomes-and-closure); [inherited infinite-dimensional conversion results](../references/related_work.md).
+**Source pointers:** Watrous §2.2.2, §2.3.2 and §6.1.2; [exact filter and local isometries](../science/target_spectrum.md); [worked examples](WORKED_EXAMPLE.md).
 
-## M21 — The target creates a seeded geometric tail recurrence
-
-**Phase:** Narrative/innovation.
-
-**Central question:** Why must a source spectrum carry weight at successively larger rank scales?
-
-**Understanding target:** Use $`Q_{dk}=P_k`$ in the universal inequality and identify a nonzero seed from $`q_1\le1/d`$. Explain the recurrence for $`\sqrt{P_{d^\ell}}`$ and the meaning of its additive error term.
-
-**Dependencies and story role:** M13, M20. This converts the general converse into a scale-by-scale constraint.
-
-**Conceptual connection:** Reproducing the catalyst while adding a target links one rank scale to the next, with success probability setting the retained fraction.
-
-**Source pointers:** Watrous §3.2 and §6.2.1 for the ingredients; [converse: geometric recurrence](../science/converse.md#a-geometric-tail-recurrence).
-
-## M22 — Fixed accuracy determines how many scales are forced
+## M17 — Weighted counting determines the long tail
 
 **Phase:** Narrative/innovation.
 
-**Central question:** How far can the converse recurrence be iterated before the allowed error dominates?
+**Central question:** How many coefficients of the optimal spectrum exceed a small weight?
 
-**Understanding target:** Explain why the accumulated square-root error permits tails of order $`s^\ell`$ through $`L_\varepsilon=\log(1/\varepsilon)/\log(1/s)+O_{s,d}(1)`$. Keep the squared-infidelity convention and fixed-$`s`$ limiting order intact.
+**Understanding target:** Define $`\beta_i=s\lambda_i`$ and the unique $`q_s`$ in $`(0,1)`$ satisfying $`\sum_i\beta_i^{q_s}=1`$. Explain conserved powered mass at a tree split, stopping leaves near a weight threshold, and the resulting $`p_j^\star=\Theta(j^{-1/q_s})`$ and $`R_k=\Theta(k^{-b_s})`$, $`b_s=1/q_s-1`$.
 
-**Dependencies and story role:** M06, M07, M12, M21. This identifies the effective range needed for the asymptotic lower bound.
+**Dependencies and story role:** M10, M15. This extracts the quantitative large-index behavior needed to test physical energy.
 
-**Conceptual connection:** A local fidelity budget becomes a global number of unavoidable rank scales; replacing the convention by a different error parameter changes the comparison.
+**Conceptual connection:** A weighted branching identity converts a target-dependent coefficient construction into a polynomial counting law.
 
-**Source pointers:** Watrous §3.2 for fidelity conventions; [converse: recurrence cutoff](../science/converse.md#a-geometric-tail-recurrence); [model: limiting convention](../science/model.md#optimization-and-limiting-convention).
+**Source pointers:** Watrous §1.1.3 for spectral ordering; the tree argument is supplied locally in [target counting](../science/target_spectrum.md).
 
-## M23 — Rank scales become a geometric photon sum
-
-**Phase:** Narrative/innovation.
-
-**Central question:** How do the forced tails and the attaining spectrum translate into the same physical inventory?
-
-**Understanding target:** Combine $`e_j=\Theta_m(j^{1/m})`$ with block mass of order $`s^\ell`$. Explain the shared sum $`\sum_{\ell\le L}(sd^{1/m})^\ell`$ in the lower and upper bounds, including why energy degeneracies do not invalidate the lower bound.
-
-**Dependencies and story role:** M10, M11, M14, M18, M22. This joins the construction and converse through the physical density of states.
-
-**Conceptual connection:** Entanglement conversion controls tail weight; oscillator counting determines the energy paid for that weight.
-
-**Source pointers:** Watrous §1.1.3 and §4.3.1 for spectral foundations; [spectral energy: geometric blocks](../science/spectral_energy.md#geometric-index-blocks); [construction: photon inventory](../science/construction.md#5-photon-inventory-and-the-three-regimes); [converse: energy lower bounds](../science/converse.md#energy-lower-bounds-for-a-fixed-number-of-modes).
-
-## M24 — The matched success–energy phase law
+## M18 — The Rényi threshold prices the complete target
 
 **Phase:** Narrative/innovation.
 
-**Central question:** Why do bounded, logarithmic and power-law photon costs occur at different fixed success probabilities?
+**Central question:** When does the optimal exact spectrum have finite photon inventory?
 
-**Understanding target:** Interpret $`g=sd^{1/m}`$, the critical value $`s_c=d^{-1/m}`$ and the exponent $`a_m=\log(g)/\log(1/s)`$. Explain what is matched over all allowed protocols and distinguish an asymptotic order from an exact coefficient.
+**Understanding target:** Combine the fixed-point tail with $`m`$-mode ordered energies. Define $`q_*=m/(m+1)`$ and $`H_q(\lambda)=\log(\sum_i\lambda_i^q)/(1-q)`$, then explain $`s_c=\exp[-H_{q_*}(\lambda)/m]`$. Establish the strict condition $`s<s_c`$, including logarithmic divergence at equality and the different rank-two thresholds $`1/2`$ and $`5/8`$ for Bell and $`(0.9,0.1)`$ targets.
 
-**Dependencies and story role:** M12, M18, M20, M22, M23. This assembles the main approximation theorem.
+**Dependencies and story role:** M10, M11, M14, M17. This combines the exact optimization and oscillator density of states into a physical feasibility boundary.
 
-**Conceptual connection:** Convergence or divergence of one geometric resource sum changes the energy cost's divergence class.
+**Conceptual connection:** The full target probability spectrum, through a mode-dependent Rényi entropy, determines the cost of its required tail.
 
-**Source pointers:** Watrous §6.2.1 as conversion background; [model: success–energy law](../science/model.md#the-successenergy-law); [mode threshold: approximate costs](../science/mode_threshold.md#3-the-same-counting-law-determines-approximate-costs).
+**Source pointers:** Watrous §4.3.1 and §6.2.1 for the ordering framework; [threshold](../science/target_spectrum.md); [mode interpretation](../science/mode_threshold.md); [worked comparison](WORKED_EXAMPLE.md).
 
-## M25 — Exact finite-energy return has a strict mode threshold
-
-**Phase:** Narrative/innovation.
-
-**Central question:** When does finite mean energy permit exact joint return, and how many modes are needed?
-
-**Understanding target:** Combine the infinite-support construction with the zero-error converse to establish $`s\lt d^{-1/m}`$. Explain the strict integer condition $`m>\log d/\log(1/s)`$ and why equality belongs to the divergent-energy boundary.
-
-**Dependencies and story role:** M12, M16, M21, M23, M24. This turns the phase law into an exact feasibility and mode-count statement.
-
-**Conceptual connection:** The same density-of-states mechanism determines both approximation costs and the possibility of exact finite-energy return.
-
-**Source pointers:** Watrous §6.2.1 for the conversion framework; [exact success: finite energy](../science/exact_success.md#2-when-the-exact-catalyst-has-finite-energy); [mode threshold: exact return](../science/mode_threshold.md#2-exact-return-forces-tails-at-every-rank-scale); [minimum mode count](../science/mode_threshold.md#4-the-minimum-number-of-modes-for-exact-finite-energy-return).
-
-## M26 — One oscillator gives a sharp exact energy budget
+## M19 — A successful branch retains its required Schmidt tail
 
 **Phase:** Narrative/innovation.
 
-**Central question:** Why can the one-mode exact budget be determined beyond its asymptotic order?
+**Central question:** How does closeness to a pure joint reference constrain the complete successful state?
 
-**Understanding target:** Use the affine identity $`\mu(q)=d\mu(p)+(d-1)/2`$ and average tail monotonicity to derive the energy–success constraint. Explain how the self-similar construction saturates it, giving $`E_1(0;s,d)=s(d-1)/(1-ds)`$ for $`s\lt 1/d`$.
+**Understanding target:** Combine Schmidt affinity, tail coarse graining and purification of discarded local systems. Explain why an entangled environment cannot lower the required tail below the desired retained spectrum, including for an unequal target.
 
-**Dependencies and story role:** M08, M11, M13, M15, M25. This identifies the special exact statement supported by the one-mode spectrum.
+**Dependencies and story role:** M07, M08, M09, M13. This develops the geometric step behind the approximate converse.
 
-**Conceptual connection:** A precise relation between rank and photon number strengthens a matching-order result into an exact optimal budget.
+**Conceptual connection:** Fidelity of a retained output constrains a complete branch without assuming the retained state is pure.
 
-**Source pointers:** Watrous §6.2.1 for finite-dimensional pure-state conversion foundations; [one-mode product identity](../science/spectral_energy.md#one-mode-product-identity); [sharp exact bound](../science/exact_success.md#3-a-sharp-one-mode-bound-for-every-energy-budget).
+**Source pointers:** Watrous §3.2.2 and §4.3.1; [affinity and environments](../science/converse.md#schmidt-affinity-and-discarded-environments); [general target application](../science/target_accuracy.md).
 
-## M27 — Compactness controls catalysts that change with accuracy
-
-**Phase:** Narrative/innovation.
-
-**Central question:** Why does the sharp zero-error one-mode budget also determine the optimal small-error limit?
-
-**Understanding target:** Explain bounded-moment tightness, preservation of normalized spectral mass and the order of passing fixed-tail inequalities to a limit before summing them. Distinguish this argument from setting the error to zero for one fixed catalyst.
-
-**Dependencies and story role:** M11, M12, M20, M26. This completes the one-mode optimization when the chosen source may depend on the requested accuracy.
-
-**Conceptual connection:** Energy control prevents probability mass from escaping to arbitrarily high Fock levels during the limit.
-
-**Source pointers:** Watrous §1.1.3 and §3.2 for spectral and continuity foundations; the compactness argument is supplied locally: [sharp positive-error limit](../science/exact_success.md#4-the-sharp-positive-error-limit); [converse: subcritical limit](../science/converse.md#the-sharp-one-mode-subcritical-limit).
-
-## M28 — Return on success, consumption on failure and growing support
+## M20 — Averaging yields the arbitrary-LOCC fidelity bound
 
 **Phase:** Narrative/innovation.
 
-**Central question:** What physical capability does the result provide once every branch and resource qualifier is retained?
+**Central question:** How do branch constraints survive adaptivity, multiple successful outcomes and conditioning?
 
-**Understanding target:** Account for repeated exact successes with probability $`s^k`$, catalyst destruction on failure and finite-error cutoff growth. Distinguish initial mean photons, physical modes, largest occupied Fock level, preparation complexity and control work.
+**Understanding target:** Obtain $`P_k\ge s(\sqrt{Q_k}-\sqrt{2\varepsilon})_+^2`$ from average tail monotonicity and the joint fidelity budget. Explain the role of every outcome, mixed retained successes and the stated trace-norm closure.
 
-**Dependencies and story role:** M01, M05, M12, M15, M17, M24, M25, M26. This integrates the theorem into a complete operational interpretation.
+**Dependencies and story role:** M05, M06, M08, M09, M19. This extends a branch calculation to the whole allowed protocol class.
 
-**Conceptual connection:** Small mean inventory and accurate conditional return are compatible with rare high-energy components and eventual resource consumption.
+**Conceptual connection:** Success probability pays for the entanglement in accepted branches; conditioning does not remove that payment.
 
-**Source pointers:** Watrous §2.3.2 and §6.1.2 for instruments and LOCC; [interpretation: failure](../science/interpretation.md#what-happens-on-failure); [finite approximations and implementation resources](../science/interpretation.md#finite-approximations-and-implementation-resources); [construction: cutoff](../science/construction.md#6-the-cutoff-remains-a-resource).
+**Source pointers:** Watrous §6.1.2 and §6.2.1; [tail inequality and closure](../science/converse.md); [unequal-target use](../science/target_accuracy.md).
 
-## M29 — Credit the conversion tools and isolate the added conclusion
-
-**Phase:** Narrative/innovation.
-
-**Central question:** What remains after the closest established conversion mechanisms are credited?
-
-**Understanding target:** Separate inherited Schmidt-tail monotones, stochastic root filters and infinite-dimensional conversion phenomena from the optimized energy threshold, critical logarithm and matching power exponent. Compare the task with thermal catalysis and catalytic distillation supplied with fresh resources without transferring their claims between models.
-
-**Dependencies and story role:** M08, M09, M12, M20, M24, M27, M28. This locates the completed contribution within its actual scientific context.
-
-**Conceptual connection:** A shared mathematical foundation does not identify the charged resource, supplied inputs or output guarantee of two different tasks.
-
-**Source pointers:** Watrous §6.1.2 and §6.2.1 for the common finite-dimensional framework; [related work](../references/related_work.md); [interpretation: established conversion theory](../science/interpretation.md#relation-to-established-conversion-theory); [model: scope and attribution](../science/model.md#scope-and-attribution).
-
-## M30 — Explain the complete result at its supported scope
+## M21 — Allocating product entries gives an exact tail operator
 
 **Phase:** Narrative/innovation.
 
-**Central question:** How do the physical task, two proof routes and final limitations form one scientific account?
+**Central question:** What replaces the uniform relation $`Q_{dk}=P_k`$ for unequal target probabilities?
 
-**Understanding target:** State the pure-catalyst, fixed-$`m,d,s\lt 1`$ task with conditional joint squared fidelity and destructive failure allowed. Explain how the explicit spectrum/filter and arbitrary-LOCC converse match through the oscillator density of states, identify the exact one-mode result, and retain the boundaries on mixed catalysts, changing parameters and implementation cost.
+**Understanding target:** Explain $`Q_k=\min_{k_1+\cdots+k_d=k}\sum_i\lambda_iP_{k_i}`$, with $`P_0=1`$ and nonnegative integer allocations. Construct the square-root operator with its zero coordinate fixed, and distinguish an exact top-k identity from a bound choosing one convenient allocation.
 
-**Dependencies and story role:** M12–M29. This is the global synthesis of the project, with no additional unannounced prerequisite or claim.
+**Dependencies and story role:** M13, M20. This gives the nonlinear operator that carries all target information into the converse.
 
-**Conceptual connection:** The contribution is a success-dependent physical inventory law: a fixed number of modes determines when accurate joint return costs bounded, logarithmic or power-growing initial energy.
+**Conceptual connection:** Merging weighted streams is equivalent to optimizing how many entries are removed from each stream.
 
-**Source pointers:** Watrous §3.2, §6.1.2 and §6.2.1 as the selected foundations; [scientific model and results](../science/model.md); [scientific reading route](../science/README.md); [physical interpretation](../science/interpretation.md); [verification boundaries](../verification/README.md).
+**Source pointers:** Watrous §1.1.3 and §4.3.1 for ordered spectra; [tail allocation and operator](../science/target_accuracy.md).
+
+## M22 — Contraction stability compares every approximate source with the optimum
+
+**Phase:** Narrative/innovation.
+
+**Central question:** Why must an accurate source retain the optimal exact tail to controlled precision?
+
+**Understanding target:** Explain monotonicity and the one-sided $`\sqrt s`$ Lipschitz bound from the weighted Euclidean norm. Compare $`\sqrt P`$ with the exact fixed tail $`\sqrt R`$ to obtain $`P_k\ge(\sqrt{R_k}-\sqrt{2s\varepsilon}/(1-\sqrt s))_+^2`$.
+
+**Dependencies and story role:** M14, M17, M20, M21. This is the load-bearing unequal-target approximate converse.
+
+**Conceptual connection:** A uniform stability estimate replaces a rank-only geometric recurrence and preserves the full target-spectrum dependence.
+
+**Source pointers:** Watrous §3.2 for fidelity conventions; [stability proof](../science/target_accuracy.md).
+
+## M23 — The accuracy cutoff determines the divergent lower costs
+
+**Phase:** Narrative/innovation.
+
+**Central question:** Over how many ordered coefficients does fidelity force a significant tail?
+
+**Understanding target:** Use $`R_k=\Theta(k^{-b_s})`$ and the stability estimate to locate $`k=\Theta(\varepsilon^{-1/b_s})`$. Sum the forced tails against passive energy increments to derive a logarithm at $`b_s=1/m`$ and the power $`\varepsilon^{-(1/(mb_s)-1)}`$ when $`b_s<1/m`$. Retain degeneracies and fixed-parameter constants.
+
+**Dependencies and story role:** M10, M11, M17, M22. This turns the general converse into quantitative initial-photon lower bounds.
+
+**Conceptual connection:** The error budget sets a rank cutoff, while the oscillator density of states prices the probability that must persist below it.
+
+**Source pointers:** Watrous §1.1.3 and §3.2 for spectral and distance foundations; [energy lower bounds](../science/target_accuracy.md); [spectral energy](../science/spectral_energy.md).
+
+## M24 — Finite cutoffs attain accuracy without lowering success
+
+**Phase:** Narrative/innovation.
+
+**Central question:** How can an infinite-spectrum optimizer give a finite protocol at every positive error?
+
+**Understanding target:** Keep the $`D`$ largest fixed-point coefficients, normalize by $`1-t`$ with $`t=R_D`$, and adjust only the root filter to retain probability exactly $`s`$. Explain the sorted product identity on entries $`2`$ through $`D`$, the omitted product mass $`b=(1-s)t/[s(1-t)]`$, and the exact-overlap bound $`1-F_{\rm joint}\le2b`$.
+
+**Dependencies and story role:** M06, M13, M15, M16, M17. This constructs the finite upper bound under the same operational promises.
+
+**Conceptual connection:** Truncation must preserve success and the complete joint reference, not only approximate the original source spectrum.
+
+**Source pointers:** Watrous §2.3.2 and §3.2; [finite truncation and fidelity](../science/target_accuracy.md); [worked examples](WORKED_EXAMPLE.md).
+
+## M25 — The complete target-dependent success-energy law
+
+**Phase:** Narrative/innovation.
+
+**Central question:** How do the arbitrary-protocol converse and finite construction match?
+
+**Understanding target:** State convergence to the finite exact optimum below $`s_c`$, logarithmic growth at $`s_c`$, and the matched power with exponent $`a=1/(mb_s)-1`$ above $`s_c`$. Explain what is optimized over all allowed pure catalysts and LOCC and distinguish a matching order from an exact coefficient.
+
+**Dependencies and story role:** M12, M18, M20, M22, M23, M24. This integrates both directions into the main approximation theorem.
+
+**Conceptual connection:** The same optimal tail controls exact feasibility and the divergence class of accurate finite borrowing.
+
+**Source pointers:** Watrous §6.2.1 for conversion foundations; [model and main results](../science/model.md); [full accuracy law](../science/target_accuracy.md).
+
+## M26 — Uniform targets recover the original sharp statements
+
+**Phase:** Narrative/innovation.
+
+**Central question:** How can the general theorem be checked against the maximally entangled case?
+
+**Understanding target:** Substitute $`\lambda_i=1/d`$ into the exponent equation to obtain $`b_s=\log(1/s)/\log d`$, $`s_c=d^{-1/m}`$ and $`a=\log(sd^{1/m})/\log(1/s)`$. Explain reduction of the word forest to geometric blocks and the one-mode exact formula $`E=s(d-1)/(1-ds)`$, including its restricted domain $`s<1/d`$.
+
+**Dependencies and story role:** M13, M15, M17, M18, M25. This verifies that the extension contains the established result without replacing it.
+
+**Conceptual connection:** An exactly solvable specialization checks notation, limiting orders, physical normalization and proof compatibility.
+
+**Source pointers:** Watrous §1.1.3 and §6.2.1; [uniform construction](../science/construction.md); [one-mode exact optimum](../science/exact_success.md); [Bell example](WORKED_EXAMPLE.md).
+
+## M27 — Compactness identifies the optimal small-error limit
+
+**Phase:** Narrative/innovation.
+
+**Central question:** Why can catalysts chosen separately at each accuracy not beat the finite exact optimum in the limit?
+
+**Understanding target:** Explain energy tightness of sorted spectra, preservation of normalized mass and passing fixed-index inequalities to a limit before nonnegative energy summation. Combine limiting exact feasibility with fixed-point majorization and lower semicontinuity to identify $`E_m(\varepsilon;s,\lambda)\to E_{\rm exact}`$ below threshold.
+
+**Dependencies and story role:** M11, M14, M18, M20, M25. This completes subcritical optimization for accuracy-dependent catalysts.
+
+**Conceptual connection:** Initial energy control prevents mass from escaping to arbitrarily high Fock levels during the limiting argument.
+
+**Source pointers:** Watrous §1.1.3 and §3.2 for spectral and continuity foundations; [subcritical limit](../science/target_accuracy.md); [uniform limit](../science/exact_success.md).
+
+## M28 — A complete physical account includes failure and implementation resources
+
+**Phase:** Narrative/innovation.
+
+**Central question:** What capability remains when all branches and charged resources are stated?
+
+**Understanding target:** Follow both worked filters, their conditional fidelities, input inventories and local reindexing. Explain probability $`s^k`$ for $`k`$ exact successes, destructive failure, and increasing cutoff. Distinguish initial photons, modes, maximum occupied level, preparation complexity and local work.
+
+**Dependencies and story role:** M01, M05, M12, M16, M24, M25, M26. This integrates the theorem into its operational meaning.
+
+**Conceptual connection:** Accurate conditional return and bounded mean inventory coexist with eventual resource consumption and demanding local controls.
+
+**Source pointers:** Watrous §2.3.2 and §6.1.2; [worked examples](WORKED_EXAMPLE.md); [interpretation](../science/interpretation.md); [model resource convention](../science/model.md).
+
+## M29 — Attribution and scope locate the added scientific result
+
+**Phase:** Narrative/innovation.
+
+**Central question:** What changes after established conversion and oscillator tools are credited?
+
+**Understanding target:** Separate inherited Schmidt-tail monotones, majorization-based stochastic conversion, root filters and infinite-dimensional phenomena from the optimal fixed spectrum, weighted counting, Rényi boundary and sharp accuracy law. Compare assumptions before transferring claims from thermal catalysis or distillation with fresh entangled resources.
+
+**Dependencies and story role:** M08, M12, M14, M18, M20, M25, M27, M28. This places the completed account in its actual scientific context.
+
+**Conceptual connection:** Shared mathematical ingredients do not make two operational tasks, charged resources or guarantees identical.
+
+**Source pointers:** Watrous §6.1.2 and §6.2.1 for the common framework; [related work](../references/related_work.md); [interpretation](../science/interpretation.md); [exact spectrum proof](../science/target_spectrum.md) and [accuracy proof](../science/target_accuracy.md).
+
+## M30 — Explain the full spectrum-dependent borrowing result
+
+**Phase:** Narrative/innovation.
+
+**Central question:** How do the task, optimizer, construction, converse and boundaries form one account?
+
+**Understanding target:** State the pure-catalyst task at fixed $`m`$, $`\lambda`$ and $`s<1`$ with conditional joint squared fidelity and destructive failure allowed. Connect the optimal fixed point, its explicit filter, weighted tail, Rényi threshold and matched approximation law to oscillator counting. Recover the uniform special case and retain limits on mixed inputs, deterministic success, changing parameters and implementation costs.
+
+**Dependencies and story role:** M12–M29. This is the global synthesis of the project.
+
+**Conceptual connection:** The complete target spectrum and physical mode density jointly determine when successful return costs finite, logarithmic or power-growing initial photons.
+
+**Source pointers:** Watrous §3.2, §6.1.2 and §6.2.1; [model](../science/model.md); [scientific route](../science/README.md); [target spectra](../science/target_spectrum.md); [target accuracy](../science/target_accuracy.md); [verification boundaries](../verification/README.md).
 

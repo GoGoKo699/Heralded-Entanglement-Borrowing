@@ -1,17 +1,19 @@
 # Scientific account
 
-The problem is to extract a fixed maximally entangled state while returning a known pure oscillator catalyst on a heralded success event. The success probability, joint return error and physical mode count together determine the minimum initial photon inventory.
+The task is to extract a fixed finite pure entangled target while returning a known pure oscillator catalyst on announced success. Failure may consume the source. The target Schmidt spectrum, success promise, joint error and physical mode count determine the optimal initial photon inventory.
 
-Start with the [model and theorem statements](model.md), then read [the physical interpretation](interpretation.md). The proofs have two connected routes.
+Start with the [model and main theorems](model.md) and [physical interpretation](interpretation.md). The general proof has three parts: optimize the exact catalyst spectrum, count its tail, and control approximate return by a contraction on square-root tails.
 
 | Question | Authoritative page |
 |---|---|
 | What is supplied, returned and charged? | [Model](model.md) |
-| How does a Schmidt index translate into photon energy? | [Passive energy and Fock counting](spectral_energy.md) |
-| Why does arbitrary LOCC obey the tail recurrence? | [Converse](converse.md) |
-| Which explicit finite states and filters attain the orders? | [Construction](construction.md) |
-| When is exact finite-energy return possible? | [Exact success](exact_success.md) |
-| How does the number of modes set the threshold? | [Mode threshold](mode_threshold.md) |
+| Which catalyst minimizes exact energy for a given target? | [Optimal target-dependent spectrum](target_spectrum.md) |
+| Why does its power tail select a Rényi threshold? | [Weighted-tree counting](target_spectrum.md#4-the-tail-exponent-from-weighted-tree-counting) |
+| How do arbitrary approximate LOCC and finite filters match? | [Sharp accuracy law](target_accuracy.md) |
+| How does a Schmidt index translate into photons? | [Passive energy and Fock counting](spectral_energy.md) |
+| How many oscillator modes permit finite-energy exact return? | [Mode threshold](mode_threshold.md) |
 | What does success-conditioned return mean physically? | [Interpretation](interpretation.md) |
 
-The [related-work account](../references/related_work.md) identifies the inherited conversion theorems and the added resource optimization. [Verification](../verification/README.md) documents finite constructive checks and their limits. The analytical converse is not replaced by numerical tests.
+The uniform target retains a direct worked proof route: [finite logarithmic-block construction](construction.md), [arbitrary-LOCC tail inequality and rank-dilation converse](converse.md), and [exact one-mode rational optimum](exact_success.md). The tail inequality is general; the subsequent rank-dilation calculations specialize to $`\Phi_d`$.
+
+[Related work](../references/related_work.md) identifies inherited conversion theory and the added resource optimization. [Verification](../verification/README.md) records finite checks and their limits. General optimality and asymptotic statements rest on the analytical proofs.

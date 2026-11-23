@@ -1,5 +1,7 @@
 # The oscillator energy carried by a Schmidt spectrum
 
+The Fock counting, passive-assignment and tail-energy results below apply to every target spectrum. The later geometric-index and one-mode product identities specialize to the uniform target $`\Phi_d`$. For a nonuniform target, combine the general energy bound with [the optimal spectrum](target_spectrum.md) and [the sharp accuracy argument](target_accuracy.md).
+
 The energy budget in the [model](model.md) counts the initial photons in the shared catalyst. It is not a bound on local control work. This distinction lets us separate the spectrum of entanglement, which local operations cannot freely create, from the choice of physical Schmidt bases, which can only increase the least initial energy needed to realize that spectrum.
 
 Each party has a fixed number $`m\geq1`$ of equal-frequency oscillator modes. We measure energy above vacuum in units of one photon. Let

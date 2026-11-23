@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "explicit_instruments": [
     {
       "d": 2,
@@ -165,6 +165,471 @@
         "d": 8,
         "s": "1/2",
         "minimum_modes_per_party": 4
+      }
+    ]
+  },
+  "target_spectrum": {
+    "finite_instruments": [
+      {
+        "target": [
+          "9/10",
+          "1/10"
+        ],
+        "s": "3/5",
+        "exhaustive_word_depth": 11,
+        "ties_present": true,
+        "finite_instruments": [
+          {
+            "cutoff": 1,
+            "success": "3/5",
+            "normalizer": "8.695652173913E-1",
+            "conditional_joint_infidelity": "1.000000000000E-1",
+            "total_photons_modes_1_2_3": [
+              "0.000000000000E+0",
+              "0.000000000000E+0",
+              "0.000000000000E+0"
+            ]
+          },
+          {
+            "cutoff": 2,
+            "success": "3/5",
+            "normalizer": "9.217391304348E-1",
+            "conditional_joint_infidelity": "5.668992469032E-2",
+            "total_photons_modes_1_2_3": [
+              "1.132075471698E-1",
+              "1.132075471698E-1",
+              "1.132075471698E-1"
+            ]
+          },
+          {
+            "cutoff": 3,
+            "success": "3/5",
+            "normalizer": "9.499130434783E-1",
+            "conditional_joint_infidelity": "3.520371933383E-2",
+            "total_photons_modes_1_2_3": [
+              "2.284877334310E-1",
+              "1.691688026364E-1",
+              "1.691688026364E-1"
+            ]
+          },
+          {
+            "cutoff": 7,
+            "success": "3/5",
+            "normalizer": "9.809092813913E-1",
+            "conditional_joint_infidelity": "1.298474417426E-2",
+            "total_photons_modes_1_2_3": [
+              "4.648544542762E-1",
+              "2.966038541083E-1",
+              "2.592011132553E-1"
+            ]
+          },
+          {
+            "cutoff": 16,
+            "success": "3/5",
+            "normalizer": "9.919094469111E-1",
+            "conditional_joint_infidelity": "5.439615424250E-3",
+            "total_photons_modes_1_2_3": [
+              "6.784276261165E-1",
+              "3.713803048500E-1",
+              "3.112186757388E-1"
+            ]
+          },
+          {
+            "cutoff": 33,
+            "success": "3/5",
+            "normalizer": "9.963503406977E-1",
+            "conditional_joint_infidelity": "2.442420654632E-3",
+            "total_photons_modes_1_2_3": [
+              "8.701237657303E-1",
+              "4.203936327216E-1",
+              "3.417631740162E-1"
+            ]
+          }
+        ]
+      },
+      {
+        "target": [
+          "3/5",
+          "3/10",
+          "1/10"
+        ],
+        "s": "2/5",
+        "exhaustive_word_depth": 5,
+        "ties_present": true,
+        "finite_instruments": [
+          {
+            "cutoff": 1,
+            "success": "2/5",
+            "normalizer": "7.894736842105E-1",
+            "conditional_joint_infidelity": "4.000000000000E-1",
+            "total_photons_modes_1_2_3": [
+              "0.000000000000E+0",
+              "0.000000000000E+0",
+              "0.000000000000E+0"
+            ]
+          },
+          {
+            "cutoff": 2,
+            "success": "2/5",
+            "normalizer": "8.842105263158E-1",
+            "conditional_joint_infidelity": "2.005291214907E-1",
+            "total_photons_modes_1_2_3": [
+              "2.142857142857E-1",
+              "2.142857142857E-1",
+              "2.142857142857E-1"
+            ]
+          },
+          {
+            "cutoff": 3,
+            "success": "2/5",
+            "normalizer": "9.157894736842E-1",
+            "conditional_joint_infidelity": "1.407385727435E-1",
+            "total_photons_modes_1_2_3": [
+              "3.448275862069E-1",
+              "2.758620689655E-1",
+              "2.758620689655E-1"
+            ]
+          },
+          {
+            "cutoff": 7,
+            "success": "2/5",
+            "normalizer": "9.629305263158E-1",
+            "conditional_joint_infidelity": "5.846617206238E-2",
+            "total_photons_modes_1_2_3": [
+              "7.107776261937E-1",
+              "4.695141148074E-1",
+              "4.109560289642E-1"
+            ]
+          },
+          {
+            "cutoff": 16,
+            "success": "2/5",
+            "normalizer": "9.826317473684E-1",
+            "conditional_joint_infidelity": "2.668724765761E-2",
+            "total_photons_modes_1_2_3": [
+              "1.090189593540E+0",
+              "6.013681668785E-1",
+              "5.020341506958E-1"
+            ]
+          },
+          {
+            "cutoff": 33,
+            "success": "2/5",
+            "normalizer": "9.912465246316E-1",
+            "conditional_joint_infidelity": "1.329223919269E-2",
+            "total_photons_modes_1_2_3": [
+              "1.462205683752E+0",
+              "6.952430748147E-1",
+              "5.603716278733E-1"
+            ]
+          }
+        ]
+      },
+      {
+        "target": [
+          "2/5",
+          "2/5",
+          "1/5"
+        ],
+        "s": "1/2",
+        "exhaustive_word_depth": 4,
+        "ties_present": true,
+        "finite_instruments": [
+          {
+            "cutoff": 1,
+            "success": "1/2",
+            "normalizer": "6.250000000000E-1",
+            "conditional_joint_infidelity": "6.000000000000E-1",
+            "total_photons_modes_1_2_3": [
+              "0.000000000000E+0",
+              "0.000000000000E+0",
+              "0.000000000000E+0"
+            ]
+          },
+          {
+            "cutoff": 2,
+            "success": "1/2",
+            "normalizer": "7.500000000000E-1",
+            "conditional_joint_infidelity": "3.523969861393E-1",
+            "total_photons_modes_1_2_3": [
+              "3.333333333333E-1",
+              "3.333333333333E-1",
+              "3.333333333333E-1"
+            ]
+          },
+          {
+            "cutoff": 3,
+            "success": "1/2",
+            "normalizer": "8.125000000000E-1",
+            "conditional_joint_infidelity": "2.455737783104E-1",
+            "total_photons_modes_1_2_3": [
+              "6.153846153846E-1",
+              "4.615384615385E-1",
+              "4.615384615385E-1"
+            ]
+          },
+          {
+            "cutoff": 7,
+            "success": "1/2",
+            "normalizer": "8.875000000000E-1",
+            "conditional_joint_infidelity": "1.337060326846E-1",
+            "total_photons_modes_1_2_3": [
+              "1.267605633803E+0",
+              "7.887323943662E-1",
+              "7.042253521127E-1"
+            ]
+          },
+          {
+            "cutoff": 16,
+            "success": "1/2",
+            "normalizer": "9.337500000000E-1",
+            "conditional_joint_infidelity": "7.370471742744E-2",
+            "total_photons_modes_1_2_3": [
+              "2.174029451138E+0",
+              "1.100401606426E+0",
+              "9.156626506024E-1"
+            ]
+          },
+          {
+            "cutoff": 33,
+            "success": "1/2",
+            "normalizer": "9.595000000000E-1",
+            "conditional_joint_infidelity": "4.331364254718E-2",
+            "total_photons_modes_1_2_3": [
+              "3.307451797811E+0",
+              "1.377279833246E+0",
+              "1.084940072955E+0"
+            ]
+          }
+        ]
+      },
+      {
+        "target": [
+          "1/2",
+          "1/2"
+        ],
+        "s": "3/4",
+        "exhaustive_word_depth": 6,
+        "ties_present": true,
+        "finite_instruments": [
+          {
+            "cutoff": 1,
+            "success": "3/4",
+            "normalizer": "4.000000000000E-1",
+            "conditional_joint_infidelity": "5.000000000000E-1",
+            "total_photons_modes_1_2_3": [
+              "0.000000000000E+0",
+              "0.000000000000E+0",
+              "0.000000000000E+0"
+            ]
+          },
+          {
+            "cutoff": 2,
+            "success": "3/4",
+            "normalizer": "5.500000000000E-1",
+            "conditional_joint_infidelity": "2.865122233303E-1",
+            "total_photons_modes_1_2_3": [
+              "5.454545454545E-1",
+              "5.454545454545E-1",
+              "5.454545454545E-1"
+            ]
+          },
+          {
+            "cutoff": 3,
+            "success": "3/4",
+            "normalizer": "6.062500000000E-1",
+            "conditional_joint_infidelity": "2.288168976908E-1",
+            "total_photons_modes_1_2_3": [
+              "8.659793814433E-1",
+              "6.804123711340E-1",
+              "6.804123711340E-1"
+            ]
+          },
+          {
+            "cutoff": 7,
+            "success": "3/4",
+            "normalizer": "7.257812500000E-1",
+            "conditional_joint_infidelity": "1.330138484285E-1",
+            "total_photons_modes_1_2_3": [
+              "2.060279870829E+0",
+              "1.285252960172E+0",
+              "1.072120559742E+0"
+            ]
+          },
+          {
+            "cutoff": 16,
+            "success": "3/4",
+            "normalizer": "8.101562500000E-1",
+            "conditional_joint_infidelity": "8.172791068427E-2",
+            "total_photons_modes_1_2_3": [
+              "4.006750241080E+0",
+              "1.912970106075E+0",
+              "1.494214079074E+0"
+            ]
+          },
+          {
+            "cutoff": 33,
+            "success": "3/4",
+            "normalizer": "8.587295532227E-1",
+            "conditional_joint_infidelity": "5.689965359134E-2",
+            "total_photons_modes_1_2_3": [
+              "6.460647823205E+0",
+              "2.479216456963E+0",
+              "1.834573907605E+0"
+            ]
+          }
+        ]
+      }
+    ],
+    "independent_fixed_point_iterations": [
+      {
+        "target": [
+          "9/10",
+          "1/10"
+        ],
+        "s": "3/5",
+        "iterations": 7,
+        "final_rank": 128,
+        "prefix_l1_difference": "3.777550918631E-3"
+      },
+      {
+        "target": [
+          "3/5",
+          "3/10",
+          "1/10"
+        ],
+        "s": "2/5",
+        "iterations": 7,
+        "final_rank": 2187,
+        "prefix_l1_difference": "4.975382743579E-5"
+      },
+      {
+        "target": [
+          "2/5",
+          "2/5",
+          "1/5"
+        ],
+        "s": "1/2",
+        "iterations": 7,
+        "final_rank": 2187,
+        "prefix_l1_difference": "6.600000000000E-5"
+      }
+    ],
+    "exhaustive_allocation_identities": 70,
+    "uniform_special_cases": [
+      {
+        "rank": 2,
+        "s": "3/4",
+        "q_s": "7.066950526114E-1"
+      },
+      {
+        "rank": 3,
+        "s": "2/3",
+        "q_s": "7.304227103092E-1"
+      },
+      {
+        "rank": 4,
+        "s": "1/2",
+        "q_s": "6.666666666667E-1"
+      }
+    ],
+    "nonuniform_one_mode_critical_success": "5/8",
+    "finite_scaling_diagnostics": [
+      {
+        "target": [
+          "9/10",
+          "1/10"
+        ],
+        "s": "1/2",
+        "q_s": "4.194617751275E-1",
+        "predicted_tail_power": "1.384007457404E+0",
+        "measured_tail_power_R1024_to_R8192": "1.388097580132E+0",
+        "samples": [
+          {
+            "cutoff": 256,
+            "ideal_tail": "5.196227307512E-5",
+            "unnormalized_total_photons": "5.865171963420E-1"
+          },
+          {
+            "cutoff": 1024,
+            "ideal_tail": "7.720011389994E-6",
+            "unnormalized_total_photons": "6.260497784435E-1"
+          },
+          {
+            "cutoff": 4096,
+            "ideal_tail": "1.129966455779E-6",
+            "unnormalized_total_photons": "6.494926992775E-1"
+          },
+          {
+            "cutoff": 8192,
+            "ideal_tail": "4.305671729287E-7",
+            "unnormalized_total_photons": "6.573064556271E-1"
+          }
+        ]
+      },
+      {
+        "target": [
+          "9/10",
+          "1/10"
+        ],
+        "s": "5/8",
+        "q_s": "5.000000000000E-1",
+        "predicted_tail_power": "1.000000000000E+0",
+        "measured_tail_power_R1024_to_R8192": "9.960332197086E-1",
+        "samples": [
+          {
+            "cutoff": 256,
+            "ideal_tail": "6.622062409193E-4",
+            "unnormalized_total_photons": "1.697731892548E+0"
+          },
+          {
+            "cutoff": 1024,
+            "ideal_tail": "1.650199102609E-4",
+            "unnormalized_total_photons": "2.169338978331E+0"
+          },
+          {
+            "cutoff": 4096,
+            "ideal_tail": "4.117265736924E-5",
+            "unnormalized_total_photons": "2.640699893569E+0"
+          },
+          {
+            "cutoff": 8192,
+            "ideal_tail": "2.079834218556E-5",
+            "unnormalized_total_photons": "2.872534528999E+0"
+          }
+        ]
+      },
+      {
+        "target": [
+          "9/10",
+          "1/10"
+        ],
+        "s": "3/4",
+        "q_s": "6.015000379295E-1",
+        "predicted_tail_power": "6.625102858552E-1",
+        "measured_tail_power_R1024_to_R8192": "6.620994427711E-1",
+        "samples": [
+          {
+            "cutoff": 256,
+            "ideal_tail": "6.659310703921E-3",
+            "unnormalized_total_photons": "5.416645487448E+0"
+          },
+          {
+            "cutoff": 1024,
+            "ideal_tail": "2.661375197614E-3",
+            "unnormalized_total_photons": "9.409304402998E+0"
+          },
+          {
+            "cutoff": 4096,
+            "ideal_tail": "1.062449793305E-3",
+            "unnormalized_total_photons": "1.579430007731E+1"
+          },
+          {
+            "cutoff": 8192,
+            "ideal_tail": "6.716928541386E-4",
+            "unnormalized_total_photons": "2.029234280691E+1"
+          }
+        ]
       }
     ]
   }

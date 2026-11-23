@@ -1,40 +1,41 @@
 # Heralded Entanglement Borrowing
 
-This repository studies the minimum initial total photon inventory of a known pure oscillator catalyst used to produce a fixed maximally entangled target and return the catalyst on a heralded success event. Failure may consume the catalyst. Local work and implementation complexity are outside the energy resource measure.
+Task: extract a prescribed finite pure entangled target while returning a known pure oscillator catalyst on a heralded success. Failure may consume the catalyst. The optimized cost is initial total mean photons on both sides, with m equal-frequency oscillator modes per party. Local work and implementation complexity are separate resources.
 
 ## Scientific routes
 
-- Question, results and reader entry: README.md
-- Operational class, success, joint squared fidelity, pure input and exact theorem scope: science/model.md
-- Ordered Fock spectrum, passification and initial-energy lower bound: science/spectral_energy.md
-- Arbitrary-LOCC tail inequality, mixed conditional outputs and matching lower orders: science/converse.md
-- Finite self-similar spectrum, normalized root filter, exact success and joint fidelity: science/construction.md
-- Exact infinite-support borrowing and sharp one-mode energy-success optimum: science/exact_success.md
-- Fixed-mode density of states, critical success and mode-count consequence: science/mode_threshold.md
-- Physical meaning, destructive failure and charged/unpriced resources: science/interpretation.md
-- Attribution and closest-work differences: references/related_work.md
-- Structured bibliography: references/references.bib
-- Reproduction commands and finite-check boundaries: verification/README.md
+- Orientation and principal results: README.md; science/README.md.
+- Operational class, success, joint squared fidelity, fixed-parameter limits and exact claims: science/model.md.
+- Ordered Fock spectrum, passive assignment and energy lower bound: science/spectral_energy.md.
+- Arbitrary finite pure target: science/target_spectrum.md gives the majorization fixed point, weighted-word catalyst, exact passive-energy optimizer and Rényi critical success.
+- Sharp arbitrary-target error law: science/target_accuracy.md gives the square-root-tail contraction for all allowed LOCC/mixed success outputs and the finite cutoff preserving success exactly.
+- Uniform target Phi_d: science/converse.md gives the explicit tail dilation; science/construction.md gives self-similar finite catalysts; science/exact_success.md gives the sharp one-mode rational optimum.
+- Physical mode-count consequence: science/mode_threshold.md.
+- Meaning, failure consumption and charged versus unpriced resources: science/interpretation.md.
+- Primary comparison and inherited ingredients: references/related_work.md; references/references.bib.
+- Commands, expected finite evidence and proof boundaries: verification/README.md.
 
-For a theorem audit, read model, spectral_energy, converse, construction, exact_success and mode_threshold in that order. For the physical story, read README, model and interpretation, then follow the theorem pointers. All mathematical statements use joint squared fidelity with the original pure catalyst tensor the target.
+For the general theorem, read model, spectral_energy, target_spectrum and target_accuracy. The uniform-target pages retain additional explicit formulas, rather than replacing the general-target proof. For the story, read interpretation and the worked examples before following the theorem route.
 
 ## Learning routes
 
-- The single educational anchor is John Watrous, The Theory of Quantum Information (2018), using the author's available manuscript.
-- learning/WORKED_EXAMPLE.md gives an explicit finite Bell-pair construction with exact probabilities, fidelity and initial photons.
-- learning/MILESTONES.md gives the common M01–M30 understanding map, with earlier dependencies and source pointers.
-- learning/WATROUS_BRIDGE.md translates the textbook's Schmidt and fidelity conventions and supplies the missing oscillator and heralding connections.
-
-For self-directed study, start with the worked example, then follow the milestone map alongside the bridge. The scientific pages own the exact theorem statements and proofs. The primary research references provide attribution beyond the educational anchor.
+The single anchor is John Watrous, The Theory of Quantum Information (2018), using the author's available manuscript. learning/WATROUS_BRIDGE.md verifies relevant sections and supplies the source-to-project connections. learning/WORKED_EXAMPLE.md develops finite instruments and contrasting target spectra. learning/MILESTONES.md is the project-defined M01–M30 map, with dependencies and scientific source pointers. Personal coaching and learner records are outside the repository.
 
 ## Essential distinctions
 
-- The catalyst is returned only on the declared success event; failure output is unconstrained.
-- Success probability is fixed as error tends to zero; constants need not be uniform near either transition.
-- The mode count and target dimension are fixed. All initial shared catalyst modes are counted.
-- Mean initial photons are different from energy consumed, preparation work, control work and runtime.
-- Exact finite-energy attainment has infinite Schmidt rank; positive-error constructions can be finite rank.
-- The lower bound covers mixed retained success outputs, but the initial catalyst is pure.
-- The one-mode subcritical optimum has an exact constant. General fixed-mode logarithmic and power laws are order statements.
-- Stochastic conversion, average Schmidt-tail monotonicity and infinite-dimensional SLOCC are attributed foundations; the claimed addition is the optimized oscillator energy-success-error law.
+- lambda denotes fixed positive squared Schmidt coefficients of a finite pure target; rank is at least two.
+- At fixed m, lambda and 0<s<1, exact finite-energy borrowing is possible iff s<exp[-H_{m/(m+1)}(lambda)/m]. The boundary is strict.
+- The unique q_s in (0,1) solves sum_i(s lambda_i)^q_s=1. The optimal exact spectrum has probabilities of order j^(-1/q_s).
+- Below threshold approximate optimal energy converges to the exact optimum. At threshold it is Theta(log(1/epsilon)); above it the exponent is 1/[m(1/q_s-1)]-1.
+- Uniform lambda_i=1/d recovers all earlier d-dependent formulas. The simple one-mode rational formula is specific to a uniform target.
+- The return test is joint squared fidelity with the original pure catalyst tensor target, conditional on success. Mixed retained success outputs are allowed in the converse.
+- The initial catalyst is pure. Arbitrary mixed initial catalysts are not covered.
+- Finite mean energy can have infinite support. Exact attainment has infinite Schmidt rank; every positive-error upper bound can use finite support and a bounded filter with success exactly s.
+- No fresh shared entanglement or quantum communication is supplied. Local product ancillas do not add cross-party entanglement.
+- Failure can destroy the catalyst; successive successes have declining probability. This is not an indefinitely reusable source.
+- Photon inventory is distinct from preparation/control work, runtime, gate count and fault tolerance.
+- The deterministic endpoint and uniform varying-parameter crossovers require separate results.
+- Vidal/Owari stochastic conversion and local filtering are inherited. The self-borrowing fixed-point optimization and sharp oscillator energy frontier are the contribution.
+
+Use the topic pages as the authority for the full claims and proof dependencies. Finite passing checks corroborate their stated cases; they do not establish general proofs or publication priority.
 

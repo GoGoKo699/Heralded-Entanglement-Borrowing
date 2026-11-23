@@ -1,227 +1,123 @@
-# The mode threshold comes from the density of states
+# The number of modes selects the Rényi threshold
 
-The success threshold is determined by how many orthogonal catalyst states fit below a given excitation energy. For a fixed number of equal-frequency oscillator modes, that counting law turns the Schmidt-tail recurrence into a physical energy bound.
+A fixed mode count determines how many orthogonal catalyst states fit at low photon number. The target spectrum determines how much Schmidt weight successful borrowing forces at large indices. Their competition sets the exact finite-energy threshold.
 
-## 1. Counting low-energy oscillator states
+## 1. Physical state counting
 
-For $`m`$ modes at one party, the number of Fock basis vectors with total photon number at most $`h\ge0`$ is
-
-```math
-A_m(h)
-=
-\#\{(n_1,\ldots,n_m)\in\mathbb N_0^m:
-n_1+\cdots+n_m\le h\}
-=
-\binom{h+m}{m}.
-\qquad\text{(1)}
-```
-
-Enumerate the corresponding photon numbers with multiplicity as $`e_1\le e_2\le\cdots`$, with $`e_1=0`$. At fixed $`m`$,
+For $`m`$ equal-frequency modes per party, the number of local Fock basis vectors with at most $`h`$ photons is
 
 ```math
-A_m(h)
-=
-\frac{h^m}{m!}\bigl(1+O_m(h^{-1})\bigr),
-\qquad
-e_j=(m!j)^{1/m}(1+o(1)).
-\qquad\text{(2)}
+A_m(h)=\binom{h+m}{m}.
 ```
 
-Thus $`e_j=\Theta_m(j^{1/m})`$ for $`j\ge2`$. Photon degeneracies are already included. The passive-energy lower bound is
+With photon energies listed in increasing order including degeneracy,
 
 ```math
-E(C)\ge2\sum_{j\ge1}e_jp_j,
-\qquad\text{(3)}
+e_j=\min\{h:j\le A_m(h)\},
+\qquad e_1=0,
 ```
 
-where $`p_j`$ are the catalyst's decreasing Schmidt probabilities. [Spectral energy](spectral_energy.md) proves this bound for arbitrary physical Schmidt bases.
-
-## 2. Exact return forces tails at every rank scale
-
-Let
+and, at fixed $`m`$,
 
 ```math
-P_k=\sum_{j>k}p_j.
-\qquad\text{(4)}
+e_j=(m!j)^{1/m}+O_m(1).
 ```
 
-For the desired catalyst and maximally entangled target, the product spectrum is $`q_j=p_{\lceil j/d\rceil}/d`$, so $`Q_{dk}=P_k`$.
-
-At exact return, the [LOCC converse](converse.md) gives
+For any pure catalyst with decreasing Schmidt probabilities $`p_j`$,
 
 ```math
-P_k\ge sQ_k,
-\qquad
-P_{dk}\ge sP_k.
-\qquad\text{(5)}
+E(C)\ge2\sum_j e_jp_j.
 ```
 
-There is a nonzero seed, because
+[Passive energy](spectral_energy.md) proves this inequality without assuming number-state Schmidt bases. Matched passive Fock bases attain it.
+
+## 2. Target-dependent exact boundary
+
+For a fixed finite pure target spectrum $`\lambda`$ and success $`0\lt s\lt1`$, let
 
 ```math
-P_1
-\ge sQ_1
-=
-s\left(1-\frac{p_1}{d}\right)
-\ge s\left(1-\frac1d\right).
-\qquad\text{(6)}
+\sum_i(s\lambda_i)^{q_s}=1,
+\qquad b_s=1/q_s-1.
 ```
 
-Iteration therefore forces
+The [exact-spectrum theorem](target_spectrum.md) gives a universally optimal catalyst with probabilities $`r_j=\Theta(j^{-1/q_s})`$. Every exactly feasible catalyst has tails at least as large as this spectrum. Its passive photon sum converges precisely when
 
 ```math
-P_{d^\ell}
-\ge
-s^\ell P_1
-\qquad(\ell\ge0).
-\qquad\text{(7)}
+\frac1{q_s}>1+\frac1m,
+\qquad\text{or equivalently}\qquad b_s>1/m.
 ```
 
-These tails are a requirement on every allowed protocol, rather than a property imposed by the construction.
+At equality, the summand is of order $`1/j`$ and its sum diverges logarithmically. Finite-energy exact return therefore requires a strict inequality.
 
-For any nonnegative increasing energy sequence with $`e_1=0`$, summation by parts gives
-
-```math
-\sum_{j\ge1}e_jp_j
-=
-\sum_{k\ge1}(e_{k+1}-e_k)P_k.
-\qquad\text{(8)}
-```
-
-The equality holds by monotone summation, including the possibility that both sides are infinite.
-
-To use (7), group the indices in (8) into disjoint blocks $`d^\ell\le k\lt d^{\ell+1}`$. Since the tails decrease,
-
-```math
-\begin{aligned}
-\sum_{k=d^\ell}^{d^{\ell+1}-1}
-(e_{k+1}-e_k)P_k
-&\ge
-\bigl(e_{d^{\ell+1}}-e_{d^\ell}\bigr)
-P_{d^{\ell+1}}.
-\end{aligned}
-\qquad\text{(9)}
-```
-
-Although individual energy increments can vanish inside a degenerate shell, equation (2) implies
-
-```math
-e_{d^{\ell+1}}-e_{d^\ell}
-=
-\Theta_{m,d}\bigl(d^{\ell/m}\bigr)
-\qquad\text{(10)}
-```
-
-for all sufficiently large $`\ell`$. Substituting (7) into (9) shows that finite mean energy requires convergence of
-
-```math
-\sum_{\ell\ge0}
-\bigl(sd^{1/m}\bigr)^\ell.
-\qquad\text{(11)}
-```
-
-Consequently exact return at finite energy is impossible when $`sd^{1/m}\ge1`$.
-
-Conversely, the [self-similar exact construction](exact_success.md) assigns block mass proportional to $`s^\ell`$ at photon cost of order $`d^{\ell/m}`$. Its mean energy is finite when $`sd^{1/m}\lt 1`$. This establishes the necessary and sufficient condition
+Writing $`q_*=m/(m+1)`$, this yields
 
 ```math
 \boxed{
-\text{Exact joint return at finite mean energy is possible}
-\quad\Longleftrightarrow\quad
-s\lt d^{-1/m}.
+s<s_c(\lambda,m),
+\qquad
+s_c(\lambda,m)
+=\left(\sum_i\lambda_i^{q_*}\right)^{-1/q_*}.
 }
-\qquad\text{(12)}
 ```
 
-The catalyst is pure and may have infinite Fock support. No statement about arbitrary mixed catalysts follows.
+Equivalently $`s_c=e^{-H_{q_*}(\lambda)/m}`$ with natural-log Rényi entropy. The target rank alone is insufficient unless its nonzero Schmidt probabilities are uniform.
 
-## 3. The same counting law determines approximate costs
+## 3. The minimum integer mode count
 
-At nonzero error, the tail recurrence becomes
+The exponent $`q_s`$ depends only on the target and success, not on $`m`$. Thus the exact finite-energy mode condition is
 
 ```math
-\sqrt{P_{dk}}
-\ge
-\sqrt{s}\,
-\bigl(\sqrt{P_k}-\sqrt{2\varepsilon}\bigr)_+.
-\qquad\text{(13)}
+m>\frac1{b_s}=\frac{q_s}{1-q_s}.
 ```
 
-For fixed $`0\lt s\lt 1`$, [the converse](converse.md) proves that nonzero tails of order $`s^\ell`$ must persist through
+The smallest integer mode count per party is consequently
 
 ```math
-L_\varepsilon
-=
-\frac{\log(1/\varepsilon)}{\log(1/s)}
--O_{s,d}(1)
-\qquad\text{(14)}
-```
-
-rank scales. Inserting these forced tails into (8)–(10) gives
-
-```math
-E(C)
-\ge
-c_{m,s,d}
-\sum_{\ell=\ell_0}^{L_\varepsilon}
-\bigl(sd^{1/m}\bigr)^\ell,
-\qquad\text{(15)}
-```
-
-where $`\ell_0`$ is a fixed finite index.
-
-The [finite construction](construction.md) attains the same sum with $`L=\log(1/\varepsilon)/\log(1/s)+O_{s,d}(1)`$. Thus the three different divergence classes in the [main theorem](model.md) follow from an ordinary geometric series:
-
-- If $`sd^{1/m}\lt 1`$, the energy stays bounded. It is also bounded away from zero at small error by (13) at $`k=1`$ and $`e_2=1`$.
-- If $`sd^{1/m}=1`$, each forced rank scale has constant-order energy cost, producing $`\Theta(\log(1/\varepsilon))`$.
-- If $`sd^{1/m}>1`$, the last forced rank scales dominate. Their cost is $`\Theta(\varepsilon^{-a_m})`$, where
-
-```math
-a_m
-=
-\frac{\log(sd^{1/m})}{\log(1/s)}
-=
-\frac{\log d}{m\log(1/s)}-1.
-\qquad\text{(16)}
-```
-
-The exponent and matching orders concern initial photon inventory at fixed $`m,d,s`$. They do not quantify the cost of preparing the high-rank state or implementing the local controls.
-
-## 4. The minimum number of modes for exact finite-energy return
-
-Solving (12) for the integer $`m`$ gives
-
-```math
-m>\frac{\log d}{\log(1/s)},
-\qquad
 \boxed{
+m_{\min}^{\rm exact}(s,\lambda)
+=\left\lfloor\frac1{b_s}\right\rfloor+1.
+}
+```
+
+Every fixed finite target and fixed $`s\lt1`$ has $`q_s\lt1`$, so some finite mode count suffices. This statement does not supply a uniform energy bound as success tends to one or target parameters vary.
+
+For a one-mode catalyst and $`\lambda=(0.9,0.1)`$, the critical success is $`5/8`$. At success $`0.6`$, one mode suffices for exact finite-energy return. At success $`5/8`$, one mode is exactly critical and two suffice for exact return. The [physical interpretation](interpretation.md) compares this with a Bell target.
+
+## 4. Uniform targets recover the rank formula
+
+For $`\lambda_i=1/d`$,
+
+```math
+q_s=\frac{\log d}{\log(d/s)},
+\qquad b_s=\frac{\log(1/s)}{\log d}.
+```
+
+Therefore
+
+```math
+s_c=d^{-1/m},
+\qquad
 m_{\min}^{\rm exact}(s,d)
-=
-\left\lfloor
-\frac{\log d}{\log(1/s)}
-\right\rfloor+1.
-}
-\qquad\text{(17)}
+=\left\lfloor\frac{\log d}{\log(1/s)}\right\rfloor+1.
 ```
 
-The inequality is strict because the equality case has a divergent mean energy. For one Bell pair, $`d=2`$:
+For one Bell pair:
 
-| Promised success $`s`$ | Minimum modes per party for exact return at finite mean energy |
+| Promised success | Minimum modes per party for exact finite-energy return |
 |---|---:|
 | $`1/4`$ | 1 |
 | $`1/2`$ | 2 |
 | $`3/4`$ | 3 |
 | $`9/10`$ | 7 |
 
-For example, one mode per party at success $`1/2`$ is precisely critical and needs logarithmically increasing mean energy as the error vanishes. Two modes per party put the same success promise below the threshold, permitting exact finite-energy return with infinite support.
+The direct uniform-target proof uses $`Q_{dk}=P_k`$: exact success forces $`P_{dk}\ge sP_k`$, and a nonzero tail seed then persists at every geometric rank scale. Combining it with $`e_j=\Theta(j^{1/m})`$ gives a geometric energy series with ratio $`sd^{1/m}`$. [Converse](converse.md) and [construction](construction.md) retain the full recurrence and matching logarithmic-block calculation.
 
-For every fixed $`s\lt 1`$ and finite $`d`$, some finite mode count satisfies (12). This statement does not give a uniform energy bound as $`s\to1`$ or as $`m`$ changes. The constants in the fixed-mode energy laws are allowed to depend on $`m`$.
+## 5. Approximate return at the boundary
 
-## 5. Why the inventory must include modes and cutoff
+The [robust tail comparison](target_accuracy.md#1-a-robust-comparison-with-the-exact-optimal-tail) forces the exact optimal tail up to indices of order $`\varepsilon^{-1/b_s}`$. Finite cutoffs attain that order with success exactly $`s`$. Consequently the energy is logarithmic when $`b_s=1/m`$ and a power with exponent $`1/(m b_s)-1`$ when $`b_s<1/m`$.
 
-Adding modes changes the low-excitation degeneracy. It changes the relation between Schmidt rank and mean photon number even though each mode has the same frequency. A mean-energy statement therefore needs its mode count.
+Below the boundary, finite cutoffs converge to the exact optimal spectrum sum. At or above it, no bounded-energy family can make the joint error vanish. These conclusions optimize mean initial photon inventory; they do not optimize local preparation or control work.
 
-All initially shared catalyst modes are counted in $`m`$. Local product ancillas used during LOCC do not change the initial shared Schmidt spectrum. Their availability does not bypass (3) or the tail recurrence.
+Mode count, mean photons and Fock cutoff are separate resources. All initially shared catalyst modes count in $`m`$. Local product ancillas do not change the source Schmidt spectrum and cannot replace the required initial entanglement tail. Exact attainment below threshold has infinite support, whereas every positive-error upper construction has finite support.
 
-The exact subcritical states have infinite support. Every positive-error construction has finite support, but its Fock cutoff grows with accuracy. Mean photons, mode count and cutoff are distinct quantities. [Interpretation](interpretation.md) explains how those distinctions affect the physical conclusion; [verification](../verification/README.md) describes finite checks of the formulas.
-
+[Model](model.md) · [Exact spectrum](target_spectrum.md) · [Accuracy law](target_accuracy.md) · [Interpretation](interpretation.md)

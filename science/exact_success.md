@@ -1,5 +1,7 @@
 # Exact heralded return and the one-mode optimum
 
+This page retains the direct uniform-target $`\Phi_d`$ construction and the elementary one-mode rational optimum. [Target spectrum](target_spectrum.md) gives the exact optimal spectrum and passive-energy sum for every fixed finite pure target and every fixed mode count.
+
 Exact return is possible on a success branch even though the failure branch may destroy the catalyst. Infinite Fock support and finite mean energy play different roles.
 
 This page proves the exact construction and the sharp initial-energy budget for one oscillator per party. The [mode-threshold account](mode_threshold.md) treats the existence threshold at any fixed mode count.
